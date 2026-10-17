@@ -1,0 +1,84 @@
+VINEYARD FLORENCE — NETLIFY DEPLOYMENT PACKAGE
+Published source: Version 94 (includes MERP, Latvia and all 18 discipleship resources)
+
+QUICKEST WAY TO GO LIVE
+1. Unzip this package on your computer.
+2. Sign in to Netlify and open https://app.netlify.com/drop.
+3. Drag the folder named "deploy" onto the upload area.
+   Upload "deploy", which contains index.html. Do not upload the whole package.
+4. Open the Netlify URL and check the homepage, Ministries, MERP, Kids,
+   Students, Prayer and Discipleship pages.
+5. In your Netlify project, enable form detection if needed, then redeploy
+   the same "deploy" folder so Netlify detects all seven forms.
+6. Submit a test form, confirm it appears in Netlify Forms, and configure
+   email notifications to info@vineyardflorence.church (or your chosen inbox).
+   Only the notification address is needed; Outlook API credentials are not
+   required for this Netlify version.
+
+WHAT IS INCLUDED
+- 19 complete HTML pages with original React interactions and design.
+- All site images, the original-quality hero video and downloadable resources.
+- MERP, Latvia and the full Discipleship resource library.
+- Seven Netlify form definitions and submission support. A success message
+  appears only after the submission service returns a successful response.
+- A snapshot of the saved sermon archive, filtered to the last three years.
+- Editable source code in "source" and reproducible export scripts.
+- A Netlify function for importing the newest YouTube services.
+
+FORMS ON NETLIFY
+The seven forms are Prayer Request; Kids Registration; Kids Media Release;
+Students New Student; Students Serve; Students Newsletter; Students Media Release.
+Submissions live in Netlify Forms rather than the current site's database.
+Previous private form submissions and hosting credentials are not included.
+No email notification address is automatically activated by this upload.
+Configure notifications in Netlify and test delivery before accepting real forms.
+
+SERMON UPDATES
+The drag-and-drop version uses the included saved archive snapshot.
+Manual static uploads do not deploy the Netlify function.
+For automatic YouTube updates, use the Git or CLI method below. The function
+merges the latest YouTube feed with the historical snapshot. It does not create
+a persistent sermon database; refresh the snapshot periodically to retain older
+new services after they leave YouTube's recent feed.
+
+EDITABLE SOURCE AND SHARED ASSETS
+To avoid making you download every image and video twice, the original public
+assets are shared with the ready-to-upload folder.
+Run "node scripts/restore-public.mjs" from this package's root to copy them into
+source/public. The build command does this automatically.
+Edit the React pages in source/app. Keep deploy available before your first build.
+Do not edit your live Sites project from these exported files; this is an
+independent Netlify copy. Changes made on one host will not update the other.
+
+DEPLOY WITH GIT (AUTOMATIC SERMON UPDATES)
+1. Put the contents of this package in a GitHub repository.
+2. Import that repository into Netlify.
+3. Use build command "npm run build" and publish directory "deploy".
+   The included netlify.toml also sets the functions directory.
+4. Netlify builds the source and deploys the sermon function. Enable Forms and
+   configure notifications as described above.
+
+DEPLOY WITH THE NETLIFY CLI (AUTOMATIC SERMON UPDATES)
+With Node.js 22 or newer installed, open a terminal in this package folder:
+  npx netlify-cli login
+  npx netlify-cli deploy --prod --dir=deploy --functions=netlify/functions
+The existing prebuilt files are ready; you do not need to rebuild first.
+If a browser upload stalls on the 21 MB hero video, this CLI method is an option.
+
+REBUILD AFTER SOURCE CHANGES
+  npm run build
+Then upload the refreshed deploy folder or redeploy through Git/CLI.
+Netlify's Linux build environment is supported. Rebuilding on Windows requires
+WSL/Linux because the original build scripts use Bash and GNU timeout.
+
+DOMAIN
+Netlify first provides a netlify.app address. After you test the deployment,
+add your church domain in Netlify and update its DNS records at the domain
+provider. This package does not change your existing domain or hosting.
+
+VERIFICATION
+The original production build passed. The exported package was checked for
+all 19 routes, local asset references, all 18 resource files, and all seven
+form definitions. Submission success/error handling and the YouTube merge
+function were tested locally. A real Netlify deployment and email delivery
+must be tested in your Netlify account.

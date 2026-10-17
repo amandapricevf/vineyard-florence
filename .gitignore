@@ -1,0 +1,9 @@
+node_modules/
+source/node_modules/
+source/dist/
+source/public/
+source/.wrangler/
+source/.sites-runtime/
+.netlify/
+.env*
+scripts/library_file_transfer.py

@@ -1,0 +1,2 @@
+/api/sermons/latest https://www.youtube.com/watch?v=sCcHD9z6F6M 302
+/api/sermons /api/sermons.json 200

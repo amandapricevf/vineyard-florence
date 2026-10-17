@@ -1,0 +1,11 @@
+{
+  "name": "vineyard-florence-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/restore-public.mjs && npm --prefix source ci && npm --prefix source run build && node scripts/export-netlify.mjs",
+    "export": "node scripts/export-netlify.mjs"
+  },
+  "engines": { "node": ">=22.13.0" }
+}
