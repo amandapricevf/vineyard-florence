@@ -1,3 +1,5 @@
+import { contactTopicLink } from "../site-data";
+
 /**
  * Every dated event on the site.
  *
@@ -281,7 +283,7 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/men-of-courage.webp",
     imageSize: { width: 1024, height: 768 },
     alt: "Vineyard Men of Courage announcement",
-    href: "/ministries#men",
+    href: contactTopicLink("men-of-courage"),
     cta: "Men Of Courage Details",
   },
 ];
