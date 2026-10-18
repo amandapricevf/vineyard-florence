@@ -189,6 +189,13 @@ every form name must make it obvious which form it is, e.g.
 `contact-us-general-questions` or `kids-media-release`, never a generic name
 like `contact` or `form`. Use the same name in both files.
 
+The contact page is one page serving many Netlify forms: one per topic, listed
+in `app/contact/contact-topics.json`, so each topic's notifications can go to
+the person responsible for it. Link to a topic with `contactTopicLink("<topic>")`;
+a link to a topic missing from the JSON fails the build. To add a topic, add
+one entry to the JSON (with a plain-English `formName`) — the export script and
+the Netlify adapter pick it up automatically.
+
 ---
 
 ## New / moved / deleted files at a glance

@@ -6,6 +6,8 @@
  * and the interior pages can never drift apart again.
  */
 
+import { findContactTopic } from "./contact/contact-topics";
+
 /* ------------------------------------------------------------------ */
 /* Brand + contact                                                     */
 /* ------------------------------------------------------------------ */
@@ -51,8 +53,17 @@ export const eventsUrl = "/events";
 export const prayerRequestUrl = "/prayer-request";
 export const contactFormUrl = "/contact";
 
-/** Link to the contact form with its subject line pre-filled. */
+/** Link to the general contact form with its subject line pre-filled. */
 export const contactFormLink = (subject: string) => `${contactFormUrl}?subject=${encodeURIComponent(subject)}`;
+
+/**
+ * Link to the contact form for one topic in `contact/contact-topics.json`.
+ * An unknown topic fails the build rather than shipping a broken link.
+ */
+export function contactTopicLink(topic: string): string {
+  if (!findContactTopic(topic)) throw new Error(`Unknown contact topic "${topic}" — add it to app/contact/contact-topics.json`);
+  return `${contactFormUrl}?topic=${topic}`;
+}
 export const youtubeUrl = "https://www.youtube.com/@VineyardFlorence";
 export const facebookUrl = "https://www.facebook.com/vineyardflorence";
 export const instagramUrl = "https://www.instagram.com/vineyardflorence";

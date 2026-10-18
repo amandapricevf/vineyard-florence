@@ -3,7 +3,7 @@
 import { useState } from "react";
 import {
   churchCenterGroupsUrl,
-  contactFormLink,
+  contactTopicLink,
   houseGroupInterestUrl,
 } from "../site-data";
 
@@ -18,7 +18,6 @@ type Stage = {
   nextSteps: { label: string; href: string; external?: boolean }[];
 };
 
-const ask = contactFormLink;
 
 const stages: Stage[] = [
   {
@@ -29,8 +28,8 @@ const stages: Stage[] = [
     traits: ["Has questions about God, Jesus and religion", "Still seeking answers to those questions"],
     nextSteps: [
       { label: "Keep Showing Up", href: "/#what-to-expect" },
-      { label: "Ask About An Alpha Course", href: ask("I Want To Explore Alpha") },
-      { label: "Ask About VF Foundations", href: ask("I Want To Explore VF Foundations") },
+      { label: "Ask About An Alpha Course", href: contactTopicLink("alpha") },
+      { label: "Ask About VF Foundations", href: contactTopicLink("vf-foundations") },
       { label: "Explore Celebrate Recovery", href: "/ministries#celebrate-recovery" },
       { label: "Explore Men’s Healthy Sexuality", href: "/ministries#mens-healthy-sexuality" },
       { label: "Visit A House Group", href: churchCenterGroupsUrl, external: true },
@@ -43,7 +42,7 @@ const stages: Stage[] = [
     marker: "02",
     traits: ["Believes in Jesus Christ", "Baptized", "Born again"],
     nextSteps: [
-      { label: "Ask About VF Foundations", href: ask("I Want To Explore VF Foundations") },
+      { label: "Ask About VF Foundations", href: contactTopicLink("vf-foundations") },
       { label: "Join A House Group", href: houseGroupInterestUrl },
       { label: "Serve And Become A Ministry Partner", href: "/ministries" },
       { label: "Give Your Time, Talent And Treasure", href: "/connect" },
@@ -58,9 +57,9 @@ const stages: Stage[] = [
     traits: ["Follows Jesus Christ", "Takes risks in faith", "Serves regularly", "Growing in faith", "Shares faith with others"],
     nextSteps: [
       { label: "Help Lead A House Group Or Prayer Meeting", href: "/discipleship#leader-path" },
-      { label: "Ask About Leader Training", href: ask("House Group Leader Training") },
+      { label: "Ask About Leader Training", href: contactTopicLink("house-group-leader-training") },
       { label: "Share Life And Resources", href: "/discipleship#resources" },
-      { label: "Ask About VF Freedom", href: ask("I Want To Learn About VF Freedom") },
+      { label: "Ask About VF Freedom", href: contactTopicLink("vf-freedom") },
     ],
   },
   {
@@ -71,9 +70,9 @@ const stages: Stage[] = [
     traits: ["Disciple of Jesus Christ", "Making new disciples"],
     nextSteps: [
       { label: "Launch Or Lead A House Group", href: "/discipleship#leader-path" },
-      { label: "Ask About Vineyard Leadership Essentials", href: ask("Vineyard Leadership Essentials") },
+      { label: "Ask About Vineyard Leadership Essentials", href: contactTopicLink("leadership-essentials") },
       { label: "Lead A Ministry", href: "/ministries" },
-      { label: "Explore Pastoring, Eldership Or Church Planting", href: ask("Pastoring, Eldership Or Church Planting") },
+      { label: "Explore Pastoring, Eldership Or Church Planting", href: contactTopicLink("pastoring-eldership-church-planting") },
     ],
   },
 ];

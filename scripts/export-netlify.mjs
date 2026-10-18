@@ -26,9 +26,12 @@ async function findPages(directory, parts = []) {
   }
 }
 await findPages(path.join(source, "app"));
+// The contact page serves one Netlify form per topic, so each topic's
+// notifications can go to the right person.
+const contactTopics = JSON.parse(await readFile(path.join(source, "app/contact/contact-topics.json"), "utf8"));
 const forms = {
   "/prayer-request": "prayer-request",
-  "/contact": "contact-us-general-questions",
+  "/contact": ["contact-us-general-questions", ...contactTopics.map(topic => topic.formName)],
   "/join-a-house-group": "house-group-interest-signup",
   "/kids/register": "kids-registration",
   "/kids/media-release": "kids-media-release",
@@ -49,7 +52,9 @@ for (const route of routes) {
     if (!form) throw new Error(`Missing form: ${route}`);
     const names = [...new Set([...form.matchAll(/\bname="([^"]+)"/g)].map(match => match[1]))];
     names.push("formType");
-    formBlueprints.push(`<form name="${forms[route]}" method="POST" data-netlify="true" netlify-honeypot="website" hidden><input type="hidden" name="form-name" value="${forms[route]}"/>${names.map(name => `<input name="${name}"/>`).join("")}</form>`);
+    for (const formName of [forms[route]].flat()) {
+      formBlueprints.push(`<form name="${formName}" method="POST" data-netlify="true" netlify-honeypot="website" hidden><input type="hidden" name="form-name" value="${formName}"/>${names.map(name => `<input name="${name}"/>`).join("")}</form>`);
+    }
   }
   const directory = path.join(output, route === "/" ? "" : route.slice(1));
   await mkdir(directory, { recursive: true });

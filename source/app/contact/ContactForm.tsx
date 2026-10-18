@@ -1,21 +1,25 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useState, useSyncExternalStore } from "react";
+import { findContactTopic, generalContactFormName } from "./contact-topics";
 
 type FormStatus = { kind: "idle" | "sending" | "success" | "error"; message: string };
 
 const initialStatus: FormStatus = { kind: "idle", message: "" };
 
+const subscribeToNothing = () => () => {};
+
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>(initialStatus);
-  const subjectRef = useRef<HTMLInputElement>(null);
 
-  // Links across the site open this form with ?subject=… so the team knows what
-  // the message is about. Read it after mount: the page is statically exported.
-  useEffect(() => {
-    const subject = new URLSearchParams(window.location.search).get("subject");
-    if (subject && subjectRef.current) subjectRef.current.value = subject.slice(0, 200);
-  }, []);
+  // Links across the site open this page with ?topic=… (one Netlify form per
+  // topic, so each notifies the right person) or, for general questions,
+  // ?subject=…. The page is statically exported, so the URL is read in the
+  // browser; the server render is the general form.
+  const search = useSyncExternalStore(subscribeToNothing, () => window.location.search, () => "");
+  const params = new URLSearchParams(search);
+  const topic = findContactTopic(params.get("topic"));
+  const suggestedSubject = params.get("subject")?.slice(0, 200) ?? "";
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -32,8 +36,6 @@ export function ContactForm() {
       const result = await response.json().catch(() => ({ message: "We could not send the form." }));
       if (!response.ok) throw new Error(result.message || "We could not send the form.");
       form.reset();
-      // reset() empties the subject; keep the one the visitor arrived with.
-      if (subjectRef.current) subjectRef.current.value = String(payload.subject ?? "");
       setStatus({ kind: "success", message: "Thank you! Your message was sent and someone from our team will be in touch." });
     } catch (error) {
       setStatus({ kind: "error", message: error instanceof Error ? error.message : "We could not send the form." });
@@ -43,6 +45,7 @@ export function ContactForm() {
   return (
     <form className="kids-form contact-form" onSubmit={submit}>
       <input className="kids-honeypot" type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      <input type="hidden" name="formName" value={topic?.formName ?? generalContactFormName} />
 
       <fieldset>
         <legend>Your Information</legend>
@@ -56,7 +59,14 @@ export function ContactForm() {
       <fieldset>
         <legend>Your Message</legend>
         <div className="kids-form-grid">
-          <label className="kids-form-wide">Subject<input name="subject" maxLength={200} ref={subjectRef} placeholder="What is this about?" /></label>
+          {topic ? (
+            <p className="kids-form-wide contact-topic">
+              <span>Topic</span>{topic.subject}
+              <input type="hidden" name="subject" value={topic.subject} />
+            </p>
+          ) : (
+            <label className="kids-form-wide">Subject<input key={suggestedSubject} name="subject" maxLength={200} defaultValue={suggestedSubject} placeholder="What is this about?" /></label>
+          )}
           <label className="kids-form-wide">How Can We Help?<textarea name="message" rows={8} required maxLength={4000} placeholder="Ask a question or tell us what you need." /></label>
         </div>
       </fieldset>

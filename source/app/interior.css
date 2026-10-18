@@ -985,3 +985,8 @@ main textarea {
 .header-search-empty{font-size:14px;line-height:1.5;margin:10px 4px 2px}
 .header-search-empty a{color:var(--vine);font-weight:700;text-decoration:underline}
 @media(max-width:620px){.site-header .header-search{left:12px}}
+
+/* Contact form topic, shown instead of an editable subject when the visitor
+   came from a specific link (each topic is its own Netlify form). */
+.contact-topic{background:white;border-left:3px solid var(--vine);font-size:18px;font-weight:600;margin:0;padding:14px 18px}
+.contact-topic span{color:var(--vine);display:block;font-size:9px;font-weight:800;letter-spacing:.2em;margin-bottom:6px;text-transform:uppercase}

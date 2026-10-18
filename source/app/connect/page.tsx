@@ -7,7 +7,7 @@ import {
   churchCenterGroupsUrl,
   churchCenterHomeUrl,
   churchCenterSignInUrl,
-  contactFormLink,
+  contactTopicLink,
   eventsUrl,
   prayerRequestUrl,
 } from "../site-data";
@@ -69,7 +69,7 @@ export default function ConnectPage() {
       <section className="connect-human" id="go">
         <div><p className="eyebrow">Still Not Sure?</p><h2>People Before<br /><em>Platforms.</em></h2></div>
         <p>If none of these buttons quite fits, tell us what you are looking for. A real person will help you find the right next step—no maze of menus required.</p>
-        <a className="button button-dark" href={contactFormLink("Help Me Find My Next Step")}>Start A Conversation <span aria-hidden="true">↗</span></a>
+        <a className="button button-dark" href={contactTopicLink("next-step")}>Start A Conversation <span aria-hidden="true">↗</span></a>
       </section>
 
       <InteriorFooter />

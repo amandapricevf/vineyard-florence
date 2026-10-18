@@ -4,7 +4,7 @@ import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/Interi
 import { TriadMark } from "../components/TriadMark";
 import { DiscipleshipStages } from "./DiscipleshipStages";
 import {
-  contactFormLink,
+  contactTopicLink,
   churchCenterGroupsUrl,
   houseGroupInterestUrl,
 } from "../site-data";
@@ -16,8 +16,7 @@ export const metadata: Metadata = {
 };
 
 const wahaUrl = "https://waha.app/eng";
-const leaderEmailUrl = contactFormLink("I Want To Lead A House Group");
-const leaderStepUrl = contactFormLink;
+const leaderEmailUrl = contactTopicLink("lead-house-group");
 
 const upInOut = [
   {
@@ -49,35 +48,35 @@ const leaderPath = [
     title: "Host A House Group",
     copy: "Open your home or another welcoming space so a group has a place to gather.",
     action: "Ask About Hosting",
-    subject: "I Want To Host A House Group",
+    topic: "host-house-group",
   },
   {
     step: "02",
     title: "Co-Lead A House Group",
     copy: "Serve alongside a leader, learn the rhythm and help people feel known.",
     action: "Ask About Co-Leading",
-    subject: "I Want To Co-Lead A House Group",
+    topic: "co-lead-house-group",
   },
   {
     step: "03",
     title: "Join Leader Training",
     copy: "Tell us you are interested in House Group leader training and ask about the next opportunity.",
     action: "Ask About Training",
-    subject: "House Group Leader Training",
+    topic: "house-group-leader-training",
   },
   {
     step: "04",
     title: "Lead A House Group",
     copy: "Help a group practice prayer, Scripture, care and following Jesus in everyday life.",
     action: "Explore Leading",
-    subject: "I Want To Lead A House Group",
+    topic: "lead-house-group",
   },
   {
     step: "05",
     title: "Launch A New House Group",
     copy: "Ready to make room for more people? Start a conversation about launching a new group.",
     action: "Explore A New Group",
-    subject: "I Want To Launch A New House Group",
+    topic: "launch-house-group",
   },
 ] as const;
 
@@ -280,7 +279,7 @@ export default function DiscipleshipPage() {
         </div>
         <div className="discipleship-leader-steps">
           {leaderPath.map((item) => (
-            <a key={item.step} href={leaderStepUrl(item.subject)}>
+            <a key={item.step} href={contactTopicLink(item.topic)}>
               <span>{item.step}</span>
               <div><h3>{item.title}</h3><p>{item.copy}</p></div>
               <strong>{item.action} <b aria-hidden="true">↗</b></strong>

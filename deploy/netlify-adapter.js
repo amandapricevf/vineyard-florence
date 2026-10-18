@@ -3,7 +3,8 @@
   const originalFetch = window.fetch.bind(window);
   const formNames = {
     "/api/prayer-requests": () => "prayer-request",
-    "/api/contact": () => "contact-us-general-questions",
+    // One Netlify form per contact topic; the page says which one in formName.
+    "/api/contact": payload => /^contact-[a-z0-9-]+$/.test(payload.formName || "") ? payload.formName : "contact-us-general-questions",
     "/api/house-group-signup": () => "house-group-interest-signup",
     "/api/kids-forms": payload => `kids-${payload.formType}`,
     "/api/student-forms": payload => `students-${payload.formType}`,
