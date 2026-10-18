@@ -192,9 +192,14 @@ export default function Home() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // The menu is a dropdown: a click anywhere outside it closes it.
   useEffect(() => {
-    document.documentElement.classList.toggle("menu-open", menuOpen);
-    return () => document.documentElement.classList.remove("menu-open");
+    if (!menuOpen) return;
+    const onPointerDown = (event: PointerEvent) => {
+      if (!(event.target as Element).closest?.(".mobile-menu, .menu-toggle")) setMenuOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
   }, [menuOpen]);
 
   useEffect(() => {
@@ -366,7 +371,7 @@ export default function Home() {
         <div className="header-left">
           <button className="header-icon-button menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-controls="site-navigation" aria-expanded={menuOpen} onClick={() => { setSearchOpen(false); setSearchQuery(""); setMenuOpen((open) => !open); }}>
             <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>
-            <span className="header-control-label">Menu</span>
+            <span className="header-control-label">{menuOpen ? "Close" : "Menu"}</span>
           </button>
           <button
             className="header-icon-button search-toggle"
