@@ -139,26 +139,120 @@ export const searchIndex: SearchItem[] = [
   { title: "Vineyard Kids", description: "A safe, fun and Spirit-led place for infants through fifth grade, with first-visit details and pre-registration.", href: "/kids", keywords: "children kids family childcare sunday nursery toddler preschool elementary register check in" },
   { title: "Register For Vineyard Kids", description: "Pre-register your child before your first Sunday visit.", href: "/kids/register", keywords: "kids child preregister registration first visit family parent guardian" },
   { title: "Vineyard Kids Media Release", description: "Submit website and social-media permission for your child.", href: "/kids/media-release", keywords: "kids child photo video media release permission consent" },
-  { title: "Vineyard Students", description: "Weekly gatherings, parent resources and clear next steps for sixth through twelfth grade students.", href: "/students", keywords: "youth teenagers middle school high school students ascend class wednesday" },
+  { title: "Vineyard Students", description: "Weekly gatherings, parent resources and clear next steps for sixth through twelfth grade students.", href: "/students", keywords: "youth group teenagers middle school high school students ascend class wednesday" },
   { title: "New To Vineyard Students", description: "Tell the Students team your family is coming to a gathering.", href: "/students/new", keywords: "student first visit new youth coming register" },
   { title: "Vineyard Students Parent Newsletter", description: "Sign up for student-ministry news, reminders and parent updates.", href: "/students/newsletter", keywords: "student youth parent newsletter updates schedule" },
   { title: "Celebrate Recovery", description: "A Christ-centered recovery community for finding healing and freedom.", href: "/ministries#celebrate-recovery", keywords: "recovery celebrate recovery healing freedom support" },
   { title: "Men’s Healthy Sexuality", description: "Resources and community helping men pursue wholeness and healthy sexuality.", href: "/ministries#mens-healthy-sexuality", keywords: "men mens healthy sexuality mhs wholeness" },
-  { title: "Men’s Ministry", description: "Find connection, discipleship and opportunities for men at Vineyard Florence.", href: "/ministries#men", keywords: "men mens ministry men of courage" },
-  { title: "Women’s Ministry", description: "Find connection, encouragement and gatherings for women at Vineyard Florence.", href: "/ministries#women", keywords: "women womens ministry gatherings" },
+  { title: "Men’s Ministry", description: "Find connection, discipleship and opportunities for men at Vineyard Florence.", href: "/ministries#men", keywords: "men mens ministry group men of courage" },
+  { title: "Women’s Ministry", description: "Find connection, encouragement and gatherings for women at Vineyard Florence.", href: "/ministries#women", keywords: "women womens ministry group gatherings ladies" },
   { title: "Meet The Staff", description: "Meet the pastors, directors and ministry leaders who serve Vineyard Florence.", href: "/staff", keywords: "staff team pastors leaders people" },
   { title: "What We Believe", description: "Explore the mission, values and beliefs that shape Vineyard Florence.", href: "/beliefs", keywords: "beliefs theology values gospel up in out mission" },
   { title: "Give To Vineyard Florence", description: "Give simply and securely—and see how generosity moves beyond the walls of the church.", href: "/#give", keywords: "giving give donate generosity online church center mission community" },
   { title: "Contact Vineyard Florence", description: "Ask a question or start a conversation with Vineyard Florence.", href: "/#footer", keywords: "email contact office conversation question" },
 ];
 
-/** Case-insensitive match across title, description and keywords. */
-export function filterSearchIndex(query: string, fallbackCount = 4): SearchItem[] {
-  const normalized = query.trim().toLowerCase();
-  if (!normalized) return searchIndex.slice(0, fallbackCount);
-  return searchIndex.filter((item) =>
-    `${item.title} ${item.description} ${item.keywords}`.toLowerCase().includes(normalized),
-  );
+/*
+ * Search understands everyday questions ("how do I register my kids?"), not
+ * just exact phrases. Filler words are ignored, word endings are loosened
+ * (register / registration, kid / kids) and common synonyms are expanded, then
+ * every page is scored on how many of the remaining words it covers.
+ */
+
+/** Words that carry no meaning for finding a page. */
+const searchStopWords = new Set(
+  ("a about am an and any are at be can could do does find for from get go "
+  + "have help how i im in info information is it know learn me more my need "
+  + "of on or our page please see should show some tell that the there this "
+  + "to us want we what when where which who will with you your "
+  + "vineyard florence vf church").split(" "),
+);
+
+/** Each group is treated as the same idea; the first word is the canonical one. */
+const searchSynonyms: string[][] = [
+  ["kid", "kids", "child", "children", "childrens", "nursery", "toddler", "baby", "babies", "son", "daughter", "preschool", "elementary"],
+  ["student", "students", "youth", "teen", "teens", "teenager", "teenagers"],
+  ["register", "registration", "signup", "sign", "enroll", "enrol", "preregister", "join"],
+  ["give", "giving", "donate", "donation", "tithe", "tithing", "offering", "money"],
+  ["service", "services", "sunday", "sundays", "times", "worship"],
+  ["sermon", "sermons", "message", "messages", "livestream", "watch", "video", "online"],
+  ["group", "groups", "smallgroup", "housegroup"],
+  ["contact", "email", "phone", "call", "office", "ask", "question", "questions"],
+  ["staff", "pastor", "pastors", "team", "leader", "leaders"],
+  ["direction", "directions", "address", "location", "park", "parking", "map"],
+  ["event", "events", "calendar", "happening", "upcoming"],
+  ["volunteer", "serve", "serving", "outreach"],
+  ["new", "visit", "visiting", "visitor", "first"],
+];
+
+const synonymLookup = new Map<string, string[]>();
+for (const group of searchSynonyms) for (const word of group) synonymLookup.set(word, group);
+
+function searchWords(text: string): string[] {
+  return text.toLowerCase().replace(/[’']/g, "").split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+/** Loosen common English endings so "registration" and "register" meet. */
+function stem(word: string): string {
+  let result = word;
+  if (result.length > 4 && result.endsWith("ies")) result = `${result.slice(0, -3)}y`;
+  else if (result.length > 3 && result.endsWith("s") && !result.endsWith("ss")) result = result.slice(0, -1);
+  for (const ending of ["ation", "ing", "ed", "er"]) {
+    if (result.length - ending.length >= 4 && result.endsWith(ending)) return result.slice(0, -ending.length);
+  }
+  return result;
+}
+
+function wordsMatch(queryWord: string, pageWord: string): boolean {
+  if (queryWord === pageWord) return true;
+  const a = stem(queryWord);
+  const b = stem(pageWord);
+  if (a === b) return true;
+  // Shared beginnings of five or more letters: "regist(er)" / "regist(ration)".
+  const shared = Math.min(a.length, b.length);
+  return shared >= 5 && a.slice(0, 5) === b.slice(0, 5);
+}
+
+function fieldContains(fieldWords: string[], variants: string[]): boolean {
+  return variants.some((variant) => fieldWords.some((word) => wordsMatch(variant, word)));
+}
+
+/**
+ * The single best page for a search, or `null` when nothing fits.
+ * Title matches count most, then keywords, then the description; a page
+ * that covers every meaningful word in the search gets a bonus.
+ */
+export function findSearchResult(query: string): SearchItem | null {
+  const terms = searchWords(query).filter((word) => !searchStopWords.has(word));
+  if (!terms.length) return null;
+
+  let best: SearchItem | null = null;
+  let bestScore = 0;
+  for (const item of searchIndex) {
+    const title = searchWords(item.title);
+    const keywords = searchWords(item.keywords);
+    const description = searchWords(item.description);
+    let score = 0;
+    let matched = 0;
+    for (const term of terms) {
+      const variants = synonymLookup.get(term) ?? [term];
+      const exact = [term];
+      const points = fieldContains(title, exact) ? 4
+        : fieldContains(title, variants) ? 3
+        : fieldContains(keywords, exact) ? 2.5
+        : fieldContains(keywords, variants) ? 2
+        : fieldContains(description, variants) ? 1
+        : 0;
+      if (points) matched += 1;
+      score += points;
+    }
+    if (matched === terms.length) score += 2;
+    if (score > bestScore) {
+      best = item;
+      bestScore = score;
+    }
+  }
+  return best;
 }
 
 /**

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import Lenis from "lenis";
+import { HeaderSearch } from "./components/HeaderSearch";
 import { SiteFooter } from "./components/SiteFooter";
 import { TriadMark } from "./components/TriadMark";
 import { usePrefersReducedMotion } from "./lib/use-prefers-reduced-motion";
@@ -14,8 +15,6 @@ import {
   everyOrgCryptoGivingUrl,
   churchCenterSignInUrl,
   directionsUrl,
-  filterSearchIndex,
-  goToSearchResult,
   logoSize,
   logoWhiteUrl,
   primaryNavigation,
@@ -158,7 +157,6 @@ const frequentlyAskedQuestions = [
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   const [activeStep, setActiveStep] = useState(1);
   const [headerSolid, setHeaderSolid] = useState(false);
   const [introComplete, setIntroComplete] = useState(false);
@@ -202,16 +200,7 @@ export default function Home() {
     return () => document.removeEventListener("pointerdown", onPointerDown);
   }, [menuOpen]);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("search-open", searchOpen);
-    const focusTimer = searchOpen
-      ? window.setTimeout(() => document.getElementById("site-search-input")?.focus(), 420)
-      : 0;
-    return () => {
-      if (focusTimer) window.clearTimeout(focusTimer);
-      document.documentElement.classList.remove("search-open");
-    };
-  }, [searchOpen]);
+  const closeSearch = useCallback(() => setSearchOpen(false), []);
 
   useEffect(() => {
     let introAlreadySeen = false;
@@ -342,14 +331,6 @@ export default function Home() {
     };
   }, [prefersReducedMotion]);
 
-  const normalizedSearch = searchQuery.trim().toLowerCase();
-  const searchResults = filterSearchIndex(searchQuery);
-
-  const closeSearch = () => {
-    setSearchOpen(false);
-    setSearchQuery("");
-  };
-
   return (
     <main className="home-page">
       {!introComplete && (
@@ -369,7 +350,7 @@ export default function Home() {
 
       <header className={`site-header ${headerSolid ? "is-scrolled" : ""}`}>
         <div className="header-left">
-          <button className="header-icon-button menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-controls="site-navigation" aria-expanded={menuOpen} onClick={() => { setSearchOpen(false); setSearchQuery(""); setMenuOpen((open) => !open); }}>
+          <button className="header-icon-button menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-controls="site-navigation" aria-expanded={menuOpen} onClick={() => { setSearchOpen(false); setMenuOpen((open) => !open); }}>
             <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>
             <span className="header-control-label">{menuOpen ? "Close" : "Menu"}</span>
           </button>
@@ -382,11 +363,10 @@ export default function Home() {
             onClick={() => {
               setMenuOpen(false);
               setSearchOpen((open) => !open);
-              if (searchOpen) setSearchQuery("");
             }}
           >
             <span className="search-symbol" aria-hidden="true" />
-            <span className="header-control-label">Search</span>
+            <span className="header-control-label">{searchOpen ? "Close" : "Search"}</span>
           </button>
           <a className="header-icon-button header-link watch-button" href={youtubeUrl} target="_blank" rel="noreferrer" aria-label="Watch Vineyard Florence on YouTube">
             <span className="play-symbol" aria-hidden="true" />
@@ -428,61 +408,8 @@ export default function Home() {
           </nav>
           <p>{serviceTimes}<br /><a href={directionsUrl} target="_blank" rel="noreferrer">{address.street}<br />{address.city}, {address.state} {address.zip} ↗</a></p>
         </div>
+        <HeaderSearch id="site-search" open={searchOpen} onClose={closeSearch} />
       </header>
-
-      <div className={`site-search ${searchOpen ? "is-open" : ""}`} id="site-search" role="dialog" aria-modal="true" aria-hidden={!searchOpen} aria-label="Search Vineyard Florence">
-        <div className="search-shell">
-          <div className="search-heading">
-            <p className="eyebrow">Find Your Way</p>
-            <h2>What Are You<br /><em>Looking For?</em></h2>
-          </div>
-          <form
-            className="search-form"
-            role="search"
-            onSubmit={(event) => {
-              event.preventDefault();
-              if (searchResults[0]) {
-                closeSearch();
-                goToSearchResult(searchResults[0].href);
-              }
-            }}
-          >
-            <label htmlFor="site-search-input">Search Vineyard Florence</label>
-            <div className="search-field">
-              <span className="search-field-icon" aria-hidden="true" />
-              <input
-                id="site-search-input"
-                type="search"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
-                placeholder="Try “prayer,” “kids” or “service times”"
-                autoComplete="off"
-              />
-              {searchQuery && <button type="button" onClick={() => setSearchQuery("")} aria-label="Clear search">Clear</button>}
-            </div>
-          </form>
-
-          <div className="search-results" aria-live="polite">
-            <div className="search-results-meta">
-              <span>{normalizedSearch ? `${searchResults.length} ${searchResults.length === 1 ? "result" : "results"}` : "Popular places"}</span>
-              <small>Press ESC to close</small>
-            </div>
-            {searchResults.length > 0 ? (
-              <div className="search-results-list">
-                {searchResults.map((item, index) => (
-                  <Link href={item.href} key={item.title} onClick={closeSearch}>
-                    <span>0{index + 1}</span>
-                    <div><strong>{item.title}</strong><p>{item.description}</p></div>
-                    <b aria-hidden="true">↗</b>
-                  </Link>
-                ))}
-              </div>
-            ) : (
-              <div className="search-empty"><strong>No matches yet.</strong><p>Try a broader word like “connect,” “Sunday” or “prayer.”</p></div>
-            )}
-          </div>
-        </div>
-      </div>
 
       <section className="hero" id="top" aria-label="Welcome to Vineyard Florence">
         <div className="hero-frame">

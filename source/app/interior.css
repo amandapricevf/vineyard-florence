@@ -970,3 +970,18 @@ main textarea {
 .site-header .mobile-menu nav a .nav-marker{color:var(--vine);width:30px}
 .site-header .mobile-menu p{background:var(--paper);border-radius:0 0 14px 14px;color:rgba(14,36,31,.7);font-size:10px;margin:0;padding:14px 22px}
 @media(max-width:620px){.site-header .mobile-menu{left:12px;max-height:calc(100vh - 150px)}}
+
+/* Search: a single search bar that drops down under the header. Enter goes
+   straight to the best-matching page. */
+.visually-hidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}
+.site-header .header-search{background:white;border-radius:14px;box-shadow:0 18px 50px rgba(14,36,31,.22);color:var(--ink);left:4vw;opacity:0;padding:10px;pointer-events:none;position:absolute;top:calc(100% + 8px);transform:translateY(-10px);transition:transform .25s ease,opacity .2s ease,visibility 0s linear .2s;visibility:hidden;width:min(520px,calc(100vw - 24px));z-index:40}
+.site-header .header-search.is-open{opacity:1;pointer-events:auto;transform:translateY(0);transition:transform .25s ease,opacity .2s ease;visibility:visible}
+.site-header .header-search *{transition:none!important}
+.site-header .header-search form{display:flex;gap:8px}
+.site-header .header-search input{appearance:none;background:var(--paper);border:1px solid rgba(14,36,31,.15);border-radius:9px;color:var(--ink);flex:1;font:inherit;font-size:16px;min-width:0;padding:12px 14px}
+.site-header .header-search input:focus{border-color:var(--vine);outline:2px solid rgba(52,99,91,.25)}
+.site-header .header-search button{background:var(--vine);border:0;border-radius:9px;color:white;cursor:pointer;font:inherit;font-size:11px;font-weight:800;letter-spacing:.12em;padding:0 18px;text-transform:uppercase}
+.site-header .header-search button:hover{background:var(--ink)}
+.header-search-empty{font-size:14px;line-height:1.5;margin:10px 4px 2px}
+.header-search-empty a{color:var(--vine);font-weight:700;text-decoration:underline}
+@media(max-width:620px){.site-header .header-search{left:12px}}

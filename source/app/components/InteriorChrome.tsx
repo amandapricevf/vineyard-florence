@@ -1,20 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import {
   address,
   churchCenterGivingUrl,
   churchCenterSignInUrl,
   directionsUrl,
-  filterSearchIndex,
-  goToSearchResult,
   logoSize,
   logoWhiteUrl,
   primaryNavigation,
   serviceTimes,
   youtubeUrl,
 } from "../site-data";
+import { HeaderSearch } from "./HeaderSearch";
 import { SiteFooter } from "./SiteFooter";
 
 export { SiteTicker } from "./SiteTicker";
@@ -27,7 +26,6 @@ export function InteriorFooter() {
 export function InteriorHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -50,29 +48,11 @@ export function InteriorHeader() {
     return () => document.removeEventListener("pointerdown", onPointerDown);
   }, [menuOpen]);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("search-open", searchOpen);
-    const focusTimer = searchOpen
-      ? window.setTimeout(() => document.getElementById("interior-search-input")?.focus(), 420)
-      : 0;
-    return () => {
-      if (focusTimer) window.clearTimeout(focusTimer);
-      document.documentElement.classList.remove("search-open");
-    };
-  }, [searchOpen]);
-
-  const normalizedQuery = query.trim().toLowerCase();
-  const results = useMemo(() => filterSearchIndex(query), [query]);
+  const closeSearch = useCallback(() => setSearchOpen(false), []);
 
   const closeAll = () => {
     setMenuOpen(false);
     setSearchOpen(false);
-    setQuery("");
-  };
-
-  const goTo = (href: string) => {
-    closeAll();
-    goToSearchResult(href);
   };
 
   return (
@@ -87,7 +67,6 @@ export function InteriorHeader() {
             aria-expanded={menuOpen}
             onClick={() => {
               setSearchOpen(false);
-              setQuery("");
               setMenuOpen((open) => !open);
             }}
           >
@@ -103,11 +82,10 @@ export function InteriorHeader() {
             onClick={() => {
               setMenuOpen(false);
               setSearchOpen((open) => !open);
-              if (searchOpen) setQuery("");
             }}
           >
             <span className="search-symbol" aria-hidden="true" />
-            <span className="header-control-label">Search</span>
+            <span className="header-control-label">{searchOpen ? "Close" : "Search"}</span>
           </button>
           <a className="header-icon-button header-link watch-button" href={youtubeUrl} target="_blank" rel="noreferrer" aria-label="Watch Vineyard Florence on YouTube">
             <span className="play-symbol" aria-hidden="true" />
@@ -149,75 +127,9 @@ export function InteriorHeader() {
             </a>
           </p>
         </div>
+        <HeaderSearch id="interior-site-search" open={searchOpen} onClose={closeSearch} />
       </header>
 
-      <div
-        className={`site-search interior-search ${searchOpen ? "is-open" : ""}`}
-        id="interior-site-search"
-        role="dialog"
-        aria-modal="true"
-        aria-hidden={!searchOpen}
-        aria-label="Search Vineyard Florence"
-      >
-        <div className="search-shell">
-          <div className="search-heading">
-            <p className="eyebrow">Find Your Way</p>
-            <h2>What Are You<br /><em>Looking For?</em></h2>
-          </div>
-          <form
-            className="search-form"
-            role="search"
-            onSubmit={(event) => {
-              event.preventDefault();
-              if (results[0]) goTo(results[0].href);
-            }}
-          >
-            <label htmlFor="interior-search-input">Search Vineyard Florence</label>
-            <div className="search-field">
-              <span className="search-field-icon" aria-hidden="true" />
-              <input
-                id="interior-search-input"
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Try “staff,” “beliefs” or “service times”"
-                autoComplete="off"
-              />
-              {query && (
-                <button type="button" onClick={() => setQuery("")} aria-label="Clear search">
-                  Clear
-                </button>
-              )}
-            </div>
-          </form>
-          <div className="search-results" aria-live="polite">
-            <div className="search-results-meta">
-              <span>
-                {normalizedQuery
-                  ? `${results.length} ${results.length === 1 ? "result" : "results"}`
-                  : "Popular places"}
-              </span>
-              <small>Press ESC to close</small>
-            </div>
-            {results.length ? (
-              <div className="search-results-list">
-                {results.map((item, index) => (
-                  <Link href={item.href} key={item.title} onClick={closeAll}>
-                    <span>0{index + 1}</span>
-                    <div><strong>{item.title}</strong><p>{item.description}</p></div>
-                    <b aria-hidden="true">↗</b>
-                  </Link>
-                ))}
-              </div>
-            ) : (
-              <div className="search-empty">
-                <strong>No matches yet.</strong>
-                <p>Try “staff,” “beliefs,” “Sunday” or “prayer.”</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
     </>
   );
 }
