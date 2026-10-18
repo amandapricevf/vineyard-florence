@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
-import { churchCenterGivingUrl, contactEmail } from "../site-data";
+import { churchCenterGivingUrl, contactFormLink } from "../site-data";
 import "./merp.css";
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Making disciples who make disciples among people on the move. Explore MERP’s vision for local leadership, church planting and humanitarian relief, and find ways to partner, pray or give.",
 };
 
-const contactMerp = (subject: string) => `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`;
+const contactMerp = contactFormLink;
 const locations = ["Turkey", "Greece", "North Macedonia", "Central Europe", "Cyprus", "And Beyond"];
 const steps = [
   {
@@ -103,7 +103,7 @@ export default function MerpPage() {
           <article><p className="eyebrow">Pray</p><h3>Make Room For Prayer.</h3><p>Pray for safety and hope for displaced families, wisdom for local leaders, and homes and fair-wage work for women.</p><Link href="/prayer#join">Join A Prayer Gathering <span aria-hidden="true">↗</span></Link></article>
           <article><p className="eyebrow">Give</p><h3>Help The Work Grow.</h3><p>Ask the VF team how to support MERP specifically, or visit Vineyard Florence’s giving page.</p><a href={contactMerp("Giving To MERP")}>Ask About Giving To MERP <span aria-hidden="true">↗</span></a><a href={churchCenterGivingUrl} target="_blank" rel="noreferrer">Open VF Giving <span aria-hidden="true">↗</span></a></article>
         </div>
-        <div className="merp-contact"><p>Have a question about MERP?</p><a href={contactMerp("Question About MERP")}>{contactEmail} <span aria-hidden="true">↗</span></a></div>
+        <div className="merp-contact"><p>Have a question about MERP?</p><a href={contactMerp("Question About MERP")}>Send Us A Message <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <InteriorFooter />

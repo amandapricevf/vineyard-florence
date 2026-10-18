@@ -3,6 +3,7 @@
   const originalFetch = window.fetch.bind(window);
   const formNames = {
     "/api/prayer-requests": () => "prayer-request",
+    "/api/contact": () => "contact",
     "/api/kids-forms": payload => `kids-${payload.formType}`,
     "/api/student-forms": payload => `students-${payload.formType}`,
   };

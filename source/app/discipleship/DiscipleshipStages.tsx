@@ -3,7 +3,7 @@
 import { useState } from "react";
 import {
   churchCenterGroupsUrl,
-  contactEmail,
+  contactFormLink,
   houseGroupInterestUrl,
 } from "../site-data";
 
@@ -18,7 +18,7 @@ type Stage = {
   nextSteps: { label: string; href: string; external?: boolean }[];
 };
 
-const ask = (subject: string) => `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`;
+const ask = contactFormLink;
 
 const stages: Stage[] = [
   {

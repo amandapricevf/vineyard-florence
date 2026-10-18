@@ -49,6 +49,10 @@ export const churchCenterGroupsUrl = "https://vineyardflorence.churchcenter.com/
 export const houseGroupInterestUrl = "https://vineyardflorence.churchcenter.com/people/forms/688987";
 export const churchCenterEventsUrl = "https://vineyardflorence.churchcenter.com/registrations";
 export const prayerRequestUrl = "/prayer-request";
+export const contactFormUrl = "/contact";
+
+/** Link to the contact form with its subject line pre-filled. */
+export const contactFormLink = (subject: string) => `${contactFormUrl}?subject=${encodeURIComponent(subject)}`;
 export const youtubeUrl = "https://www.youtube.com/@VineyardFlorence";
 export const facebookUrl = "https://www.facebook.com/vineyardflorence";
 export const instagramUrl = "https://www.instagram.com/vineyardflorence";
@@ -124,6 +128,7 @@ export const searchIndex: SearchItem[] = [
   { title: "Latvia", description: "Explore Latvia ministry updates on Facebook.", href: latviaFacebookUrl, keywords: "latvia ministry global mission outreach facebook" },
   { title: "Up, In & Out", description: "Our whole-life pathway for loving God, making disciples and impacting the world.", href: "/#pathway", keywords: "discipleship connect up in out love god community" },
   { title: "Prayer Hub", description: "Request prayer, join a gathering or learn Vineyard's five-step prayer model.", href: "/prayer", keywords: "pray healing holy spirit gathering request five step model" },
+  { title: "Contact Us", description: "Send the Vineyard Florence team a question or message.", href: contactFormUrl, keywords: "contact email question message ask help office reach" },
   { title: "Submit A Prayer Request", description: "Share a confidential prayer request with the Vineyard Florence prayer team.", href: prayerRequestUrl, keywords: "request prayer form confidential care pastoral help" },
   { title: "VF Foundations", description: "Go deeper through Vineyard Florence's eight-week Foundations course.", href: "/discipleship#resources", keywords: "foundations course class eight week 8 week deeper" },
   { title: "Upcoming Events", description: "Explore courses, gatherings, camps, baptisms and life at VF.", href: "/events", keywords: "events calendar alpha baptism upcoming foundations camp pantry" },

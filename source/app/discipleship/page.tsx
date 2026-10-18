@@ -4,7 +4,7 @@ import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/Interi
 import { TriadMark } from "../components/TriadMark";
 import { DiscipleshipStages } from "./DiscipleshipStages";
 import {
-  contactEmail,
+  contactFormLink,
   churchCenterGroupsUrl,
   houseGroupInterestUrl,
 } from "../site-data";
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 };
 
 const wahaUrl = "https://waha.app/eng";
-const leaderEmailUrl = `mailto:${contactEmail}?subject=I%20Want%20To%20Lead%20A%20House%20Group`;
-const leaderStepUrl = (subject: string) => `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`;
+const leaderEmailUrl = contactFormLink("I Want To Lead A House Group");
+const leaderStepUrl = contactFormLink;
 
 const upInOut = [
   {

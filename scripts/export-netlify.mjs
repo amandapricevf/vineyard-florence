@@ -28,6 +28,7 @@ async function findPages(directory, parts = []) {
 await findPages(path.join(source, "app"));
 const forms = {
   "/prayer-request": "prayer-request",
+  "/contact": "contact",
   "/kids/register": "kids-registration",
   "/kids/media-release": "kids-media-release",
   "/students/new": "students-new-student",
@@ -43,7 +44,7 @@ for (const route of routes) {
   html = portableFonts(html.replaceAll("https://vineyard-florence.caaprojects.chatgpt.site/", "/"));
   html = html.replace("<head>", '<head><script src="/netlify-adapter.js"></script>');
   if (forms[route]) {
-    const form = html.match(/<form\b[\s\S]*?<\/form>/)?.[0];
+    const form = html.match(/<form\b[^>]*class="kids-form[\s\S]*?<\/form>/)?.[0];
     if (!form) throw new Error(`Missing form: ${route}`);
     const names = [...new Set([...form.matchAll(/\bname="([^"]+)"/g)].map(match => match[1]))];
     names.push("formType");
