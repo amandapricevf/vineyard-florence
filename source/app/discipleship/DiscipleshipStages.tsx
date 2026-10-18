@@ -3,6 +3,7 @@
 import { useState } from "react";
 import {
   churchCenterGroupsUrl,
+  contactFormLink,
   contactTopicLink,
   houseGroupInterestUrl,
 } from "../site-data";
@@ -45,7 +46,7 @@ const stages: Stage[] = [
       { label: "Ask About VF Foundations", href: contactTopicLink("vf-foundations") },
       { label: "Join A House Group", href: houseGroupInterestUrl },
       { label: "Serve And Become A Ministry Partner", href: "/ministries" },
-      { label: "Give Your Time, Talent And Treasure", href: "/connect" },
+      { label: "Give Your Time, Talent And Treasure", href: contactFormLink("Give Your Time, Talent And Treasure") },
       { label: "Explore Prayer Training", href: "/prayer" },
     ],
   },
