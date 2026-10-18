@@ -181,6 +181,16 @@ rather than guessing. Do not add a speculative one.
 
 ---
 
+## 8. Netlify form names must say what the form is
+
+Netlify Forms lists each form by the name set in `scripts/export-netlify.mjs`
+(and mirrored in `scripts/netlify-adapter.js`). Church staff read that list, so
+every form name must make it obvious which form it is, e.g.
+`contact-us-general-questions` or `kids-media-release`, never a generic name
+like `contact` or `form`. Use the same name in both files.
+
+---
+
 ## New / moved / deleted files at a glance
 
 **Added**

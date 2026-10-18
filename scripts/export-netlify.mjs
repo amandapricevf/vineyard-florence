@@ -28,7 +28,7 @@ async function findPages(directory, parts = []) {
 await findPages(path.join(source, "app"));
 const forms = {
   "/prayer-request": "prayer-request",
-  "/contact": "contact",
+  "/contact": "contact-us-general-questions",
   "/kids/register": "kids-registration",
   "/kids/media-release": "kids-media-release",
   "/students/new": "students-new-student",
