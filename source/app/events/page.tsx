@@ -76,7 +76,6 @@ export default function EventsPage() {
           <div className="events-horizon-details"><span>Status</span><strong>Now Open</strong><span>Ways To Help</span><strong>Furnish · give · pray</strong></div>
           <div className="events-horizon-actions">
             <a className="button button-dark" href="https://a.co/04FZOIZG" target="_blank" rel="noreferrer">View Amazon Wish List <span aria-hidden="true">↗</span></a>
-            <a className="text-link" href="https://www.vineyardflorence.church/events/5n8h7sx5x8g7kqzkhqb0e925i2mrs8" target="_blank" rel="noreferrer">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>

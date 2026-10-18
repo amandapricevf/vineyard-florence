@@ -31,9 +31,9 @@ export type ChurchEvent = {
   /** Intrinsic pixel size of `image`, so the browser can reserve space. */
   imageSize: { width: number; height: number };
   alt: string;
+  /** Church Center registration page; the old website's event pages are retired. */
   primaryHref: string;
   primaryLabel: string;
-  detailsHref?: string;
   /** Kicker shown when this event is in the featured slot. */
   category: string;
   /** Long-form date line for the featured panel, e.g. "Wednesday · August 19". */
@@ -65,7 +65,6 @@ export const churchEvents: ChurchEvent[] = [
     alt: "VF eight week Foundations course announcement",
     primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3809818",
     primaryLabel: "Register",
-    detailsHref: "https://www.vineyardflorence.church/events/vf-foundations-course",
     featuredDate: "Wednesdays · September 16 – November 4",
     featuredHeadline: "Eight Weeks To Go",
     featuredHeadlineEmphasis: "Deeper.",
@@ -87,7 +86,6 @@ export const churchEvents: ChurchEvent[] = [
     alt: "Men of Courage Camp October 2 through 4 announcement",
     primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3212367",
     primaryLabel: "Register",
-    detailsHref: "https://www.vineyardflorence.church/events/men-of-courage-camp",
     featuredDate: "October 2–4",
     featuredHeadline: "A Weekend Of",
     featuredHeadlineEmphasis: "Brotherhood.",
@@ -108,7 +106,6 @@ export const churchEvents: ChurchEvent[] = [
     alt: "Ladies, you are invited to the Fall for Jesus Party at Vineyard Florence Church, Sunday October 25th at 5:30 PM",
     primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3910383",
     primaryLabel: "Register",
-    detailsHref: "https://www.vineyardflorence.church/events/womens-fall-for-jesus-party",
     featuredDate: "Sunday · October 25",
     featuredWhen: "5:30–8:00 PM",
     featuredHeadline: "Ladies, You Are",
@@ -130,7 +127,6 @@ export const churchEvents: ChurchEvent[] = [
     alt: "Hallelujah Harvest Party, October 28, 6:00 to 7:30 PM: games, treats, costume contest and more",
     primaryHref: "https://vineyardflorence.churchcenter.com/registrations/signups/3937820",
     primaryLabel: "Register",
-    detailsHref: "https://www.vineyardflorence.church/events/hallelujah-harvest-party",
     featuredDate: "Wednesday · October 28",
     featuredWhen: "6:00–7:30 PM",
     featuredHeadline: "Games, Treats And",
@@ -153,8 +149,6 @@ export const churchEvents: ChurchEvent[] = [
     alt: "Red Bird Mission trip announcement",
     primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3423004",
     primaryLabel: "Register",
-    detailsHref:
-      "https://www.vineyardflorence.church/events/red-bird-mission-trip-2s69m-jezb2-gws53-pntg6-h7y45-k9d7g-szn3p-7lff4",
     featuredDate: "October 29 – November 1",
     featuredHeadline: "Serve Our Neighbors In",
     featuredHeadlineEmphasis: "Appalachia.",
@@ -176,7 +170,6 @@ export const churchEvents: ChurchEvent[] = [
     alt: "The Outpouring youth conference logo",
     primaryHref: "https://www.theoutpouringretreat.com/",
     primaryLabel: "Register",
-    detailsHref: "https://www.vineyardflorence.church/events/the-outpouring-pm7mm",
     featuredDate: "November 6–8",
     featuredWhere: "Camp Chautauqua · 10550 Camp Trail · Miamisburg, OH",
     featuredHeadline: "One Encounter Can",
@@ -197,8 +190,7 @@ export const churchEvents: ChurchEvent[] = [
     imageSize: { width: 1024, height: 768 },
     alt: "Vineyard Men of Courage announcement",
     primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3859007",
-    primaryLabel: "View Details",
-    detailsHref: "https://www.vineyardflorence.church/events/men-of-courage-pyh3s",
+    primaryLabel: "Register",
     featuredDate: "Saturday · November 7",
     featuredHeadline: "Breakfast, Brotherhood,",
     featuredHeadlineEmphasis: "Belonging.",
@@ -214,8 +206,9 @@ export type Rhythm = {
   image: string;
   imageSize: { width: number; height: number };
   alt: string;
-  href: string;
-  cta: string;
+  /** Optional button. Omit both for a card with no link. */
+  href?: string;
+  cta?: string;
 };
 
 export const rhythms: Rhythm[] = [
@@ -240,7 +233,7 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/prayer-opportunities.webp",
     imageSize: { width: 400, height: 500 },
     alt: "Vineyard Florence prayer opportunities announcement",
-    href: "https://www.vineyardflorence.church/events/prayer-opportunities",
+    href: "/prayer",
     cta: "See prayer times",
   },
   {
@@ -252,8 +245,6 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/free-pantry.webp",
     imageSize: { width: 1024, height: 768 },
     alt: "Vineyard Florence free pantry announcement",
-    href: "https://www.vineyardflorence.church/events/grocery-giveaway-rtljl-8nm3g",
-    cta: "Pantry details",
   },
   {
     kicker: "A Public Yes",
@@ -264,8 +255,6 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/baptisms.webp",
     imageSize: { width: 1500, height: 844 },
     alt: "Vineyard Florence baptism announcement",
-    href: "https://www.vineyardflorence.church/events/baptism-hhpw6-38z2j-b4lwh-2am79-xt9mk-enksl-4rh65-atla5-ajmxf-rdkx8-s6gm6-w9xgy-l7hph-htr73",
-    cta: "Baptism Details",
   },
   {
     kicker: "Women At VF",
@@ -276,7 +265,7 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/womens-ministry.webp",
     imageSize: { width: 1500, height: 844 },
     alt: "Vineyard Florence Women’s Ministry announcement",
-    href: "https://www.vineyardflorence.church/events/womens-ministry-xdzfd-andfe",
+    href: "/ministries#women",
     cta: "Women’s Ministry Details",
   },
   {
@@ -288,7 +277,7 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/men-of-courage.webp",
     imageSize: { width: 1024, height: 768 },
     alt: "Vineyard Men of Courage announcement",
-    href: "https://www.vineyardflorence.church/events/men-of-courage-pyh3s",
+    href: "/ministries#men",
     cta: "Men Of Courage Details",
   },
 ];

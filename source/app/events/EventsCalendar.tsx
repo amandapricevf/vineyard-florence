@@ -111,11 +111,6 @@ function FeaturedEvent({ event }: { event: ChurchEvent }) {
           <a className="button button-light" href={event.primaryHref} target="_blank" rel="noreferrer">
             {event.primaryLabel} <span aria-hidden="true">↗</span>
           </a>
-          {event.detailsHref ? (
-            <a className="text-link light" href={event.detailsHref} target="_blank" rel="noreferrer">
-              Full details <span aria-hidden="true">→</span>
-            </a>
-          ) : null}
         </div>
       </div>
     </section>
@@ -153,19 +148,14 @@ function EventRow({ event, number }: { event: ChurchEvent; number: number }) {
           >
             {event.primaryLabel} <span aria-hidden="true">↗</span>
           </a>
-          {event.detailsHref && (
-            <a className="text-link" href={event.detailsHref} target="_blank" rel="noreferrer">
-              Full details <span aria-hidden="true">→</span>
-            </a>
-          )}
         </div>
       </div>
       <a
         className="event-row-image"
-        href={event.detailsHref || event.primaryHref}
+        href={event.primaryHref}
         target="_blank"
         rel="noreferrer"
-        aria-label={`View details for ${event.title}`}
+        aria-label={`${event.primaryLabel}: ${event.title}`}
       >
         <img
           src={event.image}
@@ -213,9 +203,17 @@ export function EventRhythms() {
               <h3>{rhythm.title}</h3>
               <strong>{rhythm.schedule}</strong>
               <p>{rhythm.description}</p>
-              <a href={rhythm.href} target="_blank" rel="noreferrer">
-                {rhythm.cta} <span aria-hidden="true">↗</span>
-              </a>
+              {rhythm.href && rhythm.cta ? (
+                rhythm.href.startsWith("http") ? (
+                  <a href={rhythm.href} target="_blank" rel="noreferrer">
+                    {rhythm.cta} <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <a href={rhythm.href}>
+                    {rhythm.cta} <span aria-hidden="true">→</span>
+                  </a>
+                )
+              ) : null}
             </div>
           </article>
         ))}
