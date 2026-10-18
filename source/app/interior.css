@@ -990,3 +990,19 @@ main textarea {
    came from a specific link (each topic is its own Netlify form). */
 .contact-topic{background:white;border-left:3px solid var(--vine);font-size:18px;font-weight:600;margin:0;padding:14px 18px}
 .contact-topic span{color:var(--vine);display:block;font-size:9px;font-weight:800;letter-spacing:.2em;margin-bottom:6px;text-transform:uppercase}
+
+/* Simple information pages (Baptisms, Free Pantry): the form-page hero and
+   two-column shell, with readable body copy on the right. */
+.info-shell-alt{background:white}
+.info-body{max-width:720px}
+.info-body img{border-radius:14px;display:block;height:auto;margin-bottom:34px;width:100%}
+.info-body p{color:rgba(21,21,21,.78);font-size:18px;line-height:1.7;margin:0 0 20px}
+.info-body p a{color:var(--vine);font-weight:700;text-decoration:underline}
+.info-body h3{font-size:24px;font-weight:600;letter-spacing:-.03em;margin:38px 0 10px}
+.info-callout{background:var(--paper);border-left:3px solid var(--vine);color:var(--ink)!important;font-weight:600;padding:18px 22px}
+.info-shell-alt .info-callout{background:var(--paper)}
+.info-details{border-top:1px solid var(--line);margin:28px 0}
+.info-details div{border-bottom:1px solid var(--line);display:grid;gap:18px;grid-template-columns:90px 1fr;padding:14px 0}
+.info-details dt{color:var(--vine);font-size:10px;font-weight:800;letter-spacing:.18em;padding-top:4px;text-transform:uppercase}
+.info-details dd{font-size:17px;line-height:1.5;margin:0}
+.info-actions{align-items:center;display:flex;flex-wrap:wrap;gap:24px;margin-top:30px}

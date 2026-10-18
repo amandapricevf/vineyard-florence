@@ -239,12 +239,14 @@ export const rhythms: Rhythm[] = [
   {
     kicker: "For Our Neighbors",
     title: "VF’s Free Pantry",
-    schedule: "Second Sunday + fourth Tuesday each month",
+    schedule: "Fourth Tuesday of each month · 6:00–7:30 PM",
     description:
       "The pantry provides free groceries for neighbors in need and a practical way for volunteers to serve, prepare and pray together.",
     image: "/images/events/free-pantry.webp",
     imageSize: { width: 1024, height: 768 },
     alt: "Vineyard Florence free pantry announcement",
+    href: "/free-pantry",
+    cta: "Pantry Details",
   },
   {
     kicker: "A Public Yes",
@@ -255,6 +257,8 @@ export const rhythms: Rhythm[] = [
     image: "/images/events/baptisms.webp",
     imageSize: { width: 1500, height: 844 },
     alt: "Vineyard Florence baptism announcement",
+    href: "/baptisms",
+    cta: "Baptism Details",
   },
   {
     kicker: "Women At VF",

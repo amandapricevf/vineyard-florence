@@ -14,5 +14,7 @@
   { "topic": "vf-foundations", "formName": "contact-vf-foundations-course", "subject": "I Want To Explore VF Foundations" },
   { "topic": "vf-freedom", "formName": "contact-vf-freedom", "subject": "I Want To Learn About VF Freedom" },
   { "topic": "leadership-essentials", "formName": "contact-vineyard-leadership-essentials", "subject": "Vineyard Leadership Essentials" },
-  { "topic": "pastoring-eldership-church-planting", "formName": "contact-pastoring-eldership-church-planting", "subject": "Pastoring, Eldership Or Church Planting" }
+  { "topic": "pastoring-eldership-church-planting", "formName": "contact-pastoring-eldership-church-planting", "subject": "Pastoring, Eldership Or Church Planting" },
+  { "topic": "baptism", "formName": "contact-baptism-questions", "subject": "Questions About Baptism" },
+  { "topic": "free-pantry-serve", "formName": "contact-free-pantry-volunteer", "subject": "I Want To Serve At VF’s Free Pantry" }
 ]
