@@ -29,6 +29,7 @@ await findPages(path.join(source, "app"));
 const forms = {
   "/prayer-request": "prayer-request",
   "/contact": "contact-us-general-questions",
+  "/join-a-house-group": "house-group-interest-signup",
   "/kids/register": "kids-registration",
   "/kids/media-release": "kids-media-release",
   "/students/new": "students-new-student",

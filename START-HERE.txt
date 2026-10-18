@@ -9,7 +9,7 @@ QUICKEST WAY TO GO LIVE
 4. Open the Netlify URL and check the homepage, Ministries, MERP, Kids,
    Students, Prayer and Discipleship pages.
 5. In your Netlify project, enable form detection if needed, then redeploy
-   the same "deploy" folder so Netlify detects all eight forms.
+   the same "deploy" folder so Netlify detects all nine forms.
 6. Submit a test form, confirm it appears in Netlify Forms, and configure
    email notifications to info@vineyardflorence.church (or your chosen inbox).
    Only the notification address is needed; Outlook API credentials are not
@@ -26,7 +26,7 @@ WHAT IS INCLUDED
 - A Netlify function for importing the newest YouTube services.
 
 FORMS ON NETLIFY
-The eight forms are Contact; Prayer Request; Kids Registration; Kids Media Release;
+The nine forms are Contact Us General Questions; House Group Interest Signup; Prayer Request; Kids Registration; Kids Media Release;
 Students New Student; Students Serve; Students Newsletter; Students Media Release.
 Submissions live in Netlify Forms rather than the current site's database.
 Previous private form submissions and hosting credentials are not included.

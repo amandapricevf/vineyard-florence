@@ -186,7 +186,7 @@ export default function DiscipleshipPage() {
           <h1>Don&apos;t Just Attend.<br /><em>Become A Disciple.</em></h1>
           <p>Follow Jesus with people who will know you, challenge you and help you do what Jesus did. Your next step can start today.</p>
           <div className="discipleship-hero-actions">
-            <a className="button button-light" href={houseGroupInterestUrl} target="_blank" rel="noreferrer">Find My House Group <span aria-hidden="true">↗</span></a>
+            <a className="button button-light" href={houseGroupInterestUrl}>Find My House Group <span aria-hidden="true">↗</span></a>
             <a className="text-link light" href="#pathway">Show Me The Path <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -223,7 +223,7 @@ export default function DiscipleshipPage() {
             <li><span>03</span> Discover how God can use your life.</li>
           </ul>
           <div className="discipleship-groups-actions">
-            <a className="button button-light" href={houseGroupInterestUrl} target="_blank" rel="noreferrer">Help Me Find A Group <span aria-hidden="true">↗</span></a>
+            <a className="button button-light" href={houseGroupInterestUrl}>Help Me Find A Group <span aria-hidden="true">↗</span></a>
             <a className="text-link light" href={churchCenterGroupsUrl} target="_blank" rel="noreferrer">Check Out House Groups <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -343,7 +343,7 @@ export default function DiscipleshipPage() {
         <h2>Information Won&apos;t<br />Change Your Life.<br /><em>A Next Step Will.</em></h2>
         <p>Start with a House Group. Bring your real life. Follow Jesus with people. Then help someone else do the same.</p>
         <div>
-          <a className="button button-light" href={houseGroupInterestUrl} target="_blank" rel="noreferrer">Find My House Group <span aria-hidden="true">↗</span></a>
+          <a className="button button-light" href={houseGroupInterestUrl}>Find My House Group <span aria-hidden="true">↗</span></a>
           <Link className="text-link light" href="/prayer">Begin With Prayer <span aria-hidden="true">↗</span></Link>
         </div>
       </section>

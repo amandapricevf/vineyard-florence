@@ -4,6 +4,7 @@
   const formNames = {
     "/api/prayer-requests": () => "prayer-request",
     "/api/contact": () => "contact-us-general-questions",
+    "/api/house-group-signup": () => "house-group-interest-signup",
     "/api/kids-forms": payload => `kids-${payload.formType}`,
     "/api/student-forms": payload => `students-${payload.formType}`,
   };

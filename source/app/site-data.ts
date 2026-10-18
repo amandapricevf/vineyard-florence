@@ -46,7 +46,7 @@ export const everyOrgCryptoGivingUrl =
 export const vinedresserUrl = "https://www.thevinedresser.org/";
 export const churchCenterHomeUrl = "https://vineyardflorence.churchcenter.com/";
 export const churchCenterGroupsUrl = "https://vineyardflorence.churchcenter.com/groups";
-export const houseGroupInterestUrl = "https://vineyardflorence.churchcenter.com/people/forms/688987";
+export const houseGroupInterestUrl = "/join-a-house-group";
 export const eventsUrl = "/events";
 export const prayerRequestUrl = "/prayer-request";
 export const contactFormUrl = "/contact";
@@ -128,6 +128,7 @@ export const searchIndex: SearchItem[] = [
   { title: "Latvia", description: "Explore Latvia ministry updates on Facebook.", href: latviaFacebookUrl, keywords: "latvia ministry global mission outreach facebook" },
   { title: "Up, In & Out", description: "Our whole-life pathway for loving God, making disciples and impacting the world.", href: "/#pathway", keywords: "discipleship connect up in out love god community" },
   { title: "Prayer Hub", description: "Request prayer, join a gathering or learn Vineyard's five-step prayer model.", href: "/prayer", keywords: "pray healing holy spirit gathering request five step model" },
+  { title: "Join A House Group", description: "Tell us which House Group you would like to know more about and we will help you connect.", href: houseGroupInterestUrl, keywords: "house group small group join sign up interest form community" },
   { title: "Contact Us", description: "Send the Vineyard Florence team a question or message.", href: contactFormUrl, keywords: "contact email question message ask help office reach" },
   { title: "Submit A Prayer Request", description: "Share a confidential prayer request with the Vineyard Florence prayer team.", href: prayerRequestUrl, keywords: "request prayer form confidential care pastoral help" },
   { title: "VF Foundations", description: "Go deeper through Vineyard Florence's eight-week Foundations course.", href: "/discipleship#resources", keywords: "foundations course class eight week 8 week deeper" },

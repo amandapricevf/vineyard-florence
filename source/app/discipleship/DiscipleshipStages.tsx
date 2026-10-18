@@ -44,7 +44,7 @@ const stages: Stage[] = [
     traits: ["Believes in Jesus Christ", "Baptized", "Born again"],
     nextSteps: [
       { label: "Ask About VF Foundations", href: ask("I Want To Explore VF Foundations") },
-      { label: "Join A House Group", href: houseGroupInterestUrl, external: true },
+      { label: "Join A House Group", href: houseGroupInterestUrl },
       { label: "Serve And Become A Ministry Partner", href: "/ministries" },
       { label: "Give Your Time, Talent And Treasure", href: "/connect" },
       { label: "Explore Prayer Training", href: "/prayer" },
