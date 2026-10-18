@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
 import {
   celebrateRecoveryUrl,
-  churchCenterEventsUrl,
+  eventsUrl,
   churchCenterGroupsUrl,
   contactFormLink,
   mensHealthySexualityUrl,
@@ -21,7 +21,7 @@ const ministries = [
   { id: "celebrate-recovery", label: "Recovery", title: "Celebrate Recovery", copy: "A Christ-centered recovery community helping people find healing, freedom and hope through honest relationships and the power of Jesus.", href: celebrateRecoveryUrl, cta: "Visit Celebrate Recovery", external: true },
   { id: "mens-healthy-sexuality", label: "Wholeness", title: "Men’s Healthy Sexuality", copy: "Resources and supportive community helping men pursue honesty, healing and a healthy, Jesus-centered vision for sexuality.", href: mensHealthySexualityUrl, cta: "Visit MHS", external: true },
   { id: "men", label: "Men", title: "Men’s Ministry", copy: "Connection, discipleship and practical brotherhood—including the Men of Courage ministry led by ordained pastor Chris Cousin.", href: contactFormLink("Men’s Ministry"), cta: "Connect With Men’s Ministry", external: false },
-  { id: "women", label: "Women", title: "Women’s Ministry", copy: "Gatherings and relationships that create room for women to be encouraged, grow in faith and follow Jesus together.", href: churchCenterEventsUrl, cta: "See Women’s Events", external: true },
+  { id: "women", label: "Women", title: "Women’s Ministry", copy: "Gatherings and relationships that create room for women to be encouraged, grow in faith and follow Jesus together.", href: eventsUrl, cta: "See Women’s Events", external: false },
   { id: "merp", label: "Global Mission", title: "MERP", copy: "The Middle Eastern Refugee Partnership: making disciples who make disciples among people on the move through church planting, local leadership and humanitarian relief.", href: "/merp", cta: "Explore MERP", external: false },
   { id: "latvia", label: "Global Mission", title: "Latvia", copy: "Explore Latvia ministry updates and connect through Facebook.", href: latviaFacebookUrl, cta: "Visit Latvia On Facebook", external: true },
 ] as const;

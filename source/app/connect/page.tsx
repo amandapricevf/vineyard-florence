@@ -3,12 +3,12 @@ import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
 import { TriadMark } from "../components/TriadMark";
 import {
-  churchCenterEventsUrl,
   churchCenterGivingUrl,
   churchCenterGroupsUrl,
   churchCenterHomeUrl,
   churchCenterSignInUrl,
   contactFormLink,
+  eventsUrl,
   prayerRequestUrl,
 } from "../site-data";
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const nextSteps = [
   { mark: 2, label: "Belong", title: "Find A House Group", copy: "Share meals, build real friendships and practice following Jesus with people who know your name.", href: churchCenterGroupsUrl, external: true, cta: "Explore Open Groups" },
   { mark: 1, label: "Start Here", title: "Plan Your First Sunday", copy: "Know when to arrive, what happens, where kids go and how long each service lasts.", href: "/#what-to-expect", external: false, cta: "Plan A Visit" },
-  { mark: 3, label: "Coming Up", title: "Explore Events", copy: "Find courses, baptisms, gatherings, serving opportunities and the next place to jump in.", href: churchCenterEventsUrl, external: true, cta: "See Church Center Events" },
+  { mark: 3, label: "Coming Up", title: "Explore Events", copy: "Find courses, baptisms, gatherings, serving opportunities and the next place to jump in.", href: eventsUrl, external: false, cta: "See Upcoming Events" },
   { mark: 1, label: "Care", title: "Request Prayer", copy: "Tell our prayer team what is happening and let people stand with you in compassionate prayer.", href: prayerRequestUrl, external: false, cta: "Share A Prayer Request" },
   { mark: 2, label: "Generosity", title: "Give Simply And Securely", copy: "Support the day-to-day, local, regional, and global impact of VF.", href: churchCenterGivingUrl, external: true, cta: "Give Online" },
   { mark: 3, label: "Your Account", title: "Open Church Center App", copy: "Sign in to manage registrations, giving and the ways you are connected at Vineyard Florence.", href: churchCenterSignInUrl, external: true, cta: "Sign In" },

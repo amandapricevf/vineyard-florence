@@ -47,7 +47,7 @@ export const vinedresserUrl = "https://www.thevinedresser.org/";
 export const churchCenterHomeUrl = "https://vineyardflorence.churchcenter.com/";
 export const churchCenterGroupsUrl = "https://vineyardflorence.churchcenter.com/groups";
 export const houseGroupInterestUrl = "https://vineyardflorence.churchcenter.com/people/forms/688987";
-export const churchCenterEventsUrl = "https://vineyardflorence.churchcenter.com/registrations";
+export const eventsUrl = "/events";
 export const prayerRequestUrl = "/prayer-request";
 export const contactFormUrl = "/contact";
 
