@@ -8,6 +8,11 @@ h1,h2,h3,h4 { text-transform:capitalize; }
 a { color:inherit; text-decoration:none; }
 button,a { -webkit-tap-highlight-color:transparent; }
 button { font:inherit; }
+/* One visible focus ring for keyboard users everywhere; sand on dark surfaces. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline:3px solid var(--color-vine); outline-offset:3px; }
+:where(.site-header, .site-footer, footer, .sticky-news, .hero, .button-dark, [class*="-hero"]) :where(a, button, input, summary, [tabindex]):focus-visible { outline-color:var(--color-sand); }
+:where(.mobile-menu, .header-search) :where(a, button, input):focus-visible { outline-color:var(--color-vine); }
+::selection { background:var(--color-sand); color:var(--color-ink); }
 .site-header { align-items:center; color:white; display:grid; grid-template-columns:1fr auto; height:104px; left:0; padding:0 4vw; position:absolute; right:0; top:0; z-index:30; }
 .brand { align-items:center; background:white; border-radius:50%; box-shadow:0 14px 38px rgba(0,0,0,.18); display:inline-flex; height:132px; justify-content:center; position:relative; transform:translateY(28px); width:132px; z-index:32; }
 .brand img { display:block; filter:brightness(0) saturate(100%) invert(35%) sepia(13%) saturate(1126%) hue-rotate(117deg) brightness(87%) contrast(89%); height:auto; max-height:none; object-fit:contain; object-position:center; transform:none; width:168px; }
@@ -718,7 +723,9 @@ section[id]{scroll-margin-top:76px}
   .header-left,.header-right{bottom:auto;gap:4px;left:auto;position:relative;right:auto}
   .header-left{justify-self:start}
   .header-right{justify-self:end}
-  .site-header .header-icon-button{height:38px;min-height:38px;min-width:38px;padding:0;width:38px}
+  .site-header .header-icon-button{height:42px;min-height:42px;min-width:42px;padding:0;position:relative;width:42px}
+  /* Invisible 44px hit area around the smaller phone pills. */
+  .site-header .header-icon-button::after{content:"";inset:-1px;position:absolute}
   .site-header .hamburger{transform:scale(.68)}
   .site-header .search-symbol{transform:scale(.68)}
   .play-symbol{height:22px;width:22px}
@@ -732,7 +739,8 @@ section[id]{scroll-margin-top:76px}
 @media(max-width:360px){
   .site-header,.site-header.is-scrolled{padding-left:6px;padding-right:6px}
   .site-header .brand{width:76px}
-  .site-header .header-icon-button{height:36px;min-height:36px;min-width:36px;width:36px}
+  .site-header .header-icon-button{height:38px;min-height:38px;min-width:38px;width:38px}
+  .site-header .header-icon-button::after{inset:-3px}
   .header-left,.header-right{gap:3px}
 }
 

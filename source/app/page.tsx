@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import Lenis from "lenis";
 import { HeaderSearch } from "./components/HeaderSearch";
+import { MenuVisit, returnFocusFromHeaderPanel } from "./components/MenuVisit";
 import { SiteFooter } from "./components/SiteFooter";
 import { TriadMark } from "./components/TriadMark";
 import { usePrefersReducedMotion } from "./lib/use-prefers-reduced-motion";
@@ -18,7 +19,6 @@ import {
   logoSize,
   logoWhiteUrl,
   primaryNavigation,
-  serviceTimes,
   address,
   contactEmail,
   prayerRequestUrl,
@@ -180,6 +180,7 @@ export default function Home() {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        returnFocusFromHeaderPanel();
         setMenuOpen(false);
         setSearchOpen(false);
       }
@@ -404,7 +405,7 @@ export default function Home() {
               ),
             )}
           </nav>
-          <p>{serviceTimes}<br /><a href={directionsUrl} target="_blank" rel="noreferrer">{address.street}<br />{address.city}, {address.state} {address.zip} ↗</a></p>
+          <MenuVisit />
         </div>
         <HeaderSearch id="site-search" open={searchOpen} onClose={closeSearch} />
       </header>

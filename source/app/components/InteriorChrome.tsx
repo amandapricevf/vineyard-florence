@@ -3,17 +3,15 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  address,
   churchCenterGivingUrl,
   churchCenterSignInUrl,
-  directionsUrl,
   logoSize,
   logoWhiteUrl,
   primaryNavigation,
-  serviceTimes,
   youtubeUrl,
 } from "../site-data";
 import { HeaderSearch } from "./HeaderSearch";
+import { MenuVisit, returnFocusFromHeaderPanel } from "./MenuVisit";
 import { SiteFooter } from "./SiteFooter";
 
 export { SiteTicker } from "./SiteTicker";
@@ -30,6 +28,7 @@ export function InteriorHeader() {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        returnFocusFromHeaderPanel();
         setMenuOpen(false);
         setSearchOpen(false);
       }
@@ -119,13 +118,7 @@ export function InteriorHeader() {
               ),
             )}
           </nav>
-          <p>
-            {serviceTimes}
-            <br />
-            <a href={directionsUrl} target="_blank" rel="noreferrer">
-              {address.street} · {address.city}, {address.state} {address.zip} ↗
-            </a>
-          </p>
+          <MenuVisit />
         </div>
         <HeaderSearch id="interior-site-search" open={searchOpen} onClose={closeSearch} />
       </header>

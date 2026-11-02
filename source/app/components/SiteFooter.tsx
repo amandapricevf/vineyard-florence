@@ -3,6 +3,8 @@ import {
   address,
   churchCenterGivingUrl,
   contactEmail,
+  contactPhone,
+  contactPhoneUrl,
   directionsUrl,
   facebookUrl,
   footerExploreLinks,
@@ -11,6 +13,7 @@ import {
   applePodcastUrl,
   logoSize,
   logoWhiteUrl,
+  serviceTimes,
   youtubeUrl,
 } from "../site-data";
 
@@ -63,11 +66,7 @@ export function SiteFooter({ reveal = false, className }: SiteFooterProps) {
           </div>
           <div>
             <span>Visit</span>
-            <p>
-              Sundays
-              <br />
-              9:00 &amp; 11:00 AM
-            </p>
+            <p>{serviceTimes}</p>
             <a href={directionsUrl} target="_blank" rel="noreferrer">
               {address.name}
               <br />
@@ -77,6 +76,7 @@ export function SiteFooter({ reveal = false, className }: SiteFooterProps) {
               <br />
               Get directions ↗
             </a>
+            <a href={contactPhoneUrl}>Call {contactPhone}</a>
             <a href={`mailto:${contactEmail}`}>Email us ↗</a>
           </div>
           <div>

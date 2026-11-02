@@ -962,13 +962,17 @@ main textarea {
 
 /* Navigation menu: a compact dropdown under the Menu button rather than a
    full-screen overlay, so it is always obvious how to get out of it. */
-.site-header .mobile-menu{background:white;border-radius:14px;bottom:auto;box-shadow:0 18px 50px rgba(14,36,31,.22);color:var(--ink);display:block;inset:auto;left:4vw;max-height:calc(100vh - 120px);overflow-y:auto;padding:8px 0 0;position:absolute;right:auto;top:calc(100% + 8px);transform:translateY(-10px);transition:transform .25s ease,opacity .2s ease,visibility .2s;width:min(320px,calc(100vw - 24px));z-index:40}
+.site-header .mobile-menu{background:white;border-radius:var(--radius-card);bottom:auto;box-shadow:var(--shadow-panel);color:var(--ink);display:block;inset:auto;left:4vw;max-height:calc(100vh - 120px);overflow-y:auto;padding:8px 0 0;position:absolute;right:auto;top:calc(100% + 8px);transform:translateY(-10px);transition:transform .25s ease,opacity .2s ease,visibility .2s;width:min(320px,calc(100vw - 24px));z-index:40}
 .site-header .mobile-menu.is-open{transform:translateY(0)}
 .site-header .mobile-menu nav{display:flex;flex-direction:column}
 .site-header .mobile-menu nav a{border-bottom:1px solid rgba(14,36,31,.1);font-size:17px;font-weight:600;letter-spacing:-.01em;padding:13px 22px}
 .site-header .mobile-menu nav a:hover,.site-header .mobile-menu nav a:focus-visible{background:var(--paper);color:var(--vine);padding-left:26px}
 .site-header .mobile-menu nav a .nav-marker{color:var(--vine);width:30px}
-.site-header .mobile-menu p{background:var(--paper);border-radius:0 0 14px 14px;color:rgba(14,36,31,.7);font-size:var(--text-label);margin:0;padding:14px 22px}
+.site-header .menu-visit{background:var(--paper);border-radius:0 0 var(--radius-card) var(--radius-card);display:grid;gap:2px;padding:14px 22px 16px}
+.site-header .menu-visit strong{color:var(--ink);font-size:15px;font-weight:700;padding-bottom:6px}
+.site-header .menu-visit a{align-items:baseline;color:var(--ink);display:flex;flex-wrap:wrap;font-size:15px;gap:4px 10px;justify-content:space-between;line-height:1.35;min-height:44px;padding:10px 0;border-top:1px solid rgba(14,36,31,.1)}
+.site-header .menu-visit a span{color:var(--color-vine);font-size:var(--text-label);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.site-header .menu-visit a:hover span,.site-header .menu-visit a:focus-visible span{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:620px){.site-header .mobile-menu{left:12px;max-height:calc(100vh - 150px)}}
 
 /* Search: a single search bar that drops down under the header. Enter goes
