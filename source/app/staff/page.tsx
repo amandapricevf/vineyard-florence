@@ -13,7 +13,7 @@ const staff: StaffPerson[] = [
   {
     name: "Ryan Snow",
     role: "Lead Pastor",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1656369764820-4LKL5LX1ZZJC8CZHR5XH/IMG_1071.jpg",
+    image: "/images/staff/ryan-snow.webp",
     bio: "Ryan has led VF since 2021 and has served within the Vineyard movement since 1993. His heart is prayer, discipleship and multiplication.",
     fullBio: [
       "Ryan Snow has been the Lead Pastor of Vineyard Florence since 2021. He has been married to the love of his life, Karla, since 1999. Together they have four children, a son-in-law, a grandchild and an ancient English Bulldog. Ryan has been connected to the Vineyard movement since 1993 and has pastored in and around the movement since 1996. At VF, he serves as lead pastor, elder, intercessor, servant and disciple-maker.",
@@ -24,7 +24,7 @@ const staff: StaffPerson[] = [
   {
     name: "Amanda Price",
     role: "Associate & Student Pastor",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1753978492005-ZEX5C80FN1GGUCSN6M16/staff+head+shots.png",
+    image: "/images/staff/amanda-price.webp",
     bio: "As Associate and Student Pastor, Amanda helps people build a whole-life faith and become disciples who make disciples, drawing on rich ministry and music training.",
     fullBio: [
       "Amanda’s life mission is making “Jesus-everything” disciples who go on to make more disciples—basically spiritual multiplication, minus the awkward math. As Associate Pastor and leader of Student Ministry, she gets to live that mission every day by pouring into students and helping them fall in love with Jesus.",
@@ -35,7 +35,7 @@ const staff: StaffPerson[] = [
   {
     name: "Amber Brown",
     role: "Outreach & Recovery Pastor",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1768501855359-U3QZDXF6716JJ8N46A1N/IMG_2344.jpg",
+    image: "/images/staff/amber-brown.webp",
     bio: "Amber serves people in difficult places through recovery ministry, community partnerships and practical care for families across Northern Kentucky.",
     fullBio: [
       "Amber Brown is Vineyard Florence’s Recovery and Outreach Pastor. She has been married to her husband, Adam, since 2004, and they have a son and a daughter. Their family lives on a farm with plenty of chickens, dogs and various other pets. Amber has called Vineyard Florence home since 2013.",
@@ -46,7 +46,7 @@ const staff: StaffPerson[] = [
   {
     name: "Hanna McGuire-Jaeger",
     role: "Kids Ministry Director",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1753973218079-D3TM38ZLZ0RXJVQ8F10X/4.png",
+    image: "/images/staff/hanna-mcguire-jaeger.webp",
     bio: "Hanna brings joy, energy and a deep commitment to helping children know Jesus while partnering closely with parents and caregivers.",
     fullBio: [
       "Hanna is Vineyard Florence’s Kids Ministry Director. She and her husband, Steve, have a beautifully blended family of nine children—four biological children and five adopted through the foster-care system. All but one are girls, so life at home is rarely quiet.",
@@ -56,7 +56,7 @@ const staff: StaffPerson[] = [
   {
     name: "Myles Roberts",
     role: "Worship & Social Media Director",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1753985366110-ER6AORWX3X73AF6HJ274/staff+head+shots.png",
+    image: "/images/staff/myles-roberts.webp",
     bio: "Myles creates spaces where people can connect with God, combining years of worship leadership with a love for music and storytelling.",
     fullBio: [
       "Myles has been leading worship since he was 14, beginning alongside his dad, and has served bi-vocationally in worship ministry since 2011. He has a deep passion for creating spaces where people can genuinely connect with God and experience His presence. He also loves the creative process and uses storytelling to engage and inspire—whether in ministry or marketing.",
@@ -67,7 +67,7 @@ const staff: StaffPerson[] = [
   {
     name: "Karla Snow",
     role: "Administrator & Vinedresser Founder",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1656370290683-WETW4RJ0G1XT9SWFSN7S/image-asset.jpeg",
+    image: "/images/staff/karla-snow.webp",
     bio: "Karla supports the church office and founded The Vinedresser, providing clothing and essentials to foster and kinship families.",
     fullBio: [
       "Karla Snow is married to Vineyard Florence’s lead pastor, Ryan. They have four children—Olivia, Elijah, Sophia and Naomi—a son-in-law, Joe, and a precious grandson, Gideon. Karla has been part of the Vineyard church since she was seven years old and has called Vineyard Florence home since the spring of 2021.",
@@ -78,7 +78,7 @@ const staff: StaffPerson[] = [
   {
     name: "Carol Cui",
     role: "Finance & Bookkeeping Director",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1701096599553-J9KRZ61NODBQ8MGH1W2S/image-asset.png",
+    image: "/images/staff/carol-cui.webp",
     bio: "Carol stewards Vineyard Florence’s finances and loves growing in faith, following Jesus and serving the church alongside her family.",
     fullBio: [
       "Carol is Vineyard Florence’s Finance and Bookkeeping Director. She and her husband, Charlie, began attending VF in September 2022. They have two boys, Rowan and Edwin. Carol is Korean, was born and raised in China and speaks Korean, Chinese and English.",
@@ -89,7 +89,7 @@ const staff: StaffPerson[] = [
   {
     name: "Denise Willen",
     role: "Custodial Care Leader",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1656371055920-4TGS0IZFL2M42IDR7FCA/image-asset.jpeg",
+    image: "/images/staff/denise-willen.webp",
     bio: "Denise leads the team that cares for the church building and also serves through prayer, House Groups and The Vinedresser.",
     fullBio: [
       "Denise and her husband, Bob, have been married for more than 25 years and own a trucking company together. She has two children, Karla Snow and Matthew Tobien, and six grandchildren: Olivia, Elijah, Sophia, Naomi, Lilly and Jakob. Denise has attended Vineyard Florence since the spring of 2021.",
@@ -100,7 +100,7 @@ const staff: StaffPerson[] = [
   {
     name: "Chris Cousin",
     role: "Maintenance Director",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1665423955835-Z5XB0RBJG8KKB41RUINE/IMG_9989.jpg",
+    image: "/images/staff/chris-cousin.webp",
     bio: "Chris is an ordained pastor, Maintenance Director and leader of the Men of Courage ministry, bringing a servant’s heart, practical skill and longstanding outreach experience.",
     fullBio: [
       "Chris is an ordained pastor who has been part of Vineyard Florence for more than 18 years and previously served as Outreach Pastor for six years. He also leads the Men of Courage ministry. Chris has been married to his wife, Robin, for more than 24 years, and together they have three children and a grandson.",
@@ -114,49 +114,49 @@ const elders = [
   {
     name: "Ryan Snow",
     role: "Prayer Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1657135386505-1GTAT3GUTREKBP4FR9SA/IMG_1072.jpg",
+    image: "/images/staff/ryan-snow-2.webp",
     bio: "Ryan serves the Elder Board through the Prayer Pillar, helping keep prayer and the presence of God central to the life of Vineyard Florence.",
   },
   {
     name: "Jon Allis",
     role: "Discipleship Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1667270658199-4B0PYZ8JPOYS3ODOZT44/image.jpg",
+    image: "/images/staff/jon-allis.webp",
     bio: "Jon serves the Elder Board through the Discipleship Pillar, supporting a culture of people becoming and making disciples of Jesus.",
   },
   {
     name: "Jeff Fasick",
     role: "Worship & Sunday Mornings Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1711567466176-4G6QDPWZFGBUCL4YBB1X/image-asset.png",
+    image: "/images/staff/jeff-fasick.webp",
     bio: "Jeff serves the Elder Board through the Worship and Sunday Mornings Pillar, helping steward the church’s weekly gathering.",
   },
   {
     name: "Bob Kendig",
     role: "Outreach Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1733922445922-STJS982FEKYJROK14VVS/staff+head+shots.jpg",
+    image: "/images/staff/bob-kendig.webp",
     bio: "Bob serves the Elder Board through the Outreach Pillar, encouraging practical service and mission across Northern Kentucky and beyond.",
   },
   {
     name: "Sean Gallagher",
     role: "Students Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1733922463449-3K94S62R6RHOL65J4K6J/staff+head+shots+(1).jpg",
+    image: "/images/staff/sean-gallagher.webp",
     bio: "Sean serves the Elder Board through the Students Pillar, supporting the discipleship and care of Vineyard Florence’s students.",
   },
   {
     name: "Carol Jenkins",
     role: "Kids Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1744126131432-BXAH5022SNGG35KI9CVX/staff+head+shots.png",
+    image: "/images/staff/carol-jenkins.webp",
     bio: "Carol serves the Elder Board through the Kids Pillar, helping Vineyard Florence partner with families as children learn to know Jesus.",
   },
   {
     name: "Jerry Barron",
     role: "Stewardship Pillar",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1764797175559-2QV082HHV02XG2D0W2CZ/IMG_0551.jpg",
+    image: "/images/staff/jerry-barron.webp",
     bio: "Jerry serves the Elder Board through the Stewardship Pillar, helping the church faithfully care for the resources entrusted to it.",
   },
   {
     name: "Heather Enzweiler",
     role: "Elder",
-    image: "https://images.squarespace-cdn.com/content/v1/5c95344165019fb219081fd2/1764796908200-DBMKNSTJDMH60W1FLW2C/IMG_0737.jpg",
+    image: "/images/staff/heather-enzweiler.webp",
     bio: "Heather serves the Elder Board, bringing prayerful discernment, trusted leadership and care to the life of Vineyard Florence.",
   },
 ];

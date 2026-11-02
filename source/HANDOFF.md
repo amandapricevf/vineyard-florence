@@ -271,9 +271,10 @@ README.md
 
 1. **Confirm the contact email** — only `info@vineyardflorence.church` is used;
    confirm it and remove the reminder comment in `site-data.ts`.
-2. **Staff photos are hot-linked from a Squarespace CDN.** All 17 headshots load
-   from `images.squarespace-cdn.com`. If that account lapses, every photo breaks.
-   Download them into `public/images/staff/` and reference locally.
+2. ~~Staff photos hot-linked from Squarespace~~ — done (November 2026). The 17
+   headshots now live in `deploy/images/staff/` (listed in `source-assets.json`,
+   restored into `public/images/staff/` at build time) as 900px WebP with camera
+   metadata stripped. Add new headshots the same way, named after the person.
 3. **SEO and metadata** — no Open Graph tags, sitemap, `robots.txt` or structured
    data yet. Being handled as separate work; link previews are currently blank.
 4. **Mobile load time.** Lighthouse (simulated slow phone network) puts the

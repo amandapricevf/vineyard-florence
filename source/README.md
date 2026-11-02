@@ -166,9 +166,6 @@ public/
 
 - **SEO and metadata** — no Open Graph tags, sitemap, robots.txt or structured
   data yet. Tracked as separate work.
-- **Staff photos are hot-linked** from a Squarespace CDN. If that account
-  lapses, all 17 headshots break. They should be downloaded into
-  `public/images/staff/` and referenced locally.
 - **Contact email** — only `info@vineyardflorence.church` is used on the site;
   confirm it, then delete the reminder comment in `site-data.ts`.
 - **Content Security Policy** — deliberately not set in `netlify.toml`, since it
