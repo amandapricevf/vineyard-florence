@@ -9,7 +9,7 @@ import {
   upcomingEvents,
   type ChurchEvent,
 } from "./event-data";
-import { contactEmail } from "../site-data";
+import { contactFormLink, serviceTimes } from "../site-data";
 import { TriadMark } from "../components/TriadMark";
 
 /**
@@ -39,13 +39,13 @@ export function EventsCalendar() {
 
       <section className="events-calendar" aria-label="Upcoming Vineyard Florence events">
         <div className="events-calendar-heading">
-          <p className="eyebrow">{monthRangeLabel(visible)}</p>
+          <p className="eyebrow">{visible.length ? monthRangeLabel(visible) : "Calendar"}</p>
           <h2>
             Coming Up
             <br />
             <em>At VF.</em>
           </h2>
-          <p>Tap any event to register or confirm the latest details.</p>
+          {visible.length ? <p>Tap any event to register or confirm the latest details.</p> : null}
         </div>
 
         {rest.length > 0 ? (
@@ -54,11 +54,22 @@ export function EventsCalendar() {
               <EventRow key={event.title} event={event} number={index + 2} />
             ))}
           </div>
+        ) : visible.length === 0 ? (
+          <div className="events-calendar-list events-empty">
+            <h3>No Dated Events Right Now.</h3>
+            <p>
+              New gatherings are added often. In the meantime, join us {serviceTimes}—and the ongoing
+              rhythms below are always open.
+            </p>
+            <a className="button button-dark button-small" href={contactFormLink("What's Coming Up At VF?")}>
+              Ask What&apos;s Coming Up <span aria-hidden="true">→</span>
+            </a>
+          </div>
         ) : (
           <div className="events-calendar-list">
             <p>
               Nothing else is on the calendar just yet. New gatherings are added often—
-              <a href={`mailto:${contactEmail}`}>email us</a> and we will let you know what is coming.
+              <a href={contactFormLink("What's Coming Up At VF?")}>ask us</a> and we will let you know what is coming.
             </p>
           </div>
         )}
