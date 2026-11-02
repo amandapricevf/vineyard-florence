@@ -1,0 +1,78 @@
+/*
+ * Design tokens — the one place the site's visual values are defined.
+ * See DESIGN.md (project root of `source/`) for what each token is for and
+ * which Version A elements are locked.
+ *
+ * Tailwind 4 turns every `--color-*`, `--font-*`, `--text-*`, `--radius-*`,
+ * `--shadow-*` and `--ease-*` below into a CSS variable on :root *and* into
+ * utility classes (e.g. `text-vine`, `bg-paper`, `rounded-card`), so hand-written
+ * CSS and Tailwind classes read from the same values.
+ */
+@theme {
+  /* Brand palette — locked. Do not add colours; derive tints from these. */
+  --color-ink: #151515;
+  --color-paper: #f3f0e9;
+  --color-white: #fff;
+  --color-vine: #34635b;        /* signature green */
+  --color-vine-deep: #274e47;   /* hover / pressed green */
+  --color-vine-night: #14272d;  /* darkest green surfaces */
+  --color-vine-bright: #5f8c84; /* large text and graphics only (3.3:1 on paper) */
+  --color-leaf: #9db5ae;        /* graphics only (3.1:1 on vine) */
+  --color-sand: #d6c5a7;
+  --color-gold: #d4b879;
+
+  /* Type families — locked. */
+  --font-sans: var(--font-geist), Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif; /* italic emphasis words */
+
+  /* Type roles. Labels are the small uppercase, letter-spaced lines (eyebrows,
+     meta, tags); nothing on the site renders smaller than --text-label. */
+  --text-label: 0.75rem;        /* 12px, uppercase + tracked */
+  --text-meta: 0.875rem;        /* 14px, dates, captions, secondary lines */
+  --text-body: 1.0625rem;       /* 17px, running copy */
+  --text-lead: 1.1875rem;       /* 19px, intro paragraphs */
+
+  /* Corners: cards 12–16px, pills for small controls only. */
+  --radius-control: 999px;
+  --radius-card: 14px;
+  --radius-panel: 22px;
+
+  /* Elevation: one soft, offset shadow family. */
+  --shadow-control: 0 12px 36px rgba(0, 0, 0, 0.18);
+  --shadow-control-hover: 0 16px 42px rgba(0, 0, 0, 0.24);
+  --shadow-panel: 0 18px 50px rgba(14, 36, 31, 0.22);
+
+  /* Motion: one exponential ease-out for entrances and state changes. */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-curtain: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+:root {
+  /* Semantic roles built from the palette. Muted text keeps ≥4.5:1 on every
+     surface it is used on (paper, white, sand / vine and darker greens). */
+  --text-muted: rgba(21, 21, 21, 0.72);
+  --text-muted-inverse: rgba(255, 255, 255, 0.82);
+  --focus-ring: 0 0 0 3px var(--color-paper), 0 0 0 5px var(--color-vine);
+  --focus-ring-inverse: 0 0 0 3px var(--color-vine-night), 0 0 0 5px var(--color-sand);
+
+  /* Spacing rhythm: section padding and the gaps inside sections. */
+  --space-section: clamp(72px, 9vw, 130px);
+  --space-section-mobile: 64px;
+  --space-stack: 24px;
+  --gutter: 7vw;
+  --gutter-mobile: 20px;
+
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
+  --duration-slow: 600ms;
+
+  /* Legacy names used throughout the stylesheets — aliases, not new values. */
+  --ink: var(--color-ink);
+  --paper: var(--color-paper);
+  --white: var(--color-white);
+  --vine: var(--color-vine);
+  --vine-bright: var(--color-vine-bright);
+  --leaf: var(--color-leaf);
+  --sand: var(--color-sand);
+  --line: rgba(21, 21, 21, 0.18);
+}

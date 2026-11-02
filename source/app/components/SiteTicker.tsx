@@ -31,7 +31,7 @@ export function SiteTicker() {
         <span className="sticky-news-track">
           {[0, 1, 2, 3].map((item) => (
             <span className="sticky-news-copy" key={item}>
-              <strong>{tickerMessage.lead}</strong> {tickerMessage.copy}
+              {tickerMessage.lead ? <strong>{tickerMessage.lead}</strong> : null} {tickerMessage.copy}
               <i>✦</i>
             </span>
           ))}

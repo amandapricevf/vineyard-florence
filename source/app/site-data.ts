@@ -295,10 +295,10 @@ export function goToSearchResult(href: string): void {
  */
 export const tickerMessage = {
   kicker: "Latest",
-  lead: "Breaking News:",
-  copy: "Vineyard Florence is expanding to two services, Sunday 9am & 11am starting 8/16",
-  label:
-    "Breaking News: Vineyard Florence is expanding to two services, Sunday 9 AM and 11 AM starting August 16",
+  /** Optional bold lead-in before the copy; leave empty for none. */
+  lead: "",
+  copy: "Announcement placeholder",
+  label: "Announcement placeholder",
   href: "/#visit",
-  expires: "2026-08-30" as string | null,
+  expires: null as string | null,
 };
