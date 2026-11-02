@@ -43,7 +43,7 @@
 .staff-card-copy{align-self:stretch;display:flex;flex-direction:column;justify-content:flex-start}
 .staff-card-copy .eyebrow{color:var(--vine);line-height:1.35}
 .staff-card-copy h2{font-size:clamp(34px,3.2vw,55px);font-weight:560;letter-spacing:-.058em;line-height:.92;margin:17px 0 24px}
-.staff-card-copy>p:not(.eyebrow){color:var(--text-muted);font-size:14px;line-height:1.72;margin:0 0 27px}
+.staff-card-copy>p:not(.eyebrow){color:var(--text-muted);font-size:16px;line-height:1.65;margin:0 0 27px;max-width:60ch}
 .staff-card-featured{grid-column:1/-1;grid-template-columns:.78fr 1.22fr;padding-left:10vw;padding-right:10vw}
 .staff-card-featured .staff-photo{aspect-ratio:1/1;max-height:620px}
 .staff-card-featured .staff-card-copy{max-width:620px}
@@ -1013,3 +1013,14 @@ main textarea {
 .info-details dt{color:var(--vine);font-size:10px;font-weight:800;letter-spacing:.18em;padding-top:4px;text-transform:uppercase}
 .info-details dd{font-size:17px;line-height:1.5;margin:0}
 .info-actions{align-items:center;display:flex;flex-wrap:wrap;gap:24px;margin-top:30px}
+
+/* Staff hero on phones: the copy could not stretch (its min-height:100% has
+   nothing to resolve against), so it floated up over the absolutely placed
+   team photo. Stack them instead: photo first, then the words. */
+@media(max-width:760px){
+  .staff-hero{display:flex;flex-direction:column;gap:36px;min-height:0;padding-top:104px}
+  .staff-hero .staff-hero-gallery{order:-1;position:relative;right:auto;top:auto;width:100%}
+  .staff-hero .staff-team-photo{position:relative;right:auto;top:auto;transform:none;width:100%}
+  .staff-hero .interior-hero-copy{justify-content:flex-start;min-height:0}
+  .staff-hero .interior-hero-copy h1{margin-top:20px}
+}
