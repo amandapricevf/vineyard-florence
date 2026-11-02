@@ -431,10 +431,10 @@
 .latest-player-frame{aspect-ratio:16/9;background:#07110f;min-width:0;position:relative}
 .latest-player-frame iframe{border:0;height:100%;inset:0;position:absolute;width:100%}
 .latest-player-copy{color:white;display:flex;flex-direction:column;justify-content:center;padding:clamp(38px,4.2vw,72px)}
-.latest-player-copy>.eyebrow{color:var(--sand)}
+.latest-player-copy>.eyebrow{color:var(--text-muted-inverse)}
 .latest-player-copy h3{font-size:clamp(40px,4.2vw,68px);font-weight:550;letter-spacing:-.06em;line-height:.9;margin:22px 0 27px}
 .latest-player-copy h3 em{color:var(--sand);font-family:Georgia,"Times New Roman",serif;font-weight:400}
-.latest-player-copy>p:not(.eyebrow){color:var(--text-muted-inverse);font-size:15px;line-height:1.7;margin:0 0 34px}
+.latest-player-copy>p:not(.eyebrow){color:var(--text-muted-inverse);font-size:var(--text-body);line-height:1.7;margin:0 0 34px}
 .latest-player-copy dl{border-bottom:1px solid rgba(255,255,255,.23);border-top:1px solid rgba(255,255,255,.23);display:grid;grid-template-columns:1fr 1fr;margin:0 0 34px}
 .latest-player-copy dl>div{padding:20px 0}
 .latest-player-copy dl>div+div{border-left:1px solid rgba(255,255,255,.23);padding-left:20px}
@@ -469,9 +469,9 @@
 .stream-archive-shell{padding:105px 6vw 0}
 .stream-archive-grid{align-items:stretch}
 .stream-card .sermon-card-copy{min-height:355px}
-.stream-card .sermon-card-meta time{color:var(--vine);font-size:var(--text-label);font-weight:800;letter-spacing:.11em;line-height:1.35;text-transform:uppercase}
+.stream-card .sermon-card-meta time{color:var(--vine);font-size:var(--text-meta);font-weight:650;letter-spacing:0;line-height:1.35}
 .stream-card .sermon-card-copy h4{margin-bottom:15px}
-.stream-description{color:var(--text-muted);font-size:14px;line-height:1.65;margin:0 0 30px}
+.stream-description{color:var(--text-muted);font-size:16px;line-height:1.6;margin:0 0 30px;max-width:60ch}
 .stream-load-more{align-items:center;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:15px;margin-top:70px;padding-top:55px}
 .stream-load-more small{color:var(--text-muted);font-size:var(--text-label);font-weight:780;letter-spacing:.14em;text-transform:uppercase}
 .sermon-series-list{padding:0 6vw}
@@ -499,7 +499,7 @@
 .message-label{background:rgba(52,99,91,.1);color:var(--vine)}
 .sermon-card-copy h4{font-size:clamp(27px,2.45vw,40px);font-weight:550;letter-spacing:-.054em;line-height:.96;margin:25px 0 9px}
 .sermon-speaker{color:var(--vine)!important;font-size:var(--text-label)!important;font-weight:800!important;letter-spacing:.13em!important;margin:0 0 23px!important;text-transform:uppercase}
-.sermon-card-copy>p:not(.sermon-speaker){color:var(--text-muted);font-size:14px;line-height:1.68;margin:0 0 30px}
+.sermon-card-copy>p:not(.sermon-speaker){color:var(--text-muted);font-size:16px;line-height:1.6;margin:0 0 30px}
 .sermon-card-actions{border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px;margin-top:auto;padding-top:18px}
 .sermon-card-actions>a{align-items:center;display:flex;font-size:var(--text-label);font-weight:800;justify-content:space-between;letter-spacing:.12em;text-transform:uppercase}
 .sermon-card-actions>a:hover{color:var(--vine)}
