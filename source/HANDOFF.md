@@ -198,6 +198,39 @@ the Netlify adapter pick it up automatically.
 
 ---
 
+## 9. Design polish (November 2026)
+
+A UI/UX pass on the shared chrome and Home, Events, Sermons, Staff, Beliefs and
+404. No content, data structures or SEO changed. `DESIGN.md` is the reference;
+the decisions worth knowing:
+
+- **Tokens:** `app/tokens.css` (Tailwind 4 `@theme`) defines the palette, type
+  roles, radii, shadows and motion. The old variable names (`--ink`, `--vine`…)
+  are aliases — keep using either, but add new values as tokens, not literals.
+- **Type floor:** labels were 6–11px; nothing is below 12px now. Muted text was
+  58–64% ink (4.3:1); it is `--text-muted` (72%, ≥5.5:1). This was applied only
+  to the polished pages' selectors — the other pages' CSS was left as it was.
+- **Visitor path:** the home hero leads with "Plan Your Visit" and a line with
+  service times and address + directions; the menu ends with the same visit
+  details and tap-to-call (`components/MenuVisit.tsx`); the footer reads its
+  times from `site-data.ts` and has tap-to-call.
+- **Hero vs ticker:** the home hero is sized to stop above the sticky ticker
+  (`--ticker-clearance`), so the carousel card is never covered.
+- **Keyboard:** Escape returns focus to the Menu/Search button; opening the menu
+  from the keyboard moves focus to its first link. Panels never animate
+  `visibility` on open — a hidden element cannot take focus, and the
+  reduced-motion rule gives every element a tiny `all` transition.
+- **Events empty state:** when no dated event remains, the page says so, shows
+  the Sunday times and links to the general contact form. The expiry and
+  "Next up" logic were not touched.
+- **404:** the export writes the rendered `app/not-found.tsx` as Netlify's
+  `404.html` (it used to write a plain Arial page).
+- **Phone heroes on Staff and Beliefs** are flex columns; their copy used
+  `min-height:100%`, which cannot resolve when the hero's height is `auto`, so
+  the words floated over the photo / UP IN OUT line.
+
+---
+
 ## New / moved / deleted files at a glance
 
 **Added**
@@ -236,16 +269,16 @@ README.md
 
 ## Still open
 
-1. **Confirm the contact email** — `info@vineyardflorence.church` vs
-   `office@vineyardflorence.com`. Set it once in `site-data.ts`.
+1. **Confirm the contact email** — only `info@vineyardflorence.church` is used;
+   confirm it and remove the reminder comment in `site-data.ts`.
 2. **Staff photos are hot-linked from a Squarespace CDN.** All 17 headshots load
    from `images.squarespace-cdn.com`. If that account lapses, every photo breaks.
    Download them into `public/images/staff/` and reference locally.
 3. **SEO and metadata** — no Open Graph tags, sitemap, `robots.txt` or structured
    data yet. Being handled as separate work; link previews are currently blank.
-4. **The build has not been verified.** The refactor was done in an environment
-   without network access, so `npm install` could not run. Everything typechecks,
-   but run `npm ci && npm run build` before deploying.
+4. **Mobile load time.** Lighthouse (simulated slow phone network) puts the
+   largest paint at about 5–7s on most pages, before and after the design
+   polish. Worth a performance pass: font loading and the home-page JavaScript.
 5. **Consider sourcing events from Planning Center.** The church already
    maintains events in Church Center. Pulling them via API with a scheduled
    Netlify rebuild would remove most manual editing entirely.

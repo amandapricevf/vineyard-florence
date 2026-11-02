@@ -38,8 +38,10 @@ Gradients are allowed only between these colours. No new hues.
   Watch / Give, Sign in).
 - **Menu and search** — both open as dropdown panels under their pill
   (the full-screen versions were replaced at the church's request in
-  October 2026). Menu = primary navigation + service time and address;
-  search = one field that jumps straight to the best-matching page.
+  October 2026). Menu = primary navigation + visit details (service times,
+  directions, tap-to-call); search = one field that jumps straight to the
+  best-matching page. Escape returns focus to the button; neither panel may
+  animate `visibility` on open (a hidden element cannot take focus).
 - **Hero text carousel** — the "Life Together" card in the home hero.
 - **Sticky ticker** — the announcement bar pinned to the bottom of every page.
 - **Gather / Grow / Go journey** — the tabbed discipleship journey on the home page.
@@ -103,6 +105,7 @@ kept as aliases of the tokens.
 | `--ease-out-expo` | `cubic-bezier(.16,1,.3,1)` | entrances and state changes |
 | `--ease-in-out-curtain` | `cubic-bezier(.76,0,.24,1)` | the opening curtain only |
 | `--duration-fast/base/slow` | 160 / 260 / 600ms | hover / panels / reveals |
+| `--ticker-clearance` | 74px / 58px on phones | space the home hero leaves for the sticky ticker |
 
 No bouncy or elastic easing.
 
