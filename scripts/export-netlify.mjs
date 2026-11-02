@@ -68,5 +68,12 @@ await mkdir(path.join(output, "api"), { recursive: true });
 await writeFile(path.join(output, "api/sermons.json"), JSON.stringify({ streams, refreshedAt: snapshot.exportedAt }));
 const latest = streams[0];
 await writeFile(path.join(output, "_redirects"), `/api/sermons/latest ${latest ? `https://www.youtube.com/watch?v=${latest.videoId}` : "/sermons#latest-services"} 302\n/api/sermons /api/sermons.json 200\n`);
-await writeFile(path.join(output, "404.html"), '<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page Not Found | Vineyard Florence</title><body style="font-family:Arial;background:#f3f0e9;padding:8vw"><h1>Let’s Find Your Next Step.</h1><p>This page could not be found.</p><a href="/">Return To Vineyard Florence</a></body></html>');
+// Netlify serves 404.html for unknown paths. Use the site's own branded
+// not-found page (app/not-found.tsx), rendered by the worker, so a mistyped link
+// still lands somewhere with the header, search and a way back.
+const notFound = await worker.fetch(new Request("http://localhost/__vf-not-found__", { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
+if (notFound.status !== 404) throw new Error(`Expected the not-found page to render with 404, got ${notFound.status}`);
+let notFoundHtml = portableFonts((await notFound.text()).replaceAll("https://vineyard-florence.caaprojects.chatgpt.site/", "/"));
+notFoundHtml = notFoundHtml.replace("<head>", '<head><script src="/netlify-adapter.js"></script>');
+await writeFile(path.join(output, "404.html"), notFoundHtml);
 console.log(`Exported ${routes.length} pages, ${formBlueprints.length} forms, and ${streams.length} sermons.`);

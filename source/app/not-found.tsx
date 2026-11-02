@@ -17,7 +17,7 @@ export default function NotFound() {
     <main className="interior-page" id="top">
       <InteriorHeader />
 
-      <section className="interior-cta">
+      <section className="interior-cta not-found">
         <p className="eyebrow light">404 — Page Not Found</p>
         <h2>
           We Could Not Find
