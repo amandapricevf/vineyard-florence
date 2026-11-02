@@ -5,7 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import Lenis from "lenis";
 import { HeaderSearch } from "./components/HeaderSearch";
-import { MenuVisit, returnFocusFromHeaderPanel } from "./components/MenuVisit";
+import { MenuVisit, focusMenuIfKeyboard, returnFocusFromHeaderPanel } from "./components/MenuVisit";
 import { SiteFooter } from "./components/SiteFooter";
 import { TriadMark } from "./components/TriadMark";
 import { usePrefersReducedMotion } from "./lib/use-prefers-reduced-motion";
@@ -350,7 +350,7 @@ export default function Home() {
 
       <header className={`site-header ${headerSolid ? "is-scrolled" : ""}`}>
         <div className="header-left">
-          <button className="header-icon-button menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-controls="site-navigation" aria-expanded={menuOpen} onClick={() => { setSearchOpen(false); setMenuOpen((open) => !open); }}>
+          <button className="header-icon-button menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-controls="site-navigation" aria-expanded={menuOpen} onClick={(event) => { setSearchOpen(false); setMenuOpen((open) => !open); focusMenuIfKeyboard(event, !menuOpen); }}>
             <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>
             <span className="header-control-label">{menuOpen ? "Close" : "Menu"}</span>
           </button>

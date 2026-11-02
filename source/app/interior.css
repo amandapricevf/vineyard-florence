@@ -965,8 +965,11 @@ main textarea {
 
 /* Navigation menu: a compact dropdown under the Menu button rather than a
    full-screen overlay, so it is always obvious how to get out of it. */
-.site-header .mobile-menu{background:white;border-radius:var(--radius-card);bottom:auto;box-shadow:var(--shadow-panel);color:var(--ink);display:block;inset:auto;left:4vw;max-height:calc(100vh - 120px);overflow-y:auto;padding:8px 0 0;position:absolute;right:auto;top:calc(100% + 8px);transform:translateY(-10px);transition:transform .25s ease,opacity .2s ease,visibility .2s;width:min(320px,calc(100vw - 24px));z-index:40}
-.site-header .mobile-menu.is-open{transform:translateY(0)}
+.site-header .mobile-menu{background:white;border-radius:var(--radius-card);bottom:auto;box-shadow:var(--shadow-panel);color:var(--ink);display:block;inset:auto;left:4vw;max-height:calc(100vh - 120px);overflow-y:auto;padding:8px 0 0;position:absolute;right:auto;top:calc(100% + 8px);transform:translateY(-10px);transition:transform .25s ease,opacity .2s ease,visibility 0s linear .2s;width:min(320px,calc(100vw - 24px));z-index:40}
+.site-header .mobile-menu.is-open{transform:translateY(0);transition:transform .25s ease,opacity .2s ease}
+/* Never animate visibility inside the panel (the reduced-motion rule gives every
+   element a tiny "all" transition, which would keep links unfocusable for a frame). */
+.site-header .mobile-menu *{transition-property:padding-left,color,background-color}
 .site-header .mobile-menu nav{display:flex;flex-direction:column}
 .site-header .mobile-menu nav a{border-bottom:1px solid rgba(14,36,31,.1);font-size:17px;font-weight:600;letter-spacing:-.01em;padding:13px 22px}
 .site-header .mobile-menu nav a:hover,.site-header .mobile-menu nav a:focus-visible{background:var(--paper);color:var(--vine);padding-left:26px}

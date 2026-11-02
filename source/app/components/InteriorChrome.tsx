@@ -11,7 +11,7 @@ import {
   youtubeUrl,
 } from "../site-data";
 import { HeaderSearch } from "./HeaderSearch";
-import { MenuVisit, returnFocusFromHeaderPanel } from "./MenuVisit";
+import { MenuVisit, focusMenuIfKeyboard, returnFocusFromHeaderPanel } from "./MenuVisit";
 import { SiteFooter } from "./SiteFooter";
 
 export { SiteTicker } from "./SiteTicker";
@@ -64,9 +64,10 @@ export function InteriorHeader() {
             aria-label={menuOpen ? "Close navigation" : "Open navigation"}
             aria-controls="interior-site-navigation"
             aria-expanded={menuOpen}
-            onClick={() => {
+            onClick={(event) => {
               setSearchOpen(false);
               setMenuOpen((open) => !open);
+              focusMenuIfKeyboard(event, !menuOpen);
             }}
           >
             <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>

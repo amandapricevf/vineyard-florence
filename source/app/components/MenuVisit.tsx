@@ -21,6 +21,17 @@ export function MenuVisit() {
 }
 
 /**
+ * The menu panel sits after the header buttons in the page, so a keyboard user
+ * who opens it would otherwise tab through Search, Watch, Give and Sign in
+ * before reaching it. When it was opened from the keyboard (click detail 0),
+ * move focus to its first link.
+ */
+export function focusMenuIfKeyboard(event: { detail: number }, opening: boolean) {
+  if (!opening || event.detail !== 0) return;
+  window.requestAnimationFrame(() => document.querySelector<HTMLElement>(".mobile-menu.is-open nav a")?.focus());
+}
+
+/**
  * Escape closes the header panels. If keyboard focus was inside one, send it
  * back to the button that opened it rather than dropping it on the page.
  */
