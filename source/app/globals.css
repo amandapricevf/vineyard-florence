@@ -1062,3 +1062,15 @@ section[id]{scroll-margin-top:76px}
   .home-page .hero-frame{display:flex;flex-direction:column;justify-content:flex-end;min-height:calc(100svh - var(--ticker-clearance) - 16px);padding:104px 0 36px}
   .home-page .hero-content{bottom:auto;left:auto;padding:0 24px;position:relative;right:auto}
 }
+
+/* Gather / Grow / Go tabs on phones: "House Groups" wrapped to two lines and
+   pushed "Grow" out of line with "Gather" and "Go". Set the tab labels a touch
+   smaller and tighter so they stay on one line (an agreed exception to the
+   12px label floor), and on the narrowest phones, where even that cannot fit,
+   let the label wrap upward so the titles still line up. */
+@media(max-width:620px){
+  .journey-tabs button small{font-size:11px;letter-spacing:.04em;white-space:nowrap}
+}
+@media(max-width:359px){
+  .journey-tabs button small{align-items:flex-end;display:flex;min-height:2.6em;white-space:normal}
+}

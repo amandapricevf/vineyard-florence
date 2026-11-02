@@ -91,7 +91,9 @@ kept as aliases of the tokens.
 | Meta | `--text-meta` 14px | dates, captions, secondary lines |
 | Label | `--text-label` 12px | uppercase, letter-spaced eyebrows, tags, small controls |
 
-**Nothing renders smaller than 12px.** Labels were previously 6–11px.
+**Nothing renders smaller than 12px.** Labels were previously 6–11px. One agreed exception: the
+Gather / Grow / Go tab labels on phones are 11px with tighter tracking, so
+"House Groups" stays on one line and the three titles line up.
 
 ### Spacing, corners, elevation, motion
 
