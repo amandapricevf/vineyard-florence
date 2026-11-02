@@ -20,6 +20,7 @@ import {
   logoWhiteUrl,
   primaryNavigation,
   address,
+  serviceTimes,
   contactEmail,
   prayerRequestUrl,
   celebrateRecoveryUrl,
@@ -435,9 +436,13 @@ export default function Home() {
               <span className="hero-line hero-line-script"><span>Impact The World.</span></span>
             </h1>
             <div className="hero-actions">
-              <a className="button button-light magnetic" href={churchCenterGroupsUrl} target="_blank" rel="noreferrer">Find A House Group <span aria-hidden="true">↗</span></a>
-              <Link className="text-link light" href="/discipleship">Explore Discipleship <span aria-hidden="true">↗</span></Link>
+              <a className="button button-light magnetic" href="#what-to-expect">Plan Your Visit <span aria-hidden="true">↓</span></a>
+              <a className="text-link light" href={churchCenterGroupsUrl} target="_blank" rel="noreferrer">Find A House Group <span aria-hidden="true">↗</span></a>
             </div>
+            <p className="hero-visit">
+              <span>{serviceTimes}</span>
+              <a href={directionsUrl} target="_blank" rel="noreferrer">{address.street}, {address.city} <b>Directions ↗</b></a>
+            </p>
           </div>
           <aside
             className="hero-overlay-card hero-message-carousel"
