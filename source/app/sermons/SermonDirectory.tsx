@@ -198,7 +198,7 @@ export function SermonDirectory() {
                       <time dateTime={stream.publishedAt}>Uploaded {formatDate(stream.publishedAt)}</time>
                       <span className="message-label">Livestream</span>
                     </div>
-                    <h4>{serviceLabel(stream.title)}</h4>
+                    <h3>{serviceLabel(stream.title)}</h3>
                     <p className="stream-description">{stream.description}</p>
                     <div className="sermon-card-actions">
                       <a href={watchUrl(stream.videoId)} target="_blank" rel="noreferrer">Watch full service <span aria-hidden="true">↗</span></a>

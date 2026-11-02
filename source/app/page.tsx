@@ -613,7 +613,7 @@ export default function Home() {
             { number: "03", word: "OUT", title: "Impact The World", copy: "We join Jesus in serving our neighbors and carrying hope into everyday places." },
           ].map((item, index) => (
             <article className="purpose-card" key={item.word} data-reveal="card">
-              <span className="card-number"><TriadMark index={(index + 1) as 1 | 2 | 3} />{item.number}</span><span className="giant-word">{item.word}</span>
+              <span className="card-number"><TriadMark index={(index + 1) as 1 | 2 | 3} />{item.number}</span><span className="giant-word" aria-hidden="true">{item.word}</span>
               <div><h3>{item.title}</h3><p>{item.copy}</p><Link href="/discipleship" aria-label={`Explore ${item.title}`}>Explore <span aria-hidden="true">↗</span></Link></div>
             </article>
           ))}

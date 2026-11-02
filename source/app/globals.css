@@ -238,6 +238,8 @@ h1 em,h2 em { font-family:Georgia,"Times New Roman",serif; font-weight:400; }
 .journey-house-group-callout::after{border:1px solid rgba(255,255,255,.16);border-radius:50%;content:"";height:360px;position:absolute;right:-170px;top:-210px;width:360px}
 .journey-house-group-callout>div,.journey-house-group-callout>p,.journey-house-group-callout>a{position:relative;z-index:1}
 .journey-house-group-callout .triad-mark{color:var(--sand);margin-bottom:34px}
+/* Keep the triangle sand but the small step text readable on green (sand is 4.0:1 here). */
+.journey-house-group-callout .triad-copy{color:var(--text-muted-inverse)}
 .journey-house-group-callout h3{font-size:clamp(40px,4.4vw,70px);font-weight:550;letter-spacing:-.06em;line-height:.9;margin:0}
 .journey-house-group-callout h3 em{color:var(--sand);font-family:Georgia,"Times New Roman",serif;font-weight:400}
 .journey-house-group-callout>p{color:var(--text-muted-inverse);font-size:16px;line-height:1.7;margin:0;max-width:520px}

@@ -1,6 +1,6 @@
 {
-  "_SiteTicker-DhbhNCIG.js": {
-    "file": "assets/SiteTicker-DhbhNCIG.js",
+  "_SiteTicker-BQcwAHL3.js": {
+    "file": "assets/SiteTicker-BQcwAHL3.js",
     "name": "SiteTicker",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
@@ -10,8 +10,8 @@
       "node_modules/vinext/dist/shims/link.js"
     ]
   },
-  "_TriadMark-C5V2y9I_.js": {
-    "file": "assets/TriadMark-C5V2y9I_.js",
+  "_TriadMark-Ci8KGwPb.js": {
+    "file": "assets/TriadMark-Ci8KGwPb.js",
     "name": "TriadMark",
     "imports": [
       "_framework-CXnKph_e.js"
@@ -44,13 +44,13 @@
     ]
   },
   "app/components/InteriorChrome.tsx": {
-    "file": "assets/InteriorChrome-D-7WJTp6.js",
+    "file": "assets/InteriorChrome-DLM98lTO.js",
     "name": "InteriorChrome",
     "src": "app/components/InteriorChrome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-DhbhNCIG.js",
+      "_SiteTicker-BQcwAHL3.js",
       "_site-data-CJKldgM1.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
@@ -79,13 +79,13 @@
     ]
   },
   "app/events/EventsCalendar.tsx": {
-    "file": "assets/EventsCalendar-BNj53BVn.js",
+    "file": "assets/EventsCalendar-MouMqlYT.js",
     "name": "EventsCalendar",
     "src": "app/events/EventsCalendar.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_TriadMark-C5V2y9I_.js",
+      "_TriadMark-Ci8KGwPb.js",
       "_church-date-CB-Vz8Z-.js",
       "_site-data-CJKldgM1.js",
       "_framework-CXnKph_e.js"
@@ -112,14 +112,14 @@
     ]
   },
   "app/page.tsx": {
-    "file": "assets/page-BnUodGDD.js",
+    "file": "assets/page-DghY3VoV.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-DhbhNCIG.js",
-      "_TriadMark-C5V2y9I_.js",
+      "_SiteTicker-BQcwAHL3.js",
+      "_TriadMark-Ci8KGwPb.js",
       "_site-data-CJKldgM1.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
@@ -146,7 +146,7 @@
     ]
   },
   "app/sermons/SermonDirectory.tsx": {
-    "file": "assets/SermonDirectory-wCY82v5A.js",
+    "file": "assets/SermonDirectory-DhOk1oUD.js",
     "name": "SermonDirectory",
     "src": "app/sermons/SermonDirectory.tsx",
     "isDynamicEntry": true,
@@ -177,7 +177,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-D4xO7Z8H.js",
+    "file": "assets/layout-segment-context-C5snjFfg.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -188,7 +188,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/link.js": {
-    "file": "assets/link-CFC_czjF.js",
+    "file": "assets/link-D1rgiEt0.js",
     "name": "link",
     "src": "node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -202,7 +202,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/router.js": {
-    "file": "assets/router-CKofsMRy.js",
+    "file": "assets/router-BK-Wpj1_.js",
     "name": "router",
     "src": "node_modules/vinext/dist/shims/router.js",
     "isDynamicEntry": true,
@@ -217,7 +217,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-CeN3-yoY.js",
+    "file": "assets/index-CDLMeozc.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,

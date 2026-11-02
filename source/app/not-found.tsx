@@ -19,11 +19,11 @@ export default function NotFound() {
 
       <section className="interior-cta not-found">
         <p className="eyebrow light">404 — Page Not Found</p>
-        <h2>
+        <h1>
           We Could Not Find
           <br />
           That <em>Page.</em>
-        </h2>
+        </h1>
         <p>
           The link may have moved or retired. Here are a few places people usually mean to land.
         </p>

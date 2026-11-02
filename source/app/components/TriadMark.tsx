@@ -17,7 +17,7 @@ export function TriadMark({ index, label, className = "" }: TriadMarkProps) {
     <span
       className={classes}
       data-step={index}
-      {...(label ? { "aria-label": `Step ${index} of 3: ${label}` } : { "aria-hidden": true })}
+      {...(label ? { role: "img", "aria-label": `Step ${index} of 3: ${label}` } : { "aria-hidden": true })}
     >
       <span className="triad-shape" aria-hidden="true">
         <i />
