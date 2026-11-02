@@ -1050,3 +1050,15 @@ section[id]{scroll-margin-top:76px}
 }
 @media(min-width:1200px){.expect-step-link{white-space:nowrap}}
 .expect-step-link{max-width:100%}
+
+/* Home hero on phones: real phone screens are shorter than the hero's content
+   once the browser's own bars are counted, so the headline was pushed up under
+   the header. Drop the carousel card on phones, and keep the copy in normal
+   flow at the bottom of the hero so the hero grows instead of the headline
+   sliding under the header. */
+@media(max-width:620px){
+  .home-page .hero-overlay-card{display:none}
+  .home-page .hero{height:auto;min-height:calc(100svh - var(--ticker-clearance))}
+  .home-page .hero-frame{display:flex;flex-direction:column;justify-content:flex-end;min-height:calc(100svh - var(--ticker-clearance) - 16px);padding:104px 0 36px}
+  .home-page .hero-content{bottom:auto;left:auto;padding:0 24px;position:relative;right:auto}
+}
