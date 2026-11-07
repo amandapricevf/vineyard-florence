@@ -1075,3 +1075,9 @@ main textarea {
 
 /* Links to a single event (e.g. from the ticker) land clear of the fixed header. */
 .event-row,.events-featured{scroll-margin-top:100px}
+
+/* Messages page: the search panel ("Three Years. Every Service.", search and
+   the results count) used to stick to the top on desktop, covering about a
+   third of the screen. It now scrolls with the page, as it already did on
+   phones. */
+.sermon-filter-shell{position:relative;top:auto}
