@@ -62,7 +62,7 @@ const stages: Stage[] = [
       { label: "Help Lead A House Group Or Prayer Meeting", href: "/discipleship#leader-path" },
       { label: "Ask About Leader Training", href: contactTopicLink("house-group-leader-training") },
       { label: "Share Life And Resources", href: "/discipleship#resources" },
-      { label: "Ask About VF Freedom", href: contactTopicLink("vf-freedom") },
+      { label: "Explore Vineyard Freedom", href: "/ministries/vineyard-freedom" },
     ],
   },
   {
