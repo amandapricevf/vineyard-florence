@@ -26,6 +26,10 @@ import {
   prayerRequestUrl,
   prayerZoomUrl,
   bibleReadingPlanUrl,
+  contactTopicLink,
+  houseGroupInterestUrl,
+  volunteerUrl,
+  wahaUrl,
   celebrateRecoveryUrl,
   mensHealthySexualityUrl,
   latviaFacebookUrl,
@@ -620,7 +624,18 @@ export default function Home() {
                 <>We fast as a church weekly from Sunday evenings after dinner until dinner on Mondays. See our social media for prayer points.</>,
               ],
             },
-            { number: "02", word: "IN", title: "Make Disciples", copy: "We grow through authentic community, Scripture and life shared around the table." },
+            {
+              number: "02",
+              word: "IN",
+              title: "Make Disciples",
+              copy: "IN is Fellowship and Followship. We learn the practices of personal and community through spiritual connection, obeying what Jesus says of meeting together and individually.",
+              points: [
+                <><Link href={houseGroupInterestUrl}>Join a House Group →</Link></>,
+                <>Lead or start a Discovery Bible Study: get the <a href={wahaUrl} target="_blank" rel="noreferrer">Waha app ↗</a></>,
+                <>Connect to a recovery ministry at VF: <a href={celebrateRecoveryUrl} target="_blank" rel="noreferrer">Celebrate Recovery ↗</a>, <a href={mensHealthySexualityUrl} target="_blank" rel="noreferrer">Men’s Healthy Sexuality ↗</a>, <Link href={contactTopicLink("aa-at-vf")}>AA</Link>, <Link href={contactTopicLink("men-of-courage")}>Men of Courage</Link>, <Link href={contactTopicLink("women-of-warfare")}>Women of Warfare</Link></>,
+                <>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or Media/Worship Team: <Link href={volunteerUrl}>Sign up to volunteer →</Link></>,
+              ],
+            },
             { number: "03", word: "OUT", title: "Impact The World", copy: "We join Jesus in serving our neighbors and carrying hope into everyday places." },
           ].map((item, index) => (
             <article className="purpose-card" key={item.word} data-reveal="card">

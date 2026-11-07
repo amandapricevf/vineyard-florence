@@ -7,6 +7,7 @@
     "/api/contact": payload => /^contact-[a-z0-9-]+$/.test(payload.formName || "") ? payload.formName : "contact-us-general-questions",
     "/api/house-group-signup": () => "house-group-interest-signup",
     "/api/stock-gift": () => "stock-gift-inquiry",
+    "/api/serve-signup": () => "sunday-volunteer-signup",
     "/api/kids-forms": payload => `kids-${payload.formType}`,
     "/api/student-forms": payload => `students-${payload.formType}`,
   };

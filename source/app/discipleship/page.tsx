@@ -7,6 +7,7 @@ import {
   contactTopicLink,
   churchCenterGroupsUrl,
   houseGroupInterestUrl,
+  wahaUrl,
 } from "../site-data";
 
 export const metadata: Metadata = {
@@ -15,7 +16,6 @@ export const metadata: Metadata = {
     "Find a House Group, explore House Group leadership and access practical disciple-making tools from Vineyard Florence.",
 };
 
-const wahaUrl = "https://waha.app/eng";
 const leaderEmailUrl = contactTopicLink("lead-house-group");
 
 const upInOut = [

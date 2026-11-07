@@ -28,7 +28,7 @@ WHAT IS INCLUDED
 FORMS ON NETLIFY
 The forms are one contact form per topic (all named "contact-…", listed in
 source/app/contact/contact-topics.json) plus Contact Us General Questions;
-House Group Interest Signup; Stock Gift Inquiry; Prayer Request; Kids Registration; Kids Media Release;
+House Group Interest Signup; Stock Gift Inquiry; Sunday Volunteer Signup; Prayer Request; Kids Registration; Kids Media Release;
 Students New Student; Students Serve; Students Newsletter; Students Media Release.
 Submissions live in Netlify Forms rather than the current site's database.
 Previous private form submissions and hosting credentials are not included.
