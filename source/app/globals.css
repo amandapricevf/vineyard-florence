@@ -1074,3 +1074,10 @@ section[id]{scroll-margin-top:76px}
 @media(max-width:359px){
   .journey-tabs button small{align-items:flex-end;display:flex;min-height:2.6em;white-space:normal}
 }
+
+/* Footer: the Explore list is long, so it reads down two columns across the
+   links area, with Visit and Follow side by side beneath it on larger screens. */
+.footer-links>.footer-explore{grid-column:1/-1}
+.footer-explore-list{column-gap:32px;columns:2;width:100%}
+.footer-explore-list a{break-inside:avoid;display:block;margin-bottom:15px}
+@media(min-width:961px){.footer-links{grid-template-columns:1fr 1fr}}

@@ -56,13 +56,15 @@ export function SiteFooter({ reveal = false, className }: SiteFooterProps) {
           </div>
         </div>
         <div className="footer-links">
-          <div>
+          <div className="footer-explore">
             <span>Explore</span>
-            {footerExploreLinks.map((item) => item.external ? (
-              <a key={item.href} href={item.href} target="_blank" rel="noreferrer">{item.label} ↗</a>
-            ) : (
-              <Link key={item.href} href={item.href}>{item.label}</Link>
-            ))}
+            <div className="footer-explore-list">
+              {footerExploreLinks.map((item) => item.external ? (
+                <a key={item.href} href={item.href} target="_blank" rel="noreferrer">{item.label}{"\u00a0"}↗</a>
+              ) : (
+                <Link key={item.href} href={item.href}>{item.label}</Link>
+              ))}
+            </div>
           </div>
           <div>
             <span>Visit</span>
