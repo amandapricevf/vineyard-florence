@@ -29,6 +29,7 @@ import {
   contactTopicLink,
   houseGroupInterestUrl,
   volunteerUrl,
+  stockGiftUrl,
   freePantryUrl,
   resetHouseUrl,
   wahaUrl,
@@ -731,6 +732,9 @@ export default function Home() {
               >
                 Donate crypto <span aria-hidden="true">↗</span>
               </a>
+              <Link className="button give-crypto-button give-stock-button" href={stockGiftUrl} aria-label="Donate stock to Vineyard Florence">
+                Donate stock <span aria-hidden="true">→</span>
+              </Link>
               <a className="text-link light" href="#impact">See the impact <span aria-hidden="true">↑</span></a>
             </div>
             <p className="give-crypto-note">Cryptocurrency gifts are securely processed through Every.org.</p>
