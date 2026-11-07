@@ -57,6 +57,9 @@ export const prayerZoomUrl = "https://us02web.zoom.us/j/218791174";
 export const bibleReadingPlanUrl =
   "https://www.fivedaybiblereading.com/wp-content/uploads/2025/12/2026-5-Day-Bible-Reading-Schedule.pdf";
 export const stockGiftUrl = "/give-stock";
+/** Turkey Dinner Giveaway 2026: application for families who need a meal (Microsoft Form). */
+export const turkeyDinnerApplicationUrl =
+  "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=8TLNmEEi0U23Nw-RYAe2c46eNn2j2xZIgdNH_7QO7AtUMkxRNVVFOUFDRDNLRkJRMlAzSFFVVDNJUS4u";
 export const volunteerUrl = "/serve";
 export const freePantryUrl = "/free-pantry";
 export const resetHouseUrl = "/events#reset-house";
@@ -319,9 +322,9 @@ export function goToSearchResult(href: string): void {
 export const tickerMessage = {
   kicker: "Latest",
   /** Optional bold lead-in before the copy; leave empty for none. */
-  lead: "",
-  copy: "Announcement placeholder",
-  label: "Announcement placeholder",
-  href: "/#visit",
-  expires: null as string | null,
+  lead: "Turkey Dinner Giveaway:",
+  copy: "Sunday, November 22 · sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
+  label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
+  href: "/events#turkey-dinner-giveaway",
+  expires: "2026-11-22" as string | null,
 };

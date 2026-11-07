@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { churchToday } from "../lib/church-date";
 import {
+  eventAnchor,
   monthRangeLabel,
   rhythms,
   sortedEvents,
@@ -86,7 +87,7 @@ export function EventsCalendar() {
 
 function FeaturedEvent({ event }: { event: ChurchEvent }) {
   return (
-    <section className="events-featured" aria-labelledby="featured-event-title">
+    <section className="events-featured" id={eventAnchor(event)} aria-labelledby="featured-event-title">
       <div className="events-featured-media">
         <img
           src={event.image}
@@ -130,7 +131,7 @@ function FeaturedEvent({ event }: { event: ChurchEvent }) {
 
 function EventRow({ event, number }: { event: ChurchEvent; number: number }) {
   return (
-    <article className="event-row">
+    <article className="event-row" id={eventAnchor(event)}>
       <time className="event-date" dateTime={event.isoDate}>
         <span>{event.month}</span>
         <strong>{event.day}</strong>

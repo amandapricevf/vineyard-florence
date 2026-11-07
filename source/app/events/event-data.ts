@@ -1,4 +1,4 @@
-import { contactTopicLink } from "../site-data";
+import { contactTopicLink, turkeyDinnerApplicationUrl } from "../site-data";
 
 /**
  * Every dated event on the site.
@@ -197,7 +197,33 @@ export const churchEvents: ChurchEvent[] = [
     featuredHeadline: "Breakfast, Brotherhood,",
     featuredHeadlineEmphasis: "Belonging.",
   },
+  {
+    isoDate: "2026-11-22",
+    month: "NOV",
+    day: "22",
+    dateMeta: "Sunday",
+    category: "Outreach",
+    title: "Turkey Dinner Giveaway",
+    schedule: "November 22 · Distribution & prayer 1:30–2:30 PM",
+    location: "Vineyard Florence",
+    description:
+      "Help bless families in need with a complete Thanksgiving meal. Sponsor a $25 meal bag (text \"$25 Thanksgiving\" to 1-833-263-0025, or give online to the Thanksgiving fund), or pick up a bag and shopping list at the church doors and return it filled by November 16. Need a meal? Apply and someone will reach out within two business days.",
+    image: "/images/events/turkey-dinner-giveaway.webp",
+    imageSize: { width: 1500, height: 844 },
+    alt: "Turkey Dinner Giveaway announcement",
+    primaryHref: turkeyDinnerApplicationUrl,
+    primaryLabel: "Apply For A Meal",
+    featuredDate: "Sunday · November 22",
+    featuredWhen: "Prep 12:30 PM · Distribution & prayer 1:30–2:30 PM",
+    featuredHeadline: "A Thanksgiving Meal For",
+    featuredHeadlineEmphasis: "Every Table.",
+  },
 ];
+
+/** The in-page anchor for an event, e.g. "turkey-dinner-giveaway" (used by links like the ticker's). */
+export function eventAnchor(event: ChurchEvent): string {
+  return event.title.toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
 
 /** Ongoing programmes with no single date — always shown, never expire. */
 export type Rhythm = {

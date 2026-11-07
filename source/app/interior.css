@@ -1072,3 +1072,6 @@ main textarea {
 .discipleship-resource-groups header{align-content:start;align-items:start;align-self:start}
 .discipleship-resource-groups header>.triad-mark{color:var(--color-vine);margin-top:6px}
 .discipleship-resource-groups header .eyebrow{color:var(--color-vine);margin:0 0 10px}
+
+/* Links to a single event (e.g. from the ticker) land clear of the fixed header. */
+.event-row,.events-featured{scroll-margin-top:100px}
