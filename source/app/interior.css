@@ -1058,3 +1058,11 @@ main textarea {
 .site-header .give-options a span{color:var(--text-muted);font-size:var(--text-meta);font-weight:500;letter-spacing:0}
 .site-header .give-options a:hover,.site-header .give-options a:focus-visible{background:var(--paper);color:var(--vine);padding-left:24px}
 .site-header .give-options a:focus-visible{outline:3px solid var(--color-vine);outline-offset:-3px}
+
+/* Menu on phones: slightly tighter rows (still 44px+ tap targets) so the
+   eight links and the visit details fit on most screens without scrolling. */
+@media(max-width:620px){
+  .site-header .mobile-menu nav a{padding-bottom:11px;padding-top:11px}
+  .site-header .menu-visit{padding-bottom:10px;padding-top:12px}
+  .site-header .menu-visit a{padding:8px 0}
+}
