@@ -3,3 +3,8 @@
 /sermons /messages 301
 /sermons/ /messages/ 301
 /sermons/* /messages/:splat 301
+/recovery-groups /ministries#recovery-groups 301
+/recovery-groups/blog-post-title-one-zb7tr /ministries/celebrate-recovery 301
+/recovery-groups/blog-post-title-three-la7az /ministries/griefshare 301
+/recovery-groups/mhs /ministries/mens-healthy-sexuality 301
+/recovery-groups/alcoholics-anonymous-aa /ministries/alcoholics-anonymous 301

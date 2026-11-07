@@ -69,7 +69,7 @@ const streams = snapshot.streams.filter(item => Date.parse(item.publishedAt) >= 
 await mkdir(path.join(output, "api"), { recursive: true });
 await writeFile(path.join(output, "api/sermons.json"), JSON.stringify({ streams, refreshedAt: snapshot.exportedAt }));
 const latest = streams[0];
-await writeFile(path.join(output, "_redirects"), `/api/sermons/latest ${latest ? `https://www.youtube.com/watch?v=${latest.videoId}` : "/messages#latest-services"} 302\n/api/sermons /api/sermons.json 200\n/sermons /messages 301\n/sermons/ /messages/ 301\n/sermons/* /messages/:splat 301\n`);
+await writeFile(path.join(output, "_redirects"), `/api/sermons/latest ${latest ? `https://www.youtube.com/watch?v=${latest.videoId}` : "/messages#latest-services"} 302\n/api/sermons /api/sermons.json 200\n/sermons /messages 301\n/sermons/ /messages/ 301\n/sermons/* /messages/:splat 301\n/recovery-groups /ministries#recovery-groups 301\n/recovery-groups/blog-post-title-one-zb7tr /ministries/celebrate-recovery 301\n/recovery-groups/blog-post-title-three-la7az /ministries/griefshare 301\n/recovery-groups/mhs /ministries/mens-healthy-sexuality 301\n/recovery-groups/alcoholics-anonymous-aa /ministries/alcoholics-anonymous 301\n`);
 // Netlify serves 404.html for unknown paths. Use the site's own branded
 // not-found page (app/not-found.tsx), rendered by the worker, so a mistyped link
 // still lands somewhere with the header, search and a way back.

@@ -34,9 +34,6 @@ import {
   freePantryUrl,
   resetHouseUrl,
   wahaUrl,
-  celebrateRecoveryUrl,
-  mensHealthySexualityUrl,
-  alcoholicsAnonymousUrl,
   womenOfWarfareUrl,
   latviaFacebookUrl,
   vinedresserUrl,
@@ -640,7 +637,7 @@ export default function Home() {
               points: [
                 <><Link href={houseGroupInterestUrl}>Join a House Group →</Link></>,
                 <>Lead or start a Discovery Bible Study: get the <a href={wahaUrl} target="_blank" rel="noreferrer">Waha app ↗</a></>,
-                <>Connect to a recovery ministry at VF: <a href={celebrateRecoveryUrl} target="_blank" rel="noreferrer">Celebrate Recovery ↗</a>, <a href={mensHealthySexualityUrl} target="_blank" rel="noreferrer">Men’s Healthy Sexuality ↗</a>, <a href={alcoholicsAnonymousUrl} target="_blank" rel="noreferrer">AA ↗</a>, <Link href={contactTopicLink("men-of-courage")}>Men of Courage</Link>, <a href={womenOfWarfareUrl} target="_blank" rel="noreferrer">Women of Warfare ↗</a></>,
+                <>Connect to a recovery ministry at VF: <Link href="/ministries/celebrate-recovery">Celebrate Recovery</Link>, <Link href="/ministries/mens-healthy-sexuality">Men’s Healthy Sexuality</Link>, <Link href="/ministries/alcoholics-anonymous">AA</Link>, <Link href="/ministries/griefshare">GriefShare</Link>, <Link href={contactTopicLink("men-of-courage")}>Men of Courage</Link>, <a href={womenOfWarfareUrl} target="_blank" rel="noreferrer">Women of Warfare ↗</a></>,
                 <>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or Media/Worship Team: <Link href={volunteerUrl}>Sign up to volunteer →</Link></>,
               ],
             },
@@ -782,8 +779,8 @@ export default function Home() {
         <div className="ministry-shortcut-grid" data-reveal>
           <Link href="/kids">Vineyard Kids <span aria-hidden="true">↗</span></Link>
           <Link href="/students">Vineyard Students <span aria-hidden="true">↗</span></Link>
-          <a href={celebrateRecoveryUrl} target="_blank" rel="noreferrer">Celebrate Recovery <span aria-hidden="true">↗</span></a>
-          <a href={mensHealthySexualityUrl} target="_blank" rel="noreferrer">Men&apos;s Healthy Sexuality <span aria-hidden="true">↗</span></a>
+          <Link href="/ministries/celebrate-recovery">Celebrate Recovery <span aria-hidden="true">↗</span></Link>
+          <Link href="/ministries/mens-healthy-sexuality">Men&apos;s Healthy Sexuality <span aria-hidden="true">↗</span></Link>
           <Link href="/ministries#men">Men&apos;s Ministry <span aria-hidden="true">↗</span></Link>
           <Link href="/ministries#women">Women&apos;s Ministry <span aria-hidden="true">↗</span></Link>
           <Link href="/merp">MERP <span aria-hidden="true">↗</span></Link>

@@ -17,5 +17,7 @@
   { "topic": "pastoring-eldership-church-planting", "formName": "contact-pastoring-eldership-church-planting", "subject": "Pastoring, Eldership Or Church Planting" },
   { "topic": "baptism", "formName": "contact-baptism-questions", "subject": "Questions About Baptism" },
   { "topic": "free-pantry-serve", "formName": "contact-free-pantry-volunteer", "subject": "I Want To Serve At VF’s Free Pantry" },
-  { "topic": "men-of-courage", "formName": "contact-men-of-courage-more-info", "subject": "Men Of Courage — More Info" }
+  { "topic": "men-of-courage", "formName": "contact-men-of-courage-more-info", "subject": "Men Of Courage — More Info" },
+  { "topic": "griefshare", "formName": "contact-griefshare", "subject": "GriefShare — Questions Or Registration" },
+  { "topic": "celebrate-recovery", "formName": "contact-celebrate-recovery", "subject": "Celebrate Recovery" }
 ]

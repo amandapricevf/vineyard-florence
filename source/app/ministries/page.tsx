@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
+import { recoveryGroups } from "./recovery-groups";
 import {
-  celebrateRecoveryUrl,
   eventsUrl,
   churchCenterGroupsUrl,
   contactTopicLink,
-  mensHealthySexualityUrl,
   vineyardFreedomIntakeUrl,
   latviaFacebookUrl,
 } from "../site-data";
@@ -19,8 +19,10 @@ const ministries = [
   { id: "house-groups", label: "The Primary Place We Grow", title: "House Groups", copy: "Our primary place for friendship, care, worship and growing to become more like Jesus in everyday life.", href: churchCenterGroupsUrl, cta: "Find A House Group", external: true },
   { id: "kids", label: "Children", title: "Vineyard Kids", copy: "A safe, fun and Spirit-led place where children can know God, learn the way of Jesus and build friendships on Sunday mornings.", href: "/kids", cta: "Explore Vineyard Kids", external: false },
   { id: "students", label: "Middle + High School", title: "Vineyard Students", copy: "A community where students can ask real questions, encounter Jesus and build a faith that becomes their own.", href: "/students", cta: "Explore Vineyard Students", external: false },
-  { id: "celebrate-recovery", label: "Recovery", title: "Celebrate Recovery", copy: "A Christ-centered recovery community helping people find healing, freedom and hope through honest relationships and the power of Jesus.", href: celebrateRecoveryUrl, cta: "Visit Celebrate Recovery", external: true },
-  { id: "mens-healthy-sexuality", label: "Wholeness", title: "Men’s Healthy Sexuality", copy: "Resources and supportive community helping men pursue honesty, healing and a healthy, Jesus-centered vision for sexuality.", href: mensHealthySexualityUrl, cta: "Visit MHS", external: true },
+  { id: "celebrate-recovery", label: "Recovery · Mondays 6:30 PM", title: "Celebrate Recovery", copy: "A biblical and balanced 12-step program that helps us overcome any hurt, hang-up or habit, and experience more of God’s hope, healing and freedom.", href: "/ministries/celebrate-recovery", cta: "Explore Celebrate Recovery", external: false },
+  { id: "alcoholics-anonymous", label: "Recovery · Mondays 7:30 PM", title: "Alcoholics Anonymous", copy: "A fellowship of people who come together to solve their drinking problem. Free, and open to anyone who wants to do something about their drinking.", href: "/ministries/alcoholics-anonymous", cta: "Explore A.A.", external: false },
+  { id: "mens-healthy-sexuality", label: "Recovery · For Men", title: "Men’s Healthy Sexuality", copy: "Men who have chosen to bond together to live connected, live sober and live free of compulsive sexual behaviors and their impacts.", href: "/ministries/mens-healthy-sexuality", cta: "Explore MHS", external: false },
+  { id: "griefshare", label: "Support · Saturdays 1:00 PM", title: "GriefShare", copy: "A 13-week, faith-based support group for anyone grieving the loss of a friend, family member, spouse or grandparent.", href: "/ministries/griefshare", cta: "Explore GriefShare", external: false },
   { id: "vineyard-freedom", label: "Healing + Freedom", title: "Vineyard Freedom", copy: "Experience the freedom, healing and restoration Jesus offers. Through prayer, biblical truth and the leading of the Holy Spirit, we walk alongside those seeking breakthrough from spiritual oppression, generational cycles, emotional wounds, trauma and strongholds.", href: vineyardFreedomIntakeUrl, cta: "Start The Intake Questionnaire", external: true },
   { id: "men", label: "Men", title: "Men’s Ministry", copy: "Connection, discipleship and practical brotherhood.", href: contactTopicLink("mens-ministry"), cta: "Connect With Men’s Ministry", external: false },
   { id: "women", label: "Women", title: "Women’s Ministry", copy: "Gatherings and relationships that create room for women to be encouraged, grow in faith and follow Jesus together.", href: eventsUrl, cta: "See Women’s Events", external: false },
@@ -63,6 +65,18 @@ export default function MinistriesPage() {
             <a href={ministry.href} target={ministry.external ? "_blank" : undefined} rel={ministry.external ? "noreferrer" : undefined}>{ministry.cta} <span aria-hidden="true">↗</span></a>
           </article>
         ))}
+      </section>
+
+      <section className="kids-form-shell info-shell-alt" id="recovery-groups">
+        <div className="kids-form-heading"><span className="section-index">02 — Recovery Groups</span><h2>Hope, Healing<br /><em>And Freedom.</em></h2></div>
+        <div className="info-body">
+          <p>These recovery and support groups meet at Vineyard Florence. Whatever you are carrying, you do not have to carry it alone.</p>
+          <ul className="recovery-others">
+            {recoveryGroups.map((group) => (
+              <li key={group.slug}><Link href={`/ministries/${group.slug}`}><strong>{group.title}</strong><span>{group.when}</span><b aria-hidden="true">→</b></Link></li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <InteriorFooter />

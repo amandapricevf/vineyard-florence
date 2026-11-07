@@ -1081,3 +1081,16 @@ main textarea {
    third of the screen. It now scrolls with the page, as it already did on
    phones. */
 .sermon-filter-shell{position:relative;top:auto}
+
+/* Recovery group pages (ministries/recovery-groups.tsx). */
+.recovery-questions{display:grid;gap:10px;list-style:none;margin:0 0 28px;padding:0}
+.recovery-questions li{background:var(--paper);border-left:3px solid var(--vine);color:var(--ink);font-size:18px;font-weight:600;line-height:1.45;padding:14px 18px}
+.recovery-gallery{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:40px}
+.recovery-gallery img{aspect-ratio:4/3;margin:0;object-fit:cover}
+.recovery-others{border-top:1px solid var(--line);list-style:none;margin:8px 0 0;padding:0}
+.recovery-others a{align-items:center;border-bottom:1px solid var(--line);color:var(--ink);display:grid;gap:4px 18px;grid-template-columns:1fr auto;min-height:64px;padding:16px 0;transition:padding-left .2s ease,color .2s ease}
+.recovery-others strong{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.recovery-others span{color:var(--text-muted);font-size:var(--text-meta);grid-column:1}
+.recovery-others b{color:var(--vine);font-size:20px;grid-column:2;grid-row:1/3}
+.recovery-others a:hover,.recovery-others a:focus-visible{color:var(--vine);padding-left:6px}
+@media(max-width:620px){.recovery-gallery{grid-template-columns:1fr}}
