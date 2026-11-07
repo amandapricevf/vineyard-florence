@@ -3,13 +3,13 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  churchCenterGivingUrl,
   churchCenterSignInUrl,
   logoSize,
   logoWhiteUrl,
   primaryNavigation,
   youtubeUrl,
 } from "../site-data";
+import { GiveMenu } from "./GiveMenu";
 import { HeaderSearch } from "./HeaderSearch";
 import { MenuVisit, focusMenuIfKeyboard, returnFocusFromHeaderPanel } from "./MenuVisit";
 import { SiteFooter } from "./SiteFooter";
@@ -96,10 +96,7 @@ export function InteriorHeader() {
           <img src={logoWhiteUrl} alt="Vineyard Florence Church" width={logoSize.width} height={logoSize.height} fetchPriority="high" decoding="async" />
         </Link>
         <div className="header-right">
-          <a className="header-icon-button header-link give-button" href={churchCenterGivingUrl} target="_blank" rel="noreferrer" aria-label="Give to Vineyard Florence through Church Center">
-            <span className="give-symbol" aria-hidden="true" />
-            <span className="header-link-label">Give</span>
-          </a>
+          <GiveMenu />
           <a className="header-icon-button header-link sign-in-button" href={churchCenterSignInUrl} target="_blank" rel="noreferrer" aria-label="Sign in to Vineyard Florence Church Center">
             <span className="sign-in-symbol" aria-hidden="true"><i /></span>
             <span className="header-link-label sign-in-label">Sign in</span>

@@ -42,6 +42,9 @@ Gradients are allowed only between these colours. No new hues.
   directions, tap-to-call); search = one field that jumps straight to the
   best-matching page. Escape returns focus to the button; neither panel may
   animate `visibility` on open (a hidden element cannot take focus).
+- **Give** — the header's Give pill opens a dropdown (components/GiveMenu.tsx):
+  Traditional Giving (Church Center), Crypto (Every.org) and Stocks (the
+  `/give-stock` form, Netlify form `stock-gift-inquiry`).
 - **Hero text carousel** — the "Life Together" card in the home hero.
 - **Sticky ticker** — the announcement bar pinned to the bottom of every page.
 - **Gather / Grow / Go journey** — the tabbed discipleship journey on the home page.

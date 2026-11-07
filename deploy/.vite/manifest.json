@@ -1,11 +1,11 @@
 {
-  "_SiteTicker-BnI0cHL9.js": {
-    "file": "assets/SiteTicker-BnI0cHL9.js",
+  "_SiteTicker-BluUV6zc.js": {
+    "file": "assets/SiteTicker-BluUV6zc.js",
     "name": "SiteTicker",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
       "_church-date-CB-Vz8Z-.js",
-      "_site-data-B03548La.js",
+      "_site-data-AirYcLJO.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
     ]
@@ -36,22 +36,22 @@
     "file": "assets/rolldown-runtime-S-ySWqyJ.js",
     "name": "rolldown-runtime"
   },
-  "_site-data-B03548La.js": {
-    "file": "assets/site-data-B03548La.js",
+  "_site-data-AirYcLJO.js": {
+    "file": "assets/site-data-AirYcLJO.js",
     "name": "site-data",
     "imports": [
       "_contact-topics-DHtQrqt4.js"
     ]
   },
   "app/components/InteriorChrome.tsx": {
-    "file": "assets/InteriorChrome-B1IaIAk5.js",
+    "file": "assets/InteriorChrome-BwS4B1da.js",
     "name": "InteriorChrome",
     "src": "app/components/InteriorChrome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-BnI0cHL9.js",
-      "_site-data-B03548La.js",
+      "_SiteTicker-BluUV6zc.js",
+      "_site-data-AirYcLJO.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
     ]
@@ -68,18 +68,18 @@
     ]
   },
   "app/discipleship/DiscipleshipStages.tsx": {
-    "file": "assets/DiscipleshipStages-DBVM7r6M.js",
+    "file": "assets/DiscipleshipStages-CuW1QyiU.js",
     "name": "DiscipleshipStages",
     "src": "app/discipleship/DiscipleshipStages.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_site-data-B03548La.js",
+      "_site-data-AirYcLJO.js",
       "_framework-CXnKph_e.js"
     ]
   },
   "app/events/EventsCalendar.tsx": {
-    "file": "assets/EventsCalendar-DnB4kN8t.js",
+    "file": "assets/EventsCalendar-TzyjbPxO.js",
     "name": "EventsCalendar",
     "src": "app/events/EventsCalendar.tsx",
     "isDynamicEntry": true,
@@ -87,12 +87,22 @@
       "_rolldown-runtime-S-ySWqyJ.js",
       "_TriadMark-Ci8KGwPb.js",
       "_church-date-CB-Vz8Z-.js",
-      "_site-data-B03548La.js",
+      "_site-data-AirYcLJO.js",
+      "_framework-CXnKph_e.js"
+    ]
+  },
+  "app/give-stock/StockGiftForm.tsx": {
+    "file": "assets/StockGiftForm-C9DHUA5m.js",
+    "name": "StockGiftForm",
+    "src": "app/give-stock/StockGiftForm.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
       "_framework-CXnKph_e.js"
     ]
   },
   "app/join-a-house-group/HouseGroupForm.tsx": {
-    "file": "assets/HouseGroupForm-Hv0lJYTu.js",
+    "file": "assets/HouseGroupForm-BT7RDfkn.js",
     "name": "HouseGroupForm",
     "src": "app/join-a-house-group/HouseGroupForm.tsx",
     "isDynamicEntry": true,
@@ -102,7 +112,7 @@
     ]
   },
   "app/kids/KidsForms.tsx": {
-    "file": "assets/KidsForms-BcKz5JPb.js",
+    "file": "assets/KidsForms-xWAeTBjV.js",
     "name": "KidsForms",
     "src": "app/kids/KidsForms.tsx",
     "isDynamicEntry": true,
@@ -112,21 +122,21 @@
     ]
   },
   "app/page.tsx": {
-    "file": "assets/page-DicpBIv5.js",
+    "file": "assets/page-BaQJrm3P.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-BnI0cHL9.js",
+      "_SiteTicker-BluUV6zc.js",
       "_TriadMark-Ci8KGwPb.js",
-      "_site-data-B03548La.js",
+      "_site-data-AirYcLJO.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
     ]
   },
   "app/prayer-request/PrayerRequestForm.tsx": {
-    "file": "assets/PrayerRequestForm-dOkMso9u.js",
+    "file": "assets/PrayerRequestForm-Dm-2wuDP.js",
     "name": "PrayerRequestForm",
     "src": "app/prayer-request/PrayerRequestForm.tsx",
     "isDynamicEntry": true,
@@ -136,7 +146,7 @@
     ]
   },
   "app/prayer/PrayerHexagon.tsx": {
-    "file": "assets/PrayerHexagon-Bm_3g0C7.js",
+    "file": "assets/PrayerHexagon-Duka1ku_.js",
     "name": "PrayerHexagon",
     "src": "app/prayer/PrayerHexagon.tsx",
     "isDynamicEntry": true,
@@ -146,7 +156,7 @@
     ]
   },
   "app/sermons/SermonDirectory.tsx": {
-    "file": "assets/SermonDirectory-DhOk1oUD.js",
+    "file": "assets/SermonDirectory-Cv5-Gcpx.js",
     "name": "SermonDirectory",
     "src": "app/sermons/SermonDirectory.tsx",
     "isDynamicEntry": true,
@@ -156,18 +166,18 @@
     ]
   },
   "app/staff/StaffDirectory.tsx": {
-    "file": "assets/StaffDirectory-CpWb7mac.js",
+    "file": "assets/StaffDirectory-Cxgfox0t.js",
     "name": "StaffDirectory",
     "src": "app/staff/StaffDirectory.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_site-data-B03548La.js",
+      "_site-data-AirYcLJO.js",
       "_framework-CXnKph_e.js"
     ]
   },
   "app/students/StudentsForms.tsx": {
-    "file": "assets/StudentsForms-BDdpcEJi.js",
+    "file": "assets/StudentsForms-ST-TV3EC.js",
     "name": "StudentsForms",
     "src": "app/students/StudentsForms.tsx",
     "isDynamicEntry": true,
@@ -177,7 +187,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-Di7m2dMu.js",
+    "file": "assets/layout-segment-context-BFMAxsqS.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -188,7 +198,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/link.js": {
-    "file": "assets/link-BopNRkOa.js",
+    "file": "assets/link-CDOQIHJu.js",
     "name": "link",
     "src": "node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -202,7 +212,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/router.js": {
-    "file": "assets/router-CcmejFgB.js",
+    "file": "assets/router-DV6bnEhQ.js",
     "name": "router",
     "src": "node_modules/vinext/dist/shims/router.js",
     "isDynamicEntry": true,
@@ -217,7 +227,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-BvFhYz-H.js",
+    "file": "assets/index-BWZn7MlQ.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -231,6 +241,7 @@
       "app/prayer-request/PrayerRequestForm.tsx",
       "app/discipleship/DiscipleshipStages.tsx",
       "virtual:vinext-app-browser-entry",
+      "app/give-stock/StockGiftForm.tsx",
       "app/join-a-house-group/HouseGroupForm.tsx",
       "app/page.tsx",
       "app/contact/ContactForm.tsx",

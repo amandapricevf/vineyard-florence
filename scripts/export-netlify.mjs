@@ -33,6 +33,7 @@ const forms = {
   "/prayer-request": "prayer-request",
   "/contact": ["contact-us-general-questions", ...contactTopics.map(topic => topic.formName)],
   "/join-a-house-group": "house-group-interest-signup",
+  "/give-stock": "stock-gift-inquiry",
   "/kids/register": "kids-registration",
   "/kids/media-release": "kids-media-release",
   "/students/new": "students-new-student",

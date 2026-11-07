@@ -1045,3 +1045,16 @@ main textarea {
 .not-found>div{align-items:center;display:flex;flex-wrap:wrap;gap:20px 32px;margin:12px 0 8px}
 .interior-cta.not-found>p:last-child{font-size:var(--text-body);margin-top:24px}
 .not-found>p:last-child a{color:white;text-decoration:underline;text-underline-offset:3px}
+
+/* Give: the header pill opens a small dropdown of ways to give, anchored under
+   the pill like the menu and search panels. Never animate visibility on open
+   (a hidden link cannot take keyboard focus). */
+.give-menu{position:relative}
+.site-header .give-options{background:white;border-radius:var(--radius-card);box-shadow:var(--shadow-panel);color:var(--ink);display:grid;opacity:0;overflow:hidden;pointer-events:none;position:absolute;right:0;top:calc(100% + 10px);transform:translateY(-10px);transition:transform .25s ease,opacity .2s ease,visibility 0s linear .2s;visibility:hidden;width:min(290px,calc(100vw - 24px));z-index:40}
+.site-header .give-options.is-open{opacity:1;pointer-events:auto;transform:translateY(0);transition:transform .25s ease,opacity .2s ease;visibility:visible}
+.site-header .give-options *{transition-property:background-color,color,padding-left}
+.site-header .give-options a{border-bottom:1px solid rgba(14,36,31,.1);display:grid;font-size:17px;font-weight:600;gap:3px;letter-spacing:-.01em;min-height:44px;padding:14px 20px}
+.site-header .give-options a:last-child{border-bottom:0}
+.site-header .give-options a span{color:var(--text-muted);font-size:var(--text-meta);font-weight:500;letter-spacing:0}
+.site-header .give-options a:hover,.site-header .give-options a:focus-visible{background:var(--paper);color:var(--vine);padding-left:24px}
+.site-header .give-options a:focus-visible{outline:3px solid var(--color-vine);outline-offset:-3px}

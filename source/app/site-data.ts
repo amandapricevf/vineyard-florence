@@ -51,6 +51,7 @@ export const churchCenterGroupsUrl = "https://vineyardflorence.churchcenter.com/
 export const houseGroupInterestUrl = "/join-a-house-group";
 export const eventsUrl = "/events";
 export const prayerRequestUrl = "/prayer-request";
+export const stockGiftUrl = "/give-stock";
 export const contactFormUrl = "/contact";
 
 /** Link to the general contact form with its subject line pre-filled. */
@@ -161,6 +162,7 @@ export const searchIndex: SearchItem[] = [
   { title: "Women’s Ministry", description: "Find connection, encouragement and gatherings for women at Vineyard Florence.", href: "/ministries#women", keywords: "women womens ministry group gatherings ladies" },
   { title: "Meet The Staff", description: "Meet the pastors, directors and ministry leaders who serve Vineyard Florence.", href: "/staff", keywords: "staff team pastors leaders people" },
   { title: "What We Believe", description: "Explore the mission, values and beliefs that shape Vineyard Florence.", href: "/beliefs", keywords: "beliefs theology values gospel up in out mission" },
+  { title: "Give Stock", description: "Tell us about a gift of stock and we will reach out about how to donate it.", href: stockGiftUrl, keywords: "stock stocks shares securities donate give gift broker ticker appreciated" },
   { title: "Give To Vineyard Florence", description: "Give simply and securely—and see how generosity moves beyond the walls of the church.", href: "/#give", keywords: "giving give donate generosity online church center mission community" },
   { title: "Contact Vineyard Florence", description: "Ask a question or start a conversation with Vineyard Florence.", href: "/#footer", keywords: "email contact office conversation question" },
 ];
