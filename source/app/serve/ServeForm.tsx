@@ -6,7 +6,7 @@ type FormStatus = { kind: "idle" | "sending" | "success" | "error"; message: str
 
 const initialStatus: FormStatus = { kind: "idle", message: "" };
 
-const teams = ["Kids Ministry", "Student Ministry", "First Impressions Team", "Media Team", "Worship Team", "Not sure yet"];
+const teams = ["Kids Ministry", "Student Ministry", "First Impressions Team", "Media Team", "Worship Team", "Cleaning Team", "Counting Team", "Not sure yet"];
 
 export function ServeForm() {
   const [status, setStatus] = useState<FormStatus>(initialStatus);

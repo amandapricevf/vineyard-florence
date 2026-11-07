@@ -15,7 +15,7 @@ export default function ServePage() {
       <section className="kids-form-hero">
         <p className="eyebrow light">Serve On A Sunday</p>
         <h1>Make Room<br /><em>For Others.</em></h1>
-        <p>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or the Media and Worship teams. Tell us where you would like to help, and someone from the team will reach out.</p>
+        <p>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team, the Media and Worship teams, or the Cleaning and Counting teams. Tell us where you would like to help, and someone from the team will reach out.</p>
         <Link className="text-link light" href="/#pathway">← Back To Up, In &amp; Out</Link>
       </section>
       <section className="kids-form-shell">
