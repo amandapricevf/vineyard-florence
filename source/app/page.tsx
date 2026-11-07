@@ -269,7 +269,6 @@ export default function Home() {
           smoothWheel: true,
           wheelMultiplier: 0.82,
           touchMultiplier: 1.15,
-          anchors: { offset: -76 },
         });
 
     const parallaxItems = prefersReducedMotion
@@ -305,18 +304,24 @@ export default function Home() {
     };
     frame = requestAnimationFrame(raf);
 
-    // Without Lenis intercepting them, in-page anchor links need the browser's
-    // own smooth scrolling suppressed and the fixed header accounted for.
+    // In-page anchor links are handled here, not by the browser or by Lenis's
+    // own anchor option: letting both run made the page jump to the section,
+    // pause, then snap up and glide back down. One scroll, header accounted for.
     const onAnchorClick = (nativeEvent: MouseEvent) => {
-      if (!prefersReducedMotion) return;
+      if (nativeEvent.defaultPrevented || nativeEvent.button !== 0 || nativeEvent.metaKey || nativeEvent.ctrlKey || nativeEvent.shiftKey || nativeEvent.altKey) return;
       const link = (nativeEvent.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
       const hash = link?.getAttribute("href");
       if (!hash || hash === "#") return;
-      const target = document.querySelector(hash);
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
       if (!target) return;
       nativeEvent.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 76;
-      window.scrollTo({ top, behavior: "auto" });
+      if (lenis) {
+        lenis.scrollTo(target); // Lenis adds the section's scroll-margin-top (76px) itself
+      } else {
+        const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 76;
+        const top = target.getBoundingClientRect().top + window.scrollY - margin;
+        window.scrollTo({ top, behavior: "auto" });
+      }
       history.replaceState(null, "", hash);
     };
     document.addEventListener("click", onAnchorClick);

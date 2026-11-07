@@ -19,6 +19,9 @@ export function useAutoHideHeader(headerRef: RefObject<HTMLElement | null>) {
     let isHidden = false;
     let pointerNearTop = false;
     let frame = 0;
+    // A jump to an in-page section scrolls on its own; the header stays put
+    // until it lands rather than sliding away mid-jump.
+    let holdUntil = 0;
 
     const set = (next: boolean) => {
       if (next === isHidden) return;
@@ -35,6 +38,7 @@ export function useAutoHideHeader(headerRef: RefObject<HTMLElement | null>) {
         frame = 0;
         const y = window.scrollY;
         const delta = y - lastY;
+        if (performance.now() < holdUntil) { lastY = y; return; }
         if (y < header.offsetHeight * 1.5) set(false);
         else if (delta > 4 && !pointerNearTop && !somethingOpen()) set(true);
         else if (delta < -4) set(false);
@@ -50,12 +54,22 @@ export function useAutoHideHeader(headerRef: RefObject<HTMLElement | null>) {
     };
     const onPointerLeaveWindow = () => { pointerNearTop = false; };
     const onFocusIn = () => set(false);
+    const onAnchorClick = (event: MouseEvent) => {
+      const link = (event.target as Element | null)?.closest?.("a[href*='#']") as HTMLAnchorElement | null;
+      if (!link) return;
+      const url = new URL(link.href, location.href);
+      if (url.pathname !== location.pathname || !url.hash) return;
+      holdUntil = performance.now() + 1800;
+      set(false);
+    };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("pointermove", onPointerMove, { passive: true });
     document.documentElement.addEventListener("pointerleave", onPointerLeaveWindow);
     header.addEventListener("focusin", onFocusIn);
+    document.addEventListener("click", onAnchorClick, true);
     return () => {
+      document.removeEventListener("click", onAnchorClick, true);
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pointermove", onPointerMove);
