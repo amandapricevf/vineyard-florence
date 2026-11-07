@@ -82,6 +82,8 @@ export const spotifyPodcastUrl = "https://open.spotify.com/show/2IGMUuutUKP9Junu
 export const applePodcastUrl = "https://podcasts.apple.com/no/podcast/vineyard-florence/id1479721753";
 export const celebrateRecoveryUrl = "https://celebraterecovery.com/";
 export const mensHealthySexualityUrl = "https://menshealthysexuality.com/";
+/** Vineyard Freedom intake questionnaire (Google Form), the first step to a prayer session. */
+export const vineyardFreedomIntakeUrl = "https://forms.gle/RZcUhggff8VNQGdw5";
 export const alcoholicsAnonymousUrl = "https://www.aa.org/";
 /** Women of Warfare Ministries' Facebook page, as linked from the old site. */
 export const womenOfWarfareUrl = "https://www.facebook.com/RachelleJo75";
@@ -170,6 +172,7 @@ export const searchIndex: SearchItem[] = [
   { title: "Vineyard Students", description: "Weekly gatherings, parent resources and clear next steps for sixth through twelfth grade students.", href: "/students", keywords: "youth group teenagers middle school high school students ascend class wednesday" },
   { title: "New To Vineyard Students", description: "Tell the Students team your family is coming to a gathering.", href: "/students/new", keywords: "student first visit new youth coming register" },
   { title: "Vineyard Students Parent Newsletter", description: "Sign up for student-ministry news, reminders and parent updates.", href: "/students/newsletter", keywords: "student youth parent newsletter updates schedule" },
+  { title: "Vineyard Freedom", description: "Freedom, healing and restoration through prayer, biblical truth and the leading of the Holy Spirit. Start with the intake questionnaire.", href: "/ministries#vineyard-freedom", keywords: "vineyard freedom vf healing deliverance inner healing trauma oppression strongholds prayer session intake questionnaire" },
   { title: "Celebrate Recovery", description: "A Christ-centered recovery community for finding healing and freedom.", href: "/ministries#celebrate-recovery", keywords: "recovery celebrate recovery healing freedom support" },
   { title: "Men’s Healthy Sexuality", description: "Resources and community helping men pursue wholeness and healthy sexuality.", href: "/ministries#mens-healthy-sexuality", keywords: "men mens healthy sexuality mhs wholeness" },
   { title: "Men’s Ministry", description: "Find connection, discipleship and opportunities for men at Vineyard Florence.", href: "/ministries#men", keywords: "men mens ministry group men of courage" },

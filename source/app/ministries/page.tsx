@@ -6,6 +6,7 @@ import {
   churchCenterGroupsUrl,
   contactTopicLink,
   mensHealthySexualityUrl,
+  vineyardFreedomIntakeUrl,
   latviaFacebookUrl,
 } from "../site-data";
 
@@ -20,6 +21,7 @@ const ministries = [
   { id: "students", label: "Middle + High School", title: "Vineyard Students", copy: "A community where students can ask real questions, encounter Jesus and build a faith that becomes their own.", href: "/students", cta: "Explore Vineyard Students", external: false },
   { id: "celebrate-recovery", label: "Recovery", title: "Celebrate Recovery", copy: "A Christ-centered recovery community helping people find healing, freedom and hope through honest relationships and the power of Jesus.", href: celebrateRecoveryUrl, cta: "Visit Celebrate Recovery", external: true },
   { id: "mens-healthy-sexuality", label: "Wholeness", title: "Men’s Healthy Sexuality", copy: "Resources and supportive community helping men pursue honesty, healing and a healthy, Jesus-centered vision for sexuality.", href: mensHealthySexualityUrl, cta: "Visit MHS", external: true },
+  { id: "vineyard-freedom", label: "Healing + Freedom", title: "Vineyard Freedom", copy: "Experience the freedom, healing and restoration Jesus offers. Through prayer, biblical truth and the leading of the Holy Spirit, we walk alongside those seeking breakthrough from spiritual oppression, generational cycles, emotional wounds, trauma and strongholds.", href: vineyardFreedomIntakeUrl, cta: "Start The Intake Questionnaire", external: true },
   { id: "men", label: "Men", title: "Men’s Ministry", copy: "Connection, discipleship and practical brotherhood.", href: contactTopicLink("mens-ministry"), cta: "Connect With Men’s Ministry", external: false },
   { id: "women", label: "Women", title: "Women’s Ministry", copy: "Gatherings and relationships that create room for women to be encouraged, grow in faith and follow Jesus together.", href: eventsUrl, cta: "See Women’s Events", external: false },
   { id: "merp", label: "Global Mission", title: "MERP", copy: "The Middle Eastern Refugee Partnership: making disciples who make disciples among people on the move through church planting, local leadership and humanitarian relief.", href: "/merp", cta: "Explore MERP", external: false },
