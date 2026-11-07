@@ -24,6 +24,8 @@ import {
   serviceTimes,
   contactEmail,
   prayerRequestUrl,
+  prayerZoomUrl,
+  bibleReadingPlanUrl,
   celebrateRecoveryUrl,
   mensHealthySexualityUrl,
   latviaFacebookUrl,
@@ -606,13 +608,31 @@ export default function Home() {
         </div>
         <div className="purpose-grid">
           {[
-            { number: "01", word: "UP", title: "Love God", copy: "Worship, prayer and the expectant presence of God shape everything we do." },
+            {
+              number: "01",
+              word: "UP",
+              title: "Love God",
+              copy: "UP is seeking, knowing and hearing the voice of God. We do this by cultivating lives of Prayer, Worship, Daily Bible Reading, and Fasting.",
+              points: [
+                <>We pray together daily on <a href={prayerZoomUrl} target="_blank" rel="noreferrer">Zoom from 6:30–7:00am ↗</a></>,
+                <>We worship on Sunday mornings together at 9:00am &amp; 11:00am weekly (in person and online)</>,
+                <><a href={bibleReadingPlanUrl} target="_blank" rel="noreferrer">Daily Bible Reading Plan ↗</a></>,
+                <>We fast as a church weekly from Sunday evenings after dinner until dinner on Mondays. See our social media for prayer points.</>,
+              ],
+            },
             { number: "02", word: "IN", title: "Make Disciples", copy: "We grow through authentic community, Scripture and life shared around the table." },
             { number: "03", word: "OUT", title: "Impact The World", copy: "We join Jesus in serving our neighbors and carrying hope into everyday places." },
           ].map((item, index) => (
             <article className="purpose-card" key={item.word} data-reveal="card">
               <span className="card-number"><TriadMark index={(index + 1) as 1 | 2 | 3} />{item.number}</span><span className="giant-word" aria-hidden="true">{item.word}</span>
-              <div><h3>{item.title}</h3><p>{item.copy}</p><Link href="/discipleship" aria-label={`Explore ${item.title}`}>Explore <span aria-hidden="true">↗</span></Link></div>
+              <div>
+                <h3>{item.title}</h3>
+                <div className="purpose-card-copy">
+                  <p>{item.copy}</p>
+                  {"points" in item && item.points ? <ul className="purpose-points">{item.points.map((point, pointIndex) => <li key={pointIndex}>{point}</li>)}</ul> : null}
+                </div>
+                <Link href="/discipleship" aria-label={`Explore ${item.title}`}>Explore <span aria-hidden="true">↗</span></Link>
+              </div>
             </article>
           ))}
         </div>

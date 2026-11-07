@@ -51,6 +51,11 @@ export const churchCenterGroupsUrl = "https://vineyardflorence.churchcenter.com/
 export const houseGroupInterestUrl = "/join-a-house-group";
 export const eventsUrl = "/events";
 export const prayerRequestUrl = "/prayer-request";
+/** Weekday morning prayer on Zoom, 6:30–7:00 AM. */
+export const prayerZoomUrl = "https://us02web.zoom.us/j/218791174";
+/** This year's five-day-a-week Bible reading schedule (PDF). Update each year. */
+export const bibleReadingPlanUrl =
+  "https://www.fivedaybiblereading.com/wp-content/uploads/2025/12/2026-5-Day-Bible-Reading-Schedule.pdf";
 export const stockGiftUrl = "/give-stock";
 export const contactFormUrl = "/contact";
 

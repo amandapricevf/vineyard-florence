@@ -6,6 +6,7 @@ import {
   contactPhone,
   contactPhoneUrl,
   prayerRequestUrl,
+  prayerZoomUrl,
 } from "../site-data";
 import { PrayerHexagon } from "./PrayerHexagon";
 
@@ -14,7 +15,6 @@ export const metadata: Metadata = {
   description: "Request prayer, join a prayer gathering and learn practical ways to pray with Vineyard Florence.",
 };
 
-const prayerZoomUrl = "https://us02web.zoom.us/j/218791174";
 
 const prayerGatherings = [
   ["Weekdays", "Morning Prayer", "6:30–7:00 AM", "Online Via Zoom", true],
