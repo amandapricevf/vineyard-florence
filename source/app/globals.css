@@ -1112,3 +1112,9 @@ section[id]{scroll-margin-top:76px}
 /* Home prayer section: the Daily Bible Reading link sits directly under the
    "Need Prayer?" link, sharing its divider. */
 .prayer-request.prayer-bible-reading,.home-page .prayer-request.prayer-bible-reading{border-top:0;margin-top:0}
+
+/* Auto-hiding header: slides up out of view while scrolling down and comes
+   back quickly on scroll up, when the mouse nears the top, or on keyboard
+   focus (see components/useAutoHideHeader.ts). */
+.site-header{transition:background .45s ease,color .45s ease,height .45s ease,transform .2s ease-out}
+.site-header.is-hidden{transform:translateY(-101%);transition:background .45s ease,color .45s ease,height .45s ease,transform .3s ease-in}

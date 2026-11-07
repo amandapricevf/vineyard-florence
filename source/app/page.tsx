@@ -11,6 +11,7 @@ import { SiteFooter } from "./components/SiteFooter";
 import { TriadMark } from "./components/TriadMark";
 import { usePrefersReducedMotion } from "./lib/use-prefers-reduced-motion";
 import { SiteTicker } from "./components/SiteTicker";
+import { useAutoHideHeader } from "./components/useAutoHideHeader";
 import {
   churchCenterGroupsUrl,
   churchCenterGivingUrl,
@@ -170,6 +171,8 @@ export default function Home() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
   const [headerSolid, setHeaderSolid] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const headerHidden = useAutoHideHeader(headerRef);
   const [introComplete, setIntroComplete] = useState(false);
   const [heroMessage, setHeroMessage] = useState(0);
   const [heroCarouselPaused, setHeroCarouselPaused] = useState(false);
@@ -360,7 +363,7 @@ export default function Home() {
       )}
       <div className="scroll-progress" aria-hidden="true"><span /></div>
 
-      <header className={`site-header ${headerSolid ? "is-scrolled" : ""}`}>
+      <header ref={headerRef} className={`site-header ${headerSolid ? "is-scrolled" : ""}${headerHidden ? " is-hidden" : ""}`}>
         <div className="header-left">
           <button className="header-icon-button menu-toggle" type="button" aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-controls="site-navigation" aria-expanded={menuOpen} onClick={(event) => { setSearchOpen(false); setMenuOpen((open) => !open); focusMenuIfKeyboard(event, !menuOpen); }}>
             <span className="hamburger" aria-hidden="true"><i /><i /><i /></span>

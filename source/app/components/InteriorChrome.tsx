@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   churchCenterSignInUrl,
@@ -13,6 +13,7 @@ import { GiveMenu } from "./GiveMenu";
 import { HeaderSearch } from "./HeaderSearch";
 import { MenuVisit, focusMenuIfKeyboard, returnFocusFromHeaderPanel } from "./MenuVisit";
 import { SiteFooter } from "./SiteFooter";
+import { useAutoHideHeader } from "./useAutoHideHeader";
 
 export { SiteTicker } from "./SiteTicker";
 
@@ -24,6 +25,8 @@ export function InteriorFooter() {
 export function InteriorHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const headerHidden = useAutoHideHeader(headerRef);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -56,7 +59,7 @@ export function InteriorHeader() {
 
   return (
     <>
-      <header className="site-header interior-site-header is-scrolled">
+      <header ref={headerRef} className={`site-header interior-site-header is-scrolled${headerHidden ? " is-hidden" : ""}`}>
         <div className="header-left">
           <button
             className="header-icon-button menu-toggle"
