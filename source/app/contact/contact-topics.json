@@ -17,7 +17,5 @@
   { "topic": "pastoring-eldership-church-planting", "formName": "contact-pastoring-eldership-church-planting", "subject": "Pastoring, Eldership Or Church Planting" },
   { "topic": "baptism", "formName": "contact-baptism-questions", "subject": "Questions About Baptism" },
   { "topic": "free-pantry-serve", "formName": "contact-free-pantry-volunteer", "subject": "I Want To Serve At VF’s Free Pantry" },
-  { "topic": "men-of-courage", "formName": "contact-men-of-courage-more-info", "subject": "Men Of Courage — More Info" },
-  { "topic": "aa-at-vf", "formName": "contact-aa-meeting-at-vf", "subject": "AA Meeting At Vineyard Florence" },
-  { "topic": "women-of-warfare", "formName": "contact-women-of-warfare", "subject": "Women Of Warfare" }
+  { "topic": "men-of-courage", "formName": "contact-men-of-courage-more-info", "subject": "Men Of Courage — More Info" }
 ]

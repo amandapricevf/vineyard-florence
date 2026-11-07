@@ -32,6 +32,8 @@ import {
   wahaUrl,
   celebrateRecoveryUrl,
   mensHealthySexualityUrl,
+  alcoholicsAnonymousUrl,
+  womenOfWarfareUrl,
   latviaFacebookUrl,
   vinedresserUrl,
   youtubeUrl,
@@ -632,7 +634,7 @@ export default function Home() {
               points: [
                 <><Link href={houseGroupInterestUrl}>Join a House Group →</Link></>,
                 <>Lead or start a Discovery Bible Study: get the <a href={wahaUrl} target="_blank" rel="noreferrer">Waha app ↗</a></>,
-                <>Connect to a recovery ministry at VF: <a href={celebrateRecoveryUrl} target="_blank" rel="noreferrer">Celebrate Recovery ↗</a>, <a href={mensHealthySexualityUrl} target="_blank" rel="noreferrer">Men’s Healthy Sexuality ↗</a>, <Link href={contactTopicLink("aa-at-vf")}>AA</Link>, <Link href={contactTopicLink("men-of-courage")}>Men of Courage</Link>, <Link href={contactTopicLink("women-of-warfare")}>Women of Warfare</Link></>,
+                <>Connect to a recovery ministry at VF: <a href={celebrateRecoveryUrl} target="_blank" rel="noreferrer">Celebrate Recovery ↗</a>, <a href={mensHealthySexualityUrl} target="_blank" rel="noreferrer">Men’s Healthy Sexuality ↗</a>, <a href={alcoholicsAnonymousUrl} target="_blank" rel="noreferrer">AA ↗</a>, <Link href={contactTopicLink("men-of-courage")}>Men of Courage</Link>, <a href={womenOfWarfareUrl} target="_blank" rel="noreferrer">Women of Warfare ↗</a></>,
                 <>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or Media/Worship Team: <Link href={volunteerUrl}>Sign up to volunteer →</Link></>,
               ],
             },

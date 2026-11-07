@@ -80,6 +80,9 @@ export const spotifyPodcastUrl = "https://open.spotify.com/show/2IGMUuutUKP9Junu
 export const applePodcastUrl = "https://podcasts.apple.com/no/podcast/vineyard-florence/id1479721753";
 export const celebrateRecoveryUrl = "https://celebraterecovery.com/";
 export const mensHealthySexualityUrl = "https://menshealthysexuality.com/";
+export const alcoholicsAnonymousUrl = "https://www.aa.org/";
+/** Women of Warfare Ministries' Facebook page, as linked from the old site. */
+export const womenOfWarfareUrl = "https://www.facebook.com/RachelleJo75";
 export const latviaFacebookUrl = "https://www.facebook.com/share/1cmcu4t5Cq/?mibextid=wwXIfr";
 
 /* ------------------------------------------------------------------ */
