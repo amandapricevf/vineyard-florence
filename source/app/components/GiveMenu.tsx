@@ -59,7 +59,7 @@ export function GiveMenu() {
           Crypto <span>Every.org ↗</span>
         </a>
         <Link href={stockGiftUrl} onClick={() => setOpen(false)}>
-          Stocks <span>Tell us about your gift →</span>
+          Stocks <span>Tell us about your gift ↗</span>
         </Link>
       </div>
     </div>

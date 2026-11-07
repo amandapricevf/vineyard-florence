@@ -1118,3 +1118,17 @@ section[id]{scroll-margin-top:76px}
    focus (see components/useAutoHideHeader.ts). */
 .site-header{transition:background .45s ease,color .45s ease,height .45s ease,transform .2s ease-out}
 .site-header.is-hidden{transform:translateY(-101%);transition:background .45s ease,color .45s ease,height .45s ease,transform .3s ease-in}
+
+/* Announcement bar collapse: after scrolling down, the moving message rolls
+   left and tucks behind the "Latest" tab, which stays on screen. Clicking the
+   tab, or returning to the top of the page, opens it again
+   (components/SiteTicker.tsx). */
+.sticky-news{clip-path:inset(-40px -40px -40px -40px);transition:background .25s ease,box-shadow .25s ease,opacity .3s ease,transform .45s cubic-bezier(.16,1,.3,1),clip-path .55s cubic-bezier(.65,0,.35,1)}
+.sticky-news-kicker{position:relative;z-index:2}
+.sticky-news-window,.sticky-news-arrow{transition:transform .55s cubic-bezier(.65,0,.35,1),opacity .4s ease,background .25s ease}
+.sticky-news.is-collapsed{box-shadow:none;clip-path:inset(-40px calc(100% - var(--news-kicker-w,120px)) -40px -40px)}
+.sticky-news-kicker{transition:box-shadow .3s ease}
+.sticky-news.is-collapsed .sticky-news-kicker{box-shadow:0 12px 30px rgba(16,35,31,.28)}
+.sticky-news.is-collapsed .sticky-news-window,.sticky-news.is-collapsed .sticky-news-arrow{opacity:0;transform:translateX(-45%)}
+.sticky-news.is-collapsed .sticky-news-track{animation-play-state:paused}
+.sticky-news.is-collapsed .sticky-news-kicker{cursor:pointer}

@@ -43,7 +43,7 @@
   // Full page navigation keeps static routes independent of a React server.
   window.addEventListener("click", event => {
     const anchor = event.target.closest?.("a[href]");
-    if (!anchor || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || anchor.target || anchor.hasAttribute("download")) return;
+    if (!anchor || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || anchor.target || anchor.hasAttribute("download") || anchor.hasAttribute("data-no-navigate")) return;
     const url = new URL(anchor.href, location.href);
     if (url.origin === "https://vineyard-florence.caaprojects.chatgpt.site") url.host = location.host;
     if (url.origin !== location.origin || !/^https?:$/.test(url.protocol)) return;
