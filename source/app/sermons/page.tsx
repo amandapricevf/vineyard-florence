@@ -3,7 +3,7 @@ import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/Interi
 import { SermonDirectory } from "./SermonDirectory";
 
 export const metadata: Metadata = {
-  title: "Sermons | Vineyard Florence Church",
+  title: "Messages | Vineyard Florence Church",
   description: "Browse every archived Vineyard Florence Church Sunday livestream, newest first, with the original date and a direct link to watch each full service.",
 };
 
