@@ -51,8 +51,8 @@
       event.preventDefault(); event.stopImmediatePropagation();
       window.fetch("/api/sermons").then(response => response.json()).then(archive => {
         const latest = (archive.streams || []).filter(item => /^[\w-]{11}$/.test(item.videoId) && Date.parse(item.publishedAt) <= Date.now()).sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))[0];
-        location.assign(latest ? `https://www.youtube.com/watch?v=${latest.videoId}` : "/sermons#latest-services");
-      }).catch(() => location.assign("/sermons#latest-services"));
+        location.assign(latest ? `https://www.youtube.com/watch?v=${latest.videoId}` : "/messages#latest-services");
+      }).catch(() => location.assign("/messages#latest-services"));
       return;
     }
     if (url.pathname.replace(/\/$/, "") !== location.pathname.replace(/\/$/, "")) {

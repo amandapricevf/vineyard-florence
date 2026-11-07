@@ -1,4 +1,4 @@
-import { streamArchiveSeed, type StreamArchiveItem } from "../../sermons/stream-archive";
+import { streamArchiveSeed, type StreamArchiveItem } from "../../messages/stream-archive";
 
 const playlistFeedUrl = "https://www.youtube.com/feeds/videos.xml?playlist_id=UULVezpWG2xkplYJJZyTayTyKg";
 
