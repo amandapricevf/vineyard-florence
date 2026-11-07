@@ -1066,3 +1066,9 @@ main textarea {
   .site-header .menu-visit{padding-bottom:10px;padding-top:12px}
   .site-header .menu-visit a{padding:8px 0}
 }
+
+/* Discipleship resource library: each group (Up / In / Out) is marked with
+   the triangle in place of a number, with the movement as a small label. */
+.discipleship-resource-groups header{align-content:start;align-items:start;align-self:start}
+.discipleship-resource-groups header>.triad-mark{color:var(--color-vine);margin-top:6px}
+.discipleship-resource-groups header .eyebrow{color:var(--color-vine);margin:0 0 10px}

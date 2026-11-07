@@ -7,6 +7,7 @@ import {
   contactTopicLink,
   churchCenterGroupsUrl,
   houseGroupInterestUrl,
+  lectio365Url,
   wahaUrl,
 } from "../site-data";
 
@@ -118,49 +119,56 @@ const recommendedBooks = [
   { title: "Sacrilege", author: "Hugh Halter" },
   { title: "Cultivating a Life for God: Multiplying Disciples Through Life Transformation Groups", author: "Neil Cole" },
   { title: "The Forgotten Ways", author: "Alan Hirsch" },
+  { title: "Designed to Lead", author: "Eric Geiger and Kevin Peck" },
+  { title: "The Heavenly Man", author: "Brother Yun" },
 ] as const;
 
+/**
+ * The resource library in three groups that follow Up, In and Out. The
+ * resources the church named for each group come first; the rest of the
+ * original guides follow where they fit best. `external` marks apps that open
+ * another site rather than a VF guide.
+ */
 const resourceGroups = [
   {
-    label: "Disciple-Making Tools",
-    description: "Guides for hearing God, practicing accountability and joining His mission.",
+    movement: "Up",
+    label: "Prayer",
+    description: "Make room to meet with God, hear His voice and pray with Scripture.",
     links: [
-      { title: "Circle Of Accountability", note: "A discipleship conversation guide", href: "/resources/discipleship/Circle-of-Accountability.pdf" },
       { title: "Learning To Hear God’s Voice", note: "Practice listening and responding to God", href: "/resources/discipleship/Learning-to-Hear-Gods-Voice.pdf" },
-      { title: "Workers For The Harvest", note: "Pray and prepare to join God’s mission", href: "/resources/discipleship/Workers-for-the-Harvest.pdf" },
-    ],
-  },
-  {
-    label: "Personal Prayer",
-    description: "Make room to meet with God, listen to Him and pray with Scripture.",
-    links: [
       { title: "Alone Time With God", note: "A personal prayer guide", href: "/resources/discipleship/Alone-Time-wGod-Prayer-Guide.pdf" },
-      { title: "Kingdom Prayer", note: "A guide to praying for God’s Kingdom", href: "/resources/discipleship/Kingdom-Prayer-DMM.pdf" },
-      { title: "Personal Prayer Time Based On The Disciple’s Prayer", note: "Pray through the Lord’s Prayer", href: "/resources/discipleship/Personal-Prayer-Time-based-on-the-Disciples-Prayer.pdf" },
       { title: "Prayer Hexagon", note: "Printable guide; try the interactive version on the Prayer page", href: "/resources/discipleship/Prayer-Hexagon.jpg" },
-      { title: "Prayer Wheel", note: "A visual guide for sustained prayer", href: "/resources/discipleship/Prayer-Wheel.pdf" },
+      { title: "Lectio 365 App", note: "Daily Lectio Divina prayer on your phone", href: lectio365Url, external: true },
       { title: "Lectio Divina", note: "Read Scripture slowly and prayerfully", href: "/resources/discipleship/Lectio-Divina-1.pdf" },
+      { title: "Personal Prayer Time Based On The Disciple’s Prayer", note: "Pray through the Lord’s Prayer", href: "/resources/discipleship/Personal-Prayer-Time-based-on-the-Disciples-Prayer.pdf" },
+      { title: "Prayer Wheel", note: "A visual guide for sustained prayer", href: "/resources/discipleship/Prayer-Wheel.pdf" },
       { title: "Prayer Of Examen", note: "Notice God’s presence in your day", href: "/resources/discipleship/Prayer-of-Examen.pdf" },
-    ],
-  },
-  {
-    label: "Pray For The World",
-    description: "Bring people, communities and disciple-making movements before God.",
-    links: [
-      { title: "DMM Prayers", note: "Pray for disciple-making movements", href: "/resources/discipleship/DMM-Prayers.pdf" },
-      { title: "Persecuted Church Prayers", note: "Stand with the persecuted church in prayer", href: "/resources/discipleship/Persecuted-Church-Prayer.pdf" },
-      { title: "Prayer Cycle Movement Prayer", note: "A repeatable prayer rhythm for movements", href: "/resources/discipleship/Prayer-Cycle-Movement-Prayer.pdf" },
-      { title: "Prayer For Disciple-Making Movements", note: "Focused movement prayer prompts", href: "/resources/discipleship/Praying-for-Disciple-Making-Movements.pdf" },
-      { title: "The Prayer Triangle", note: "A three-part prayer tool", href: "/resources/discipleship/The-Prayer-Triangle-1.pdf" },
-    ],
-  },
-  {
-    label: "Practices And Prayer Ministry",
-    description: "Make space for surrender, and learn to pray for someone with care.",
-    links: [
       { title: "Fasting And Feasting", note: "A guide to hunger, attention and celebration", href: "/resources/discipleship/Fasting-and-Feasting.pdf" },
       { title: "John Wesley Covenant Prayer", note: "A historic prayer of surrender", href: "/resources/discipleship/John-Wesley-Covenant-Prayer-hm6b.pdf" },
+    ],
+  },
+  {
+    movement: "In",
+    label: "Together",
+    description: "Grow with others in House Groups and Discovery Bible Studies, and pray for disciple-making movements.",
+    links: [
+      { title: "DMM Prayers", note: "Pray for disciple-making movements", href: "/resources/discipleship/DMM-Prayers.pdf" },
+      { title: "Waha App", note: "Start a Discovery Bible Study", href: wahaUrl, external: true },
+      { title: "Circle Of Accountability", note: "A discipleship conversation guide", href: "/resources/discipleship/Circle-of-Accountability.pdf" },
+      { title: "Prayer For Disciple-Making Movements", note: "Focused movement prayer prompts", href: "/resources/discipleship/Praying-for-Disciple-Making-Movements.pdf" },
+      { title: "Prayer Cycle Movement Prayer", note: "A repeatable prayer rhythm for movements", href: "/resources/discipleship/Prayer-Cycle-Movement-Prayer.pdf" },
+    ],
+  },
+  {
+    movement: "Out",
+    label: "Serving Others",
+    description: "Join God’s mission: pray for His Kingdom, pray for people and serve those far from Him.",
+    links: [
+      { title: "Kingdom Prayer", note: "A guide to praying for God’s Kingdom", href: "/resources/discipleship/Kingdom-Prayer-DMM.pdf" },
       { title: "Vineyard Five-Step Prayer Model", note: "Learn to pray for someone", href: "/resources/discipleship/Vineyard-5-Step-Prayer-Model.pdf" },
+      { title: "The Prayer Triangle", note: "A three-part prayer tool", href: "/resources/discipleship/The-Prayer-Triangle-1.pdf" },
+      { title: "Workers For The Harvest", note: "Pray and prepare to join God’s mission", href: "/resources/discipleship/Workers-for-the-Harvest.pdf" },
+      { title: "Persecuted Church Prayers", note: "Stand with the persecuted church in prayer", href: "/resources/discipleship/Persecuted-Church-Prayer.pdf" },
     ],
   },
 ] as const;
@@ -297,16 +305,16 @@ export default function DiscipleshipPage() {
         <div className="discipleship-resources-heading">
           <span className="section-index">06 — Resource Library</span>
           <div><p className="eyebrow">Tools You Can Use This Week</p><h2>Learn It.<br /><em>Live It. Give It Away.</em></h2></div>
-          <p>House Groups, Discovery Bible Studies and recovery ministries are primary places we make disciples. Explore all 18 original VF tools for personal and shared prayer, disciple-making and joining God&apos;s mission. Each guide opens in a new tab.</p>
+          <p>House Groups, Discovery Bible Studies and recovery ministries are primary places we make disciples. These tools follow Up, In and Out: prayer, life together and serving others. Each one opens in a new tab.</p>
         </div>
 
         <div className="discipleship-resource-groups">
           {resourceGroups.map((group, groupIndex) => (
             <section key={group.label}>
-              <header><span>0{groupIndex + 1}</span><div><h3>{group.label}</h3><p>{group.description}</p></div></header>
+              <header><TriadMark index={(groupIndex + 1) as 1 | 2 | 3} /><div><p className="eyebrow">{group.movement}</p><h3>{group.label}</h3><p>{group.description}</p></div></header>
               <div>
                 {group.links.map((resource) => (
-                  <a key={resource.title} href={resource.href} target="_blank" rel="noreferrer">
+                  <a key={resource.title} href={resource.href} target="_blank" rel="noreferrer" data-kind={"external" in resource ? "app" : "guide"}>
                     <div><strong>{resource.title}</strong><span>{resource.note}</span></div>
                     <b aria-hidden="true">↗</b>
                   </a>

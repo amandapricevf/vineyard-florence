@@ -62,6 +62,8 @@ export const freePantryUrl = "/free-pantry";
 export const resetHouseUrl = "/events#reset-house";
 /** Free Discovery Bible Study app. */
 export const wahaUrl = "https://waha.app/eng";
+/** Lectio 365: daily Lectio Divina prayer app (linked from the old Prayer Resources page). */
+export const lectio365Url = "https://lectio365.com/";
 export const contactFormUrl = "/contact";
 
 /** Link to the general contact form with its subject line pre-filled. */
