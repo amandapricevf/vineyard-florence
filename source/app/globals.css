@@ -1034,9 +1034,9 @@ section[id]{scroll-margin-top:76px}
 .home-page .hero{height:calc(100svh - var(--ticker-clearance));max-height:none;min-height:640px}
 @media(max-width:620px){.home-page .hero{min-height:calc(100svh - var(--ticker-clearance))}}
 
-/* What To Expect timeline, desktop: seven steps in 100px columns were too
-   cramped to read. Put the time band across the top (as on phones) and lay the
-   steps out four to a row. */
+/* What To Expect timeline, desktop: the time band runs across the top (as on
+   phones) so the steps get the card's full width: four to a row on small
+   desktops and tablets, a single row of seven from 1100px. */
 @media(min-width:961px){
   .home-page .expect-service-shared{display:block;min-height:0}
   .home-page .expect-service-shared .expect-service-label{align-items:center;display:grid;gap:4px 24px;grid-template-columns:1fr auto;padding:24px 32px}
@@ -1048,7 +1048,17 @@ section[id]{scroll-margin-top:76px}
   .home-page .expect-rail strong{font-size:clamp(20px,1.6vw,24px)}
   .home-page .expect-rail p{font-size:15px;max-width:30ch}
 }
-@media(min-width:1200px){.expect-step-link{white-space:nowrap}}
+/* Laptops and desktops: all seven steps in a single row. The step links become
+   underlined text links here, which wrap cleanly in the narrower columns. */
+@media(min-width:1100px){
+  .home-page .expect-rail{grid-template-columns:repeat(7,minmax(0,1fr));padding:44px 22px 30px;row-gap:0}
+  .home-page .expect-rail li{padding:32px 14px 14px}
+  .home-page .expect-rail li:nth-child(4)::after{display:block}
+  .home-page .expect-rail strong{font-size:clamp(18px,1.35vw,22px)}
+  .home-page .expect-rail p{max-width:none}
+  .home-page .expect-rail .expect-step-link{background:transparent;border-bottom:1px solid currentColor;border-radius:0;color:var(--color-vine);gap:6px;justify-content:flex-start;line-height:1.4;padding:0 0 3px;white-space:normal}
+  .home-page .expect-rail .expect-step-link:hover,.home-page .expect-rail .expect-step-link:focus-visible{background:transparent;color:var(--ink)}
+}
 .expect-step-link{max-width:100%}
 
 /* Home hero on phones: real phone screens are shorter than the hero's content
