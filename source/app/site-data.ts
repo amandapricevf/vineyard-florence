@@ -58,6 +58,8 @@ export const bibleReadingPlanUrl =
   "https://www.fivedaybiblereading.com/wp-content/uploads/2025/12/2026-5-Day-Bible-Reading-Schedule.pdf";
 export const stockGiftUrl = "/give-stock";
 export const volunteerUrl = "/serve";
+export const freePantryUrl = "/free-pantry";
+export const resetHouseUrl = "/events#reset-house";
 /** Free Discovery Bible Study app. */
 export const wahaUrl = "https://waha.app/eng";
 export const contactFormUrl = "/contact";

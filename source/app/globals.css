@@ -1099,5 +1099,13 @@ section[id]{scroll-margin-top:76px}
 .purpose-card .purpose-points li::before{border-bottom:7px solid var(--color-sand);border-left:5px solid transparent;border-right:5px solid transparent;content:"";left:2px;position:absolute;top:17px}
 .purpose-card .purpose-points a{color:white;display:inline;font-size:inherit;font-weight:600;letter-spacing:0;padding:0;text-decoration:underline;text-decoration-thickness:1px;text-transform:none;text-underline-offset:3px}
 .purpose-card .purpose-points a:hover{color:var(--color-sand)}
-.purpose-card .purpose-points a{white-space:nowrap}
+.purpose-card .purpose-points .nowrap{white-space:nowrap}
 .purpose-card .purpose-card-copy>p{margin-bottom:18px}
+/* OUT is the light (tan) card on desktop: dark list text, lines and links. */
+@media(min-width:961px){
+  .purpose-card:nth-child(3) .purpose-points{border-top-color:rgba(21,21,21,.18)}
+  .purpose-card:nth-child(3) .purpose-points li{border-bottom-color:rgba(21,21,21,.18);color:var(--text-muted)}
+  .purpose-card:nth-child(3) .purpose-points li::before{border-bottom-color:var(--color-vine)}
+  .purpose-card:nth-child(3) .purpose-points a{color:var(--ink)}
+  .purpose-card:nth-child(3) .purpose-points a:hover{color:var(--color-vine)}
+}

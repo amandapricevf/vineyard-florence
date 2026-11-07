@@ -29,6 +29,8 @@ import {
   contactTopicLink,
   houseGroupInterestUrl,
   volunteerUrl,
+  freePantryUrl,
+  resetHouseUrl,
   wahaUrl,
   celebrateRecoveryUrl,
   mensHealthySexualityUrl,
@@ -620,7 +622,7 @@ export default function Home() {
               title: "Love God",
               copy: "UP is seeking, knowing and hearing the voice of God. We do this by cultivating lives of Prayer, Worship, Daily Bible Reading, and Fasting.",
               points: [
-                <>We pray together daily on <a href={prayerZoomUrl} target="_blank" rel="noreferrer">Zoom from 6:30–7:00am ↗</a></>,
+                <>We pray together daily on <a href={prayerZoomUrl} target="_blank" rel="noreferrer">Zoom from <span className="nowrap">6:30–7:00am ↗</span></a></>,
                 <>We worship on Sunday mornings together at 9:00am &amp; 11:00am weekly (in person and online)</>,
                 <><a href={bibleReadingPlanUrl} target="_blank" rel="noreferrer">Daily Bible Reading Plan ↗</a></>,
                 <>We fast as a church weekly from Sunday evenings after dinner until dinner on Mondays. See our social media for prayer points.</>,
@@ -638,7 +640,16 @@ export default function Home() {
                 <>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or Media/Worship Team: <Link href={volunteerUrl}>Sign up to volunteer →</Link></>,
               ],
             },
-            { number: "03", word: "OUT", title: "Impact The World", copy: "We join Jesus in serving our neighbors and carrying hope into everyday places." },
+            {
+              number: "03",
+              word: "OUT",
+              title: "Impact The World",
+              copy: "We are a people on mission to join Jesus in seeking the lost, poor, and broken.",
+              points: [
+                <>Serve at VF with one of our outreach ministries: <Link href={freePantryUrl}>Monthly Grocery Giveaways</Link>, <Link href={resetHouseUrl}>Local Reset Ministries sober-living house</Link>, <a href={vinedresserUrl} target="_blank" rel="noreferrer">The Vinedresser Foster and Kinship ↗</a>, <Link href="/events">other outreach events</Link> and more.</>,
+                <>Go on a mission trip with us to Appalachia at <Link href="/events">Red Bird</Link>, or globally to <Link href="/merp">Greece</Link> or <a href={latviaFacebookUrl} target="_blank" rel="noreferrer">Latvia ↗</a>.</>,
+              ],
+            },
           ].map((item, index) => (
             <article className="purpose-card" key={item.word} data-reveal="card">
               <span className="card-number"><TriadMark index={(index + 1) as 1 | 2 | 3} />{item.number}</span><span className="giant-word" aria-hidden="true">{item.word}</span>

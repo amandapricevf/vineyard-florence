@@ -65,7 +65,7 @@ export default function EventsPage() {
 
       <EventRhythms />
 
-      <section className="events-horizon">
+      <section className="events-horizon" id="reset-house">
         <div className="events-horizon-media">
           <img src="/images/events/reset-house.webp" alt="Vineyard Florence Reset House announcement" width={454} height={454} loading="lazy" decoding="async" />
         </div>
