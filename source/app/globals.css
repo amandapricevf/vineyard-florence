@@ -1109,3 +1109,6 @@ section[id]{scroll-margin-top:76px}
   .purpose-card:nth-child(3) .purpose-points a{color:var(--ink)}
   .purpose-card:nth-child(3) .purpose-points a:hover{color:var(--color-vine)}
 }
+/* Home prayer section: the Daily Bible Reading link sits directly under the
+   "Need Prayer?" link, sharing its divider. */
+.prayer-request.prayer-bible-reading,.home-page .prayer-request.prayer-bible-reading{border-top:0;margin-top:0}

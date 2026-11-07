@@ -6,6 +6,7 @@ import {
   contactFormLink,
   contactTopicLink,
   houseGroupInterestUrl,
+  bibleReadingPlanUrl,
 } from "../site-data";
 
 type StageIcon = "seeker" | "believer" | "follower" | "disciple";
@@ -45,6 +46,7 @@ const stages: Stage[] = [
     nextSteps: [
       { label: "Ask About VF Foundations", href: contactTopicLink("vf-foundations") },
       { label: "Join A House Group", href: houseGroupInterestUrl },
+      { label: "Follow The Daily Bible Reading Plan", href: bibleReadingPlanUrl, external: true },
       { label: "Serve And Become A Ministry Partner", href: "/ministries" },
       { label: "Give Your Time, Talent And Treasure", href: contactFormLink("Give Your Time, Talent And Treasure") },
       { label: "Explore Prayer Training", href: "/prayer" },

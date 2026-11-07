@@ -682,6 +682,7 @@ export default function Home() {
           <p>Prayer is more than something we do—it is how we stay connected to God and join what He is already doing. Every disciple-making movement is first a prayer movement.</p>
           <Link className="button button-dark" href="/prayer">Enter The Prayer Hub <span aria-hidden="true">↗</span></Link>
           <Link className="prayer-request" href={prayerRequestUrl}><span>Need Prayer?</span><strong>We would be honored to pray with you.</strong><b aria-hidden="true">→</b></Link>
+          <a className="prayer-request prayer-bible-reading" href={bibleReadingPlanUrl} target="_blank" rel="noreferrer" aria-label="Daily Bible Reading: get the reading plan (PDF)"><span>Daily Bible Reading</span><strong>Read the whole Bible in a year, five readings a week.</strong><b aria-hidden="true">↗</b></a>
         </div>
       </section>
 
