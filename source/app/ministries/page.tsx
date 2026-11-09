@@ -7,6 +7,7 @@ import {
   churchCenterGroupsUrl,
   contactTopicLink,
   latviaFacebookUrl,
+  vinedresserUrl,
 } from "../site-data";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ const ministries = [
   { id: "vineyard-freedom", label: "Healing + Freedom", title: "Vineyard Freedom", copy: "Experience the freedom, healing and restoration Jesus offers. Through prayer, biblical truth and the leading of the Holy Spirit, we walk alongside those seeking breakthrough from spiritual oppression, generational cycles, emotional wounds, trauma and strongholds.", href: "/ministries/vineyard-freedom", cta: "Explore Vineyard Freedom", external: false },
   { id: "men", label: "Men", title: "Men’s Ministry", copy: "Connection, discipleship and practical brotherhood.", href: contactTopicLink("mens-ministry"), cta: "Connect With Men’s Ministry", external: false },
   { id: "women", label: "Women", title: "Women’s Ministry", copy: "Gatherings and relationships that create room for women to be encouraged, grow in faith and follow Jesus together.", href: eventsUrl, cta: "See Women’s Events", external: false },
+  { id: "vinedresser", label: "Foster + Kinship", title: "The Vinedresser", copy: "Free children’s clothing, diapers and practical support for foster and kinship families in Northern Kentucky, helping to ease the costs of caring for kids.", href: vinedresserUrl, cta: "Visit The Vinedresser", external: true },
   { id: "merp", label: "Global Mission", title: "MERP", copy: "The Middle Eastern Refugee Partnership: making disciples who make disciples among people on the move through church planting, local leadership and humanitarian relief.", href: "/merp", cta: "Explore MERP", external: false },
   { id: "latvia", label: "Global Mission", title: "Latvia", copy: "Explore Latvia ministry updates and connect through Facebook.", href: latviaFacebookUrl, cta: "Visit Latvia On Facebook", external: true },
 ] as const;
