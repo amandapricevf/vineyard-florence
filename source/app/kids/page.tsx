@@ -13,7 +13,7 @@ const ageGroups = [
   ["Nursery", "Ages 0–18 Months", "11 AM only"],
   ["Toddlers", "18 Months–3 Years", "11 AM only"],
   ["Preschool", "Ages 4–5", "11 AM only"],
-  ["Elementary", "Kindergarten–2nd Grade · 3rd–5th Grade", "9 AM & 11 AM"],
+  ["Elementary", "Kindergarten–5th Grade", "9 AM & 11 AM"],
 ] as const;
 
 export default function VineyardKidsPage() {
