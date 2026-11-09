@@ -104,7 +104,7 @@ export default function BeliefsPage() {
             <div className="movement-copy">
               <p className="eyebrow">{movement.title}</p>
               <h2>{movement.intro}</h2>
-              <ul>{movement.points.map((point) => <li key={point}>{point}<span aria-hidden="true">↗</span></li>)}</ul>
+              <ul>{movement.points.map((point) => <li key={point}>{point}</li>)}</ul>
               <div className="movement-ways">
                 <p className="eyebrow">How We Live It Out</p>
                 <ul>{waysToLiveItOut[index].map((way, wayIndex) => <li key={wayIndex}>{way}</li>)}</ul>
