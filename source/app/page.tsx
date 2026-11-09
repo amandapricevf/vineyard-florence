@@ -166,7 +166,6 @@ const frequentlyAskedQuestions = [
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [activeStep, setActiveStep] = useState(1);
   const [headerSolid, setHeaderSolid] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const headerHidden = useAutoHideHeader(headerRef);
@@ -515,36 +514,6 @@ export default function Home() {
           </div>
           <p>House Groups are our primary place for friendship, care, worship and growing to become more like Jesus in everyday life.</p>
           <a className="button button-light" href={churchCenterGroupsUrl} target="_blank" rel="noreferrer">Find A House Group <span aria-hidden="true">↗</span></a>
-        </div>
-        <div className="journey-board" data-reveal>
-          <div className="journey-tabs" role="tablist" aria-label="Discipleship journey">
-            {[
-              ["Gather", "Sunday"],
-              ["Grow", "House Groups"],
-              ["Go", "Live It Out"],
-            ].map(([verb, label], index) => (
-              <button key={verb} role="tab" aria-selected={activeStep === index} onClick={() => setActiveStep(index)} className={activeStep === index ? "active" : ""}>
-                <TriadMark index={(index + 1) as 1 | 2 | 3} /><strong>{verb}</strong><small>{label}</small>
-              </button>
-            ))}
-          </div>
-          <div className="journey-detail" role="tabpanel">
-            <span className="journey-number">0{activeStep + 1}</span>
-            <div key={activeStep}>
-              <p className="eyebrow">{["Come And See", "Grow With Your People", "Live It Out"][activeStep]}</p>
-              <h3>{[
-                "Meet God And A Community Ready To Welcome You.",
-                "Share Real Life Around A Table, Not Just A Row.",
-                "Follow Jesus Into The Places He Has Already Sent You.",
-              ][activeStep]}</h3>
-              <p>{[
-                "Our Sunday gathering is the front door: worship, practical teaching, prayer ministry and space to connect over coffee.",
-                "House Groups are our primary place for friendship, care, worship and growing to become more like Jesus in everyday life.",
-                "You do not need a title to go with Jesus. We will equip you to serve, make disciples and carry His life wherever you go.",
-              ][activeStep]}</p>
-              <a className="text-link" href={["/#visit", churchCenterGroupsUrl, "/connect#go"][activeStep]} target={activeStep === 1 ? "_blank" : undefined} rel={activeStep === 1 ? "noreferrer" : undefined}>{["Plan A Sunday", "Find A House Group", "Explore Ways To Go"][activeStep]} <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
         </div>
       </section>
 

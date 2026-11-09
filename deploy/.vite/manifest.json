@@ -1,6 +1,6 @@
 {
-  "_SiteTicker-0C0Dw0kc.js": {
-    "file": "assets/SiteTicker-0C0Dw0kc.js",
+  "_SiteTicker-DGXGNsyu.js": {
+    "file": "assets/SiteTicker-DGXGNsyu.js",
     "name": "SiteTicker",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
@@ -44,13 +44,13 @@
     ]
   },
   "app/components/InteriorChrome.tsx": {
-    "file": "assets/InteriorChrome-DQrquazS.js",
+    "file": "assets/InteriorChrome-BzwtypH0.js",
     "name": "InteriorChrome",
     "src": "app/components/InteriorChrome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-0C0Dw0kc.js",
+      "_SiteTicker-DGXGNsyu.js",
       "_site-data-DN8TOK16.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
@@ -132,13 +132,13 @@
     ]
   },
   "app/page.tsx": {
-    "file": "assets/page-B4qYP__z.js",
+    "file": "assets/page-BFj1Amw7.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-0C0Dw0kc.js",
+      "_SiteTicker-DGXGNsyu.js",
       "_TriadMark-Ci8KGwPb.js",
       "_site-data-DN8TOK16.js",
       "_framework-CXnKph_e.js",
@@ -197,7 +197,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-_Lifsbug.js",
+    "file": "assets/layout-segment-context-DZGwFuBe.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -208,7 +208,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/link.js": {
-    "file": "assets/link-hMF4GVTQ.js",
+    "file": "assets/link-9W2ATMxa.js",
     "name": "link",
     "src": "node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -222,7 +222,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/router.js": {
-    "file": "assets/router-IH3e_R9D.js",
+    "file": "assets/router-D3rwOx1M.js",
     "name": "router",
     "src": "node_modules/vinext/dist/shims/router.js",
     "isDynamicEntry": true,
@@ -237,7 +237,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-CkETGv-X.js",
+    "file": "assets/index-Nqm2cU0n.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
