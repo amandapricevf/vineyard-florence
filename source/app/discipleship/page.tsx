@@ -187,8 +187,13 @@ export default function DiscipleshipPage() {
           <p className="eyebrow">Jesus Did Not Say “Come And Watch”</p>
           <h2>He Said,<br /><em>“Follow Me.”</em></h2>
         </div>
-        <p>Discipleship is the lifelong process of becoming more like Jesus—and helping someone else do the same. It is not a class you finish. It is a life you practice with God and other people. We do this in three ways.</p>
+        <p>Discipleship is the lifelong process of becoming more like Jesus—and helping someone else do the same. It is not a class you finish. It is a life you practice with God and other people.</p>
       </section>
+
+      <div className="discipleship-transition">
+        <p>We do this in <em>three ways.</em></p>
+        <span><b>Up</b> · <b>In</b> · <b>Out</b> <i aria-hidden="true">↓</i></span>
+      </div>
 
       <MovementStack />
 

@@ -1133,3 +1133,14 @@ main textarea {
 .beliefs-mission h2 em{color:var(--sand)}
 .beliefs-mission>p:last-child{color:var(--text-muted-inverse)}
 .beliefs-mission .eyebrow,.beliefs-mission .section-index{color:rgba(255,255,255,.82)}
+
+/* Discipleship: "We do this in three ways." bridges The Invitation and the
+   Up / In / Out panels below it. */
+.discipleship-manifesto{padding-bottom:70px}
+.discipleship-transition{align-items:center;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:18px;margin:0 6vw;padding:64px 0 76px;text-align:center}
+.interior-page .discipleship-transition>p{font-size:clamp(38px,4.6vw,72px);font-weight:560;letter-spacing:-.05em;line-height:1;margin:0}
+.discipleship-transition em{white-space:nowrap;color:var(--vine);font-family:Georgia,"Times New Roman",serif;font-weight:400}
+.discipleship-transition span{color:var(--ink);font-size:var(--text-label);font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.discipleship-transition b{font-weight:800}
+.discipleship-transition i{color:var(--vine);display:inline-block;font-style:normal;margin-left:6px}
+@media(max-width:620px){.discipleship-manifesto{padding-bottom:50px}.discipleship-transition{margin:0 24px;padding:44px 0 56px}}
