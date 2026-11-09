@@ -32,7 +32,19 @@ export default function BeliefsPage() {
         <div className="hero-outline-word interior-outline" aria-hidden="true">BELIEVE</div>
       </section>
 
-      <section className="beliefs-mission" id="our-way">
+      <section className="beliefs-links" id="our-way">
+        <div>
+          <p className="eyebrow light">Anchored In A Wider Story</p>
+          <h2>Historic Faith.<br /><em>Vineyard Expression.</em></h2>
+          <p>Vineyard Florence stands with the shared theology and values of Vineyard USA and affirms the Cape Town Commitment as a rich expression of Christian belief and mission.</p>
+        </div>
+        <div className="beliefs-link-list">
+          <a href="https://vineyardusa.org/about/core-values-beliefs/" target="_blank" rel="noreferrer"><span>01</span><strong>Vineyard USA<br />Values &amp; Beliefs</strong><b aria-hidden="true">↗</b></a>
+          <a href="https://lausanne.org/statement/ctcommitment" target="_blank" rel="noreferrer"><span>02</span><strong>The Cape Town<br />Commitment</strong><b aria-hidden="true">↗</b></a>
+        </div>
+      </section>
+
+      <section className="beliefs-mission" id="mission">
         <span className="section-index">01 — Mission</span>
         <div className="beliefs-mission-statement">
           <p className="eyebrow">Why We Are Here</p>
@@ -40,7 +52,6 @@ export default function BeliefsPage() {
         </div>
         <p>Be a hub of Spirit-empowered disciple-making movements where people everywhere are saved, transformed, and released to <em>“do the stuff”</em> Jesus did.</p>
       </section>
-
 
       <section className="gospel-values">
         <div className="values-heading">
@@ -51,18 +62,6 @@ export default function BeliefsPage() {
           {values.map(([letter, title, copy]) => (
             <article key={letter}><span>{letter}</span><div><h3>{title}</h3><p>{copy}</p></div></article>
           ))}
-        </div>
-      </section>
-
-      <section className="beliefs-links">
-        <div>
-          <p className="eyebrow light">Anchored In A Wider Story</p>
-          <h2>Historic Faith.<br /><em>Vineyard Expression.</em></h2>
-          <p>Vineyard Florence stands with the shared theology and values of Vineyard USA and affirms the Cape Town Commitment as a rich expression of Christian belief and mission.</p>
-        </div>
-        <div className="beliefs-link-list">
-          <a href="https://vineyardusa.org/about/core-values-beliefs/" target="_blank" rel="noreferrer"><span>01</span><strong>Vineyard USA<br />Values &amp; Beliefs</strong><b aria-hidden="true">↗</b></a>
-          <a href="https://lausanne.org/statement/ctcommitment" target="_blank" rel="noreferrer"><span>02</span><strong>The Cape Town<br />Commitment</strong><b aria-hidden="true">↗</b></a>
         </div>
       </section>
 

@@ -1120,3 +1120,7 @@ main textarea {
 /* Up / In / Out panels without the italic intro line: space the points
    list from the eyebrow title. */
 .movement-copy>.eyebrow+ul{margin-top:28px}
+
+/* Beliefs: "Historic Faith" now follows the dark hero directly; a hairline
+   keeps the two dark sections from running together. */
+.beliefs-hero+.beliefs-links{border-top:1px solid rgba(255,255,255,.14)}
