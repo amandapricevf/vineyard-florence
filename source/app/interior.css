@@ -1154,3 +1154,32 @@ main textarea {
 
 /* Home UP / IN / OUT "Explore" links land on these panels (#up, #in, #out). */
 .movement-panel{scroll-margin-top:76px}
+
+/* Ministries page, regrouped: shorter hero with a recovery prompt, a
+   "Jump to" bar, then four groups of compact cards. */
+.ministries-hero{min-height:0;padding-bottom:64px;padding-top:150px}
+.ministries-recovery-prompt{background:var(--sand);border-radius:14px;color:var(--ink);display:grid;gap:8px;margin-bottom:30px;padding:20px 22px;transition:transform .2s ease,box-shadow .2s ease}
+.ministries-recovery-prompt:hover{box-shadow:0 14px 34px rgba(0,0,0,.22);transform:translateY(-2px)}
+.ministries-recovery-prompt span{color:var(--vine);font-size:var(--text-label);font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.ministries-recovery-prompt strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+.ministries-recovery-prompt b{align-items:center;display:flex;font-size:var(--text-label);font-weight:800;gap:8px;letter-spacing:.14em;margin-top:6px;text-transform:uppercase}
+.ministries-recovery-prompt:focus-visible{outline:3px solid var(--color-sand);outline-offset:3px}
+.ministries-jump{align-items:center;background:white;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;padding:20px 4vw;scroll-margin-top:76px}
+.ministries-jump>span{color:var(--text-muted);font-size:var(--text-label);font-weight:800;letter-spacing:.16em;margin-right:6px;text-transform:uppercase}
+.ministries-jump a{border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:15px;font-weight:600;min-height:44px;display:inline-flex;align-items:center;padding:0 18px;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.ministries-jump a:hover{border-color:var(--vine);color:var(--vine)}
+.ministries-jump a.is-recovery{background:var(--vine);border-color:var(--vine);color:white}
+.ministries-jump a.is-recovery:hover{background:var(--ink);border-color:var(--ink);color:white}
+.ministries-group{padding:60px 4vw 0;scroll-margin-top:76px}
+.ministries-group:last-of-type{padding-bottom:110px}
+.ministries-group-heading{align-items:end;display:grid;gap:12px 4vw;grid-template-columns:auto 1fr minmax(0,.9fr)}
+.ministries-group-heading h2{font-size:clamp(32px,3.4vw,52px);font-weight:550;letter-spacing:-.055em;line-height:.95;margin:0}
+.ministries-group-heading p{color:var(--text-muted);font-size:16px;line-height:1.6;margin:0;max-width:520px}
+.ministries-group .ministries-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:26px 0 0}
+.ministries-group .ministry-card,.ministries-group .ministry-card:nth-child(n){background:white;min-height:0;padding:24px}
+.ministries-group .ministry-card.ministry-card-featured{background:var(--vine)}
+.ministries-group .ministry-card h3{font-size:clamp(22px,1.9vw,30px);font-weight:550;letter-spacing:-.04em;line-height:1;margin:14px 0 10px}
+.ministries-group .ministry-card p:not(.eyebrow){font-size:15px;line-height:1.55;margin:0 0 22px}
+.ministries-group .ministry-card a{min-height:44px;padding-top:14px}
+@media(max-width:860px){.ministries-group-heading{grid-template-columns:1fr}}
+@media(max-width:620px){.ministries-hero{padding-bottom:48px;padding-top:120px}.ministries-jump{padding:16px 18px}.ministries-group{padding:44px 18px 0}.ministries-group:last-of-type{padding-bottom:80px}.ministries-group .ministries-grid{grid-template-columns:1fr;margin-left:0;margin-right:0}}
