@@ -606,7 +606,7 @@ export default function Home() {
                 <div className="purpose-card-copy">
                   <p>{item.copy}</p>
                 </div>
-                <Link href="/discipleship" aria-label={`Explore ${item.title}`}>Explore <span aria-hidden="true">↗</span></Link>
+                <Link href={`/discipleship#${item.word.toLowerCase()}`} aria-label={`Explore ${item.title}`}>Explore <span aria-hidden="true">↗</span></Link>
               </div>
             </article>
           ))}

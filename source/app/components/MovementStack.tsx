@@ -58,7 +58,7 @@ export function MovementStack() {
   return (
     <section className="movement-stack" aria-label="Up, in and out">
       {movements.map((movement, index) => (
-        <article className="movement-panel" key={movement.mark}>
+        <article className="movement-panel" id={movement.mark.toLowerCase()} key={movement.mark}>
           <div className="movement-mark"><TriadMark index={(index + 1) as 1 | 2 | 3} label={movement.title} /><strong>{movement.mark}</strong></div>
           <div className="movement-copy">
             <p className="eyebrow">{movement.title}</p>

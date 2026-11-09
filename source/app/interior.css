@@ -1151,3 +1151,6 @@ main textarea {
 .kids-times-note b{font-weight:700}
 .interior-page .kids-age-grid p.kids-age-time{background:var(--vine);border-radius:999px;color:white;display:inline-block;font-size:13px;font-weight:700;letter-spacing:.02em;margin-top:16px;padding:7px 14px}
 @media(max-width:620px){.kids-times-note{margin:0 18px 22px}}
+
+/* Home UP / IN / OUT "Explore" links land on these panels (#up, #in, #out). */
+.movement-panel{scroll-margin-top:76px}
