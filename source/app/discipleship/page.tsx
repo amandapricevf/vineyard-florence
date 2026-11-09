@@ -20,30 +20,6 @@ export const metadata: Metadata = {
 
 const leaderEmailUrl = contactTopicLink("lead-house-group");
 
-const upInOut = [
-  {
-    mark: 1,
-    word: "UP",
-    title: "Relationship With God",
-    mission: "Love God.",
-    copy: "Worship, prayer and obedience to God the Father. This is the vertical dimension of faith: being with Jesus and becoming like Him.",
-  },
-  {
-    mark: 2,
-    word: "IN",
-    title: "Be A Disciple. Make Disciples.",
-    mission: "Make Disciples.",
-    copy: "Community, discipleship and fellowship with other believers. We build one another up and learn to follow Jesus together.",
-  },
-  {
-    mark: 3,
-    word: "OUT",
-    title: "Impact The World",
-    mission: "Impact The World.",
-    copy: "Outreach to people far from God, service and justice in a broken world. We share the Gospel and help people in need.",
-  },
-] as const;
-
 const leaderPath = [
   {
     step: "01",
@@ -239,34 +215,9 @@ export default function DiscipleshipPage() {
         </div>
       </section>
 
-      <section className="discipleship-up-in-out" id="up-in-out">
-        <div className="discipleship-up-heading">
-          <span className="section-index">03 — The Way Of Jesus</span>
-          <div>
-            <p className="eyebrow">With Him. Like Him. Sent By Him.</p>
-            <h2>UP. IN. <em>OUT.</em></h2>
-          </div>
-          <p>At VF we are obsessed with Jesus. We want to be with Him, and we want to be like Him. In Scripture we see Jesus moving fluidly and purposefully through these three relationships—not as a checklist, but as a way of life that keeps looping.</p>
-        </div>
-        <div className="discipleship-up-grid">
-          {upInOut.map((movement) => (
-            <article key={movement.word}>
-              <TriadMark index={movement.mark as 1 | 2 | 3} label={movement.word} />
-              <span>{movement.word}</span>
-              <div>
-                <p className="eyebrow">{movement.mission}</p>
-                <h3>{movement.title}</h3>
-                <p>{movement.copy}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <p className="discipleship-loop-note">UP → IN → OUT → UP. Keep following Jesus; keep inviting others into the journey.</p>
-      </section>
-
       <section className="discipleship-lead" id="lead">
         <div>
-          <span className="section-index">04 — Multiply</span>
+          <span className="section-index">03 — Multiply</span>
           <p className="eyebrow">Maybe The Next Group Starts With You</p>
           <h2>You Don&apos;t Need<br />All The Answers.<br /><em>You Need A Yes.</em></h2>
         </div>
@@ -300,13 +251,13 @@ export default function DiscipleshipPage() {
       </section>
 
       <section className="discipleship-discovery" id="discovery-group">
-        <div><span className="section-index">05 — Discovery Groups</span><p className="eyebrow">For People Curious About God And Faith</p><h2>Start With<br /><em>A Question.</em></h2></div>
+        <div><span className="section-index">04 — Discovery Groups</span><p className="eyebrow">For People Curious About God And Faith</p><h2>Start With<br /><em>A Question.</em></h2></div>
         <div><p>Invite a few people to explore Scripture together. You do not need to give a lecture or have every answer. Waha offers a free Discovery Bible Study app and disciple-making course to help you start a Discovery Group.</p><a className="button button-dark" href={wahaUrl} target="_blank" rel="noreferrer">Start A Discovery Group With Waha <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section className="discipleship-resources" id="resources">
         <div className="discipleship-resources-heading">
-          <span className="section-index">06 — Resource Library</span>
+          <span className="section-index">05 — Resource Library</span>
           <div><p className="eyebrow">Tools You Can Use This Week</p><h2>Learn It.<br /><em>Live It. Give It Away.</em></h2></div>
           <p>House Groups, Discovery Bible Studies and recovery ministries are primary places we make disciples. These tools follow Up, In and Out: prayer, life together and serving others. Each one opens in a new tab.</p>
         </div>
