@@ -45,12 +45,6 @@ const heroMessages = [
     cta: "Explore events",
     href: "/events",
   },
-  {
-    label: "Go Deeper",
-    copy: "Ready for something deeper? Check out our VF Foundations 8 week course.",
-    cta: "Discover Foundations",
-    href: "/discipleship#resources",
-  },
 ];
 
 type SundayFlowStep = {
