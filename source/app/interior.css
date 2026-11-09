@@ -1102,3 +1102,17 @@ main textarea {
 .freedom-contact{margin-top:26px!important}
 .freedom-resource-group+.freedom-resource-group{margin-top:54px}
 .freedom-resource-group h3{margin-top:0!important}
+
+/* Beliefs: "How We Live It Out" under each Up / In / Out panel. These are the
+   rhythms and next steps that used to sit on the home page cards. */
+.movement-copy .movement-ways{margin-top:56px;max-width:760px}
+.movement-copy .movement-ways .eyebrow{margin:0 0 14px}
+.movement-copy .movement-ways ul{border-top:1px solid color-mix(in srgb,currentColor 30%,transparent)}
+.movement-copy .movement-ways li{border-bottom:1px solid color-mix(in srgb,currentColor 30%,transparent);border-top:0;display:block;font-size:17px;font-weight:450;letter-spacing:0;line-height:1.55;padding:14px 0 14px 24px;position:relative;text-transform:none}
+.movement-copy .movement-ways li:last-child{border-bottom:1px solid color-mix(in srgb,currentColor 30%,transparent)}
+.movement-copy .movement-ways li::before{border-bottom:7px solid currentColor;border-left:5px solid transparent;border-right:5px solid transparent;content:"";left:2px;opacity:.7;position:absolute;top:21px}
+.movement-copy .movement-ways a{color:inherit;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.movement-copy .movement-ways a:hover{opacity:.75}
+.movement-copy .movement-ways .nowrap{white-space:nowrap}
+.movement-panel:nth-child(odd) .movement-ways a:focus-visible{outline:3px solid var(--color-sand);outline-offset:2px}
+.movement-panel:nth-child(even) .movement-ways a:focus-visible{outline:3px solid var(--color-vine);outline-offset:2px}

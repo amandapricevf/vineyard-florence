@@ -25,16 +25,8 @@ import {
   serviceTimes,
   contactEmail,
   prayerRequestUrl,
-  prayerZoomUrl,
   bibleReadingPlanUrl,
-  contactTopicLink,
-  houseGroupInterestUrl,
-  volunteerUrl,
   stockGiftUrl,
-  freePantryUrl,
-  resetHouseUrl,
-  wahaUrl,
-  womenOfWarfareUrl,
   latviaFacebookUrl,
   vinedresserUrl,
   youtubeUrl,
@@ -599,34 +591,18 @@ export default function Home() {
               word: "UP",
               title: "Love God",
               copy: "UP is seeking, knowing and hearing the voice of God. We do this by cultivating lives of Prayer, Worship, Daily Bible Reading, and Fasting.",
-              points: [
-                <>We pray together daily on <a href={prayerZoomUrl} target="_blank" rel="noreferrer">Zoom from <span className="nowrap">6:30–7:00am ↗</span></a></>,
-                <>We worship on Sunday mornings together at 9:00am &amp; 11:00am weekly (in person and online)</>,
-                <><a href={bibleReadingPlanUrl} target="_blank" rel="noreferrer">Daily Bible Reading Plan ↗</a></>,
-                <>We fast as a church weekly from Sunday evenings after dinner until dinner on Mondays. See our social media for prayer points.</>,
-              ],
             },
             {
               number: "02",
               word: "IN",
               title: "Make Disciples",
               copy: "IN is Fellowship and Followship. We learn the practices of personal and community through spiritual connection, obeying what Jesus says of meeting together and individually.",
-              points: [
-                <><Link href={houseGroupInterestUrl}>Join a House Group →</Link></>,
-                <>Lead or start a Discovery Bible Study: get the <a href={wahaUrl} target="_blank" rel="noreferrer">Waha app ↗</a></>,
-                <>Connect to a recovery ministry at VF: <Link href="/ministries/celebrate-recovery">Celebrate Recovery</Link>, <Link href="/ministries/mens-healthy-sexuality">Men’s Healthy Sexuality</Link>, <Link href="/ministries/alcoholics-anonymous">AA</Link>, <Link href="/ministries/griefshare">GriefShare</Link>, <Link href={contactTopicLink("men-of-courage")}>Men of Courage</Link>, <a href={womenOfWarfareUrl} target="_blank" rel="noreferrer">Women of Warfare ↗</a></>,
-                <>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or Media/Worship Team: <Link href={volunteerUrl}>Sign up to volunteer →</Link></>,
-              ],
             },
             {
               number: "03",
               word: "OUT",
               title: "Impact The World",
               copy: "We are a people on mission to join Jesus in seeking the lost, poor, and broken.",
-              points: [
-                <>Serve at VF with one of our outreach ministries: <Link href={freePantryUrl}>Monthly Grocery Giveaways</Link>, <Link href={resetHouseUrl}>Local Reset Ministries sober-living house</Link>, <a href={vinedresserUrl} target="_blank" rel="noreferrer">The Vinedresser Foster and Kinship ↗</a>, <Link href="/events">other outreach events</Link> and more.</>,
-                <>Go on a mission trip with us to Appalachia at <Link href="/events">Red Bird</Link>, or globally to <Link href="/merp">Greece</Link> or <a href={latviaFacebookUrl} target="_blank" rel="noreferrer">Latvia ↗</a>.</>,
-              ],
             },
           ].map((item, index) => (
             <article className="purpose-card" key={item.word} data-reveal="card">
@@ -635,7 +611,6 @@ export default function Home() {
                 <h3>{item.title}</h3>
                 <div className="purpose-card-copy">
                   <p>{item.copy}</p>
-                  {"points" in item && item.points ? <ul className="purpose-points">{item.points.map((point, pointIndex) => <li key={pointIndex}>{point}</li>)}</ul> : null}
                 </div>
                 <Link href="/discipleship" aria-label={`Explore ${item.title}`}>Explore <span aria-hidden="true">↗</span></Link>
               </div>
