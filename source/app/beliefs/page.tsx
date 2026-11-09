@@ -34,7 +34,7 @@ export default function BeliefsPage() {
 
       <section className="beliefs-links" id="our-way">
         <div>
-          <p className="eyebrow light">Anchored In A Wider Story</p>
+          <p className="eyebrow">Anchored In A Wider Story</p>
           <h2>Historic Faith.<br /><em>Vineyard Expression.</em></h2>
           <p>Vineyard Florence stands with the shared theology and values of Vineyard USA and affirms the Cape Town Commitment as a rich expression of Christian belief and mission.</p>
         </div>
