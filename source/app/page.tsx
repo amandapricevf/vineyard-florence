@@ -643,7 +643,7 @@ export default function Home() {
           <p>We believe transformed people transform places. So we show up—with practical help, generous hearts and the hope of Jesus.</p>
         </div>
         <div className="impact-grid">
-          <a className="impact-card impact-large" href="#footer" data-reveal="card">
+          <a className="impact-card impact-large" href="/free-pantry" data-reveal="card">
             <img data-parallax src="/images/vineyard-florence/local-care.webp" alt="A Vineyard Florence member praying with someone in the community" width={1114} height={821} loading="lazy" decoding="async" />
             <span className="impact-label"><TriadMark index={1} />Local impact</span>
             <div><small>Serve Northern Kentucky</small><h3>For Our Neighbors.<br />For The City.</h3><p>Food, recovery, practical care and the love of Jesus.</p></div><b aria-hidden="true">↗</b>
