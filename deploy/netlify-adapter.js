@@ -40,6 +40,21 @@
     }
     return originalFetch(input, options);
   };
+  // Same-page "#section" links. The browser fires popstate for these; vinext
+  // then tries to fetch page data that a static export does not have, fails,
+  // and re-navigates to the same #section URL, which fires popstate again.
+  // That loop pulled visitors back to the section on every scroll ("stuck").
+  // When only the hash changed, keep the event from vinext and let the
+  // browser's own jump stand. Registered before vinext's listener.
+  let currentPath = location.pathname + location.search;
+  window.addEventListener("popstate", event => {
+    const path = location.pathname + location.search;
+    if (path === currentPath) {
+      event.stopImmediatePropagation();
+      return;
+    }
+    currentPath = path;
+  }, true);
   // Full page navigation keeps static routes independent of a React server.
   window.addEventListener("click", event => {
     const anchor = event.target.closest?.("a[href]");
