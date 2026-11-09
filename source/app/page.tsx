@@ -653,7 +653,8 @@ export default function Home() {
             <span className="impact-label"><TriadMark index={2} />Foster + kinship</span>
             <div><small>The Vinedresser</small><h3>Making Room<br />For Families.</h3></div><b aria-hidden="true">↗</b>
           </a>
-          <a className="impact-card impact-color" href="/merp" data-reveal="card">
+          <a className="impact-card impact-color impact-global" href="/merp" data-reveal="card">
+            <img data-parallax src="/images/vineyard-florence/global-mission.webp" alt="Rows of vines across rolling hills at golden hour" width={1640} height={720} loading="lazy" decoding="async" />
             <span className="impact-label"><TriadMark index={3} />Global mission</span>
             <div><small>Give, Go, Pray</small><h3>Hope Has<br />No Borders.</h3><p>Partnering with disciple-making movements near and far.</p></div><b aria-hidden="true">↗</b>
           </a>

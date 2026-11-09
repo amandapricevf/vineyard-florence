@@ -1136,3 +1136,8 @@ section[id]{scroll-margin-top:76px}
 /* Home "What Is Discipleship?" definition, under the heading in the
    purpose (UP / IN / OUT) intro. */
 .purpose-intro .purpose-definition{color:rgba(255,255,255,.9);font-size:clamp(19px,1.7vw,25px);letter-spacing:-.01em;line-height:1.45;margin:28px 0 0;max-width:36ch}
+
+/* Home "Global Mission" card: photo background like the Local Impact card,
+   with its text at the bottom over the same dark fade. */
+.impact-global::after{display:block}
+.impact-global>div{bottom:36px;top:auto;transform:none}
