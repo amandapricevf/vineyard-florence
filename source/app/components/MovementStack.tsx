@@ -39,19 +39,16 @@ const movements = [
   {
     mark: "UP",
     title: "Love God",
-    intro: "We Turn Our Attention Toward God And Learn To Live Aware Of His Presence.",
     points: ["Passionate Worship", "Personal And Shared Prayer", "Scripture And Spiritual Practices", "An Expectant Life With God"],
   },
   {
     mark: "IN",
     title: "Make Disciples",
-    intro: "We Follow Jesus Together, Becoming Disciples Who Can Help Others Follow Him, Too.",
     points: ["Authentic Community", "Growth Through Obedience", "Serving One Another", "Life Shared With Intention"],
   },
   {
     mark: "OUT",
     title: "Impact The World",
-    intro: "We Carry The Good News And Practical Love Of Jesus Into The Places We Already Live.",
     points: ["Sharing The Gospel", "Serving Our Community", "Seeking People Far From God", "Local And Global Mission"],
   },
 ];
@@ -65,7 +62,6 @@ export function MovementStack() {
           <div className="movement-mark"><TriadMark index={(index + 1) as 1 | 2 | 3} label={movement.title} /><strong>{movement.mark}</strong></div>
           <div className="movement-copy">
             <p className="eyebrow">{movement.title}</p>
-            <h2>{movement.intro}</h2>
             <ul>{movement.points.map((point) => <li key={point}>{point}</li>)}</ul>
             <div className="movement-ways">
               <p className="eyebrow">How We Live It Out</p>

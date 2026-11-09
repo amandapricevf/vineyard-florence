@@ -1116,3 +1116,7 @@ main textarea {
 .movement-copy .movement-ways .nowrap{white-space:nowrap}
 .movement-panel:nth-child(odd) .movement-ways a:focus-visible{outline:3px solid var(--color-sand);outline-offset:2px}
 .movement-panel:nth-child(even) .movement-ways a:focus-visible{outline:3px solid var(--color-vine);outline-offset:2px}
+
+/* Up / In / Out panels without the italic intro line: space the points
+   list from the eyebrow title. */
+.movement-copy>.eyebrow+ul{margin-top:28px}
