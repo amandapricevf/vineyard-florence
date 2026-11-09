@@ -1,4 +1,4 @@
-import { contactTopicLink, turkeyDinnerApplicationUrl } from "../site-data";
+import { contactTopicLink, turkeyDinnerApplicationUrl, womenOfWarfareUrl } from "../site-data";
 
 /**
  * Every dated event on the site.
@@ -218,6 +218,69 @@ export const churchEvents: ChurchEvent[] = [
     featuredHeadline: "A Thanksgiving Meal For",
     featuredHeadlineEmphasis: "Every Table.",
   },
+  {
+    isoDate: "2026-11-22",
+    month: "NOV",
+    day: "22",
+    dateMeta: "Sunday evening",
+    category: "Women Of Warfare",
+    title: "Women Of Warfare Sunday Evening Service",
+    schedule: "November 22 · 6:30 PM",
+    location: "Vineyard Florence",
+    description:
+      "A Women of Warfare Ministries evening service with guest speaker Renee McKnight, a mother of two, evangelist and woman marked by revival fire. After years of addiction, abuse, jails, rehabs and devastating loss, she encountered the delivering power of Jesus Christ and was forever changed. Pray, heal, deliver.",
+    image: "/images/events/women-of-warfare-nov-22.webp",
+    imageSize: { width: 1024, height: 1536 },
+    alt: "Women of Warfare Ministries: guest speaker Renee McKnight, Sunday November 22 at 6:30 PM at Vineyard Florence Church",
+    primaryHref: womenOfWarfareUrl,
+    primaryLabel: "Women Of Warfare On Facebook",
+    featuredDate: "Sunday · November 22",
+    featuredWhen: "6:30 PM",
+    featuredHeadline: "Pray. Heal.",
+    featuredHeadlineEmphasis: "Deliver.",
+  },
+  {
+    isoDate: "2026-12-05",
+    month: "DEC",
+    day: "05",
+    dateMeta: "Saturday",
+    category: "Men of Courage",
+    title: "Men Of Courage Breakfast",
+    schedule: "December 5 · 9:00 AM",
+    location: "Vineyard Florence",
+    description:
+      "A hearty breakfast and a meaningful time of fellowship, connection and community for men ages 16 and up. Whether you attend our church or not, you are welcome—so bring a friend.",
+    image: "/images/events/men-of-courage-breakfast-dec.webp",
+    imageSize: { width: 1024, height: 768 },
+    alt: "Men of Courage Breakfast, Saturday at 9:00 AM. Register online under events",
+    primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3859007",
+    primaryLabel: "Register",
+    featuredDate: "Saturday · December 5",
+    featuredWhen: "9:00 AM",
+    featuredHeadline: "Breakfast, Brotherhood,",
+    featuredHeadlineEmphasis: "Belonging.",
+  },
+  {
+    isoDate: "2026-12-06",
+    month: "DEC",
+    day: "06",
+    dateMeta: "Sunday",
+    category: "Women’s Ministry",
+    title: "Women’s Christmas Celebration PJ Party",
+    schedule: "December 6 · 5:30 PM",
+    location: "Vineyard Florence",
+    description:
+      "Wear your favorite holiday PJs and bring a dessert to share; food and drinks are provided. Bring a new or gently used purse with a Christmas card of encouragement inside for the lucky lady who wins your bag!",
+    image: "/images/events/womens-christmas-pj-party.webp",
+    imageSize: { width: 1024, height: 768 },
+    alt: "Women’s Ministry Christmas Celebration PJ Party, December 6th at 5:30 PM at The Vineyard Florence",
+    primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3919473",
+    primaryLabel: "Register",
+    featuredDate: "Sunday · December 6",
+    featuredWhen: "5:30 PM",
+    featuredHeadline: "Celebrate Our Savior",
+    featuredHeadlineEmphasis: "Together.",
+  },
 ];
 
 /** The in-page anchor for an event, e.g. "turkey-dinner-giveaway" (used by links like the ticker's). */
@@ -227,6 +290,8 @@ export function eventAnchor(event: ChurchEvent): string {
 
 /** Ongoing programmes with no single date — always shown, never expire. */
 export type Rhythm = {
+  /** Optional in-page anchor id for linking straight to this card. */
+  id?: string;
   kicker: string;
   title: string;
   schedule: string;
@@ -243,14 +308,14 @@ export const rhythms: Rhythm[] = [
   {
     kicker: "For Newcomers",
     title: "Pastries With The Pastors",
-    schedule: "Registration open · Next date shown at signup",
+    schedule: "For people new to VF · Next date shown at signup",
     description:
       "Meet the team, learn why VF exists, hear about its mission and values, and find your next connection point—with pastries provided.",
     image: "/images/events/pastries-with-pastors.webp",
     imageSize: { width: 1500, height: 844 },
     alt: "Pastries with the Pastors announcement",
-    href: "https://vineyardflorence.churchcenter.com/registrations",
-    cta: "Check Upcoming Dates",
+    href: "https://vineyardflorence.churchcenter.com/registrations/events/3919050",
+    cta: "Sign Up For The Next One",
   },
   {
     kicker: "A Life Of Prayer",
@@ -279,7 +344,7 @@ export const rhythms: Rhythm[] = [
   {
     kicker: "A Public Yes",
     title: "Baptisms",
-    schedule: "First Sunday of each month · 11:00 AM service",
+    schedule: "First Sunday of each month · 11:00 AM service · Next: December 6",
     description:
       "Go public with your decision to follow Jesus and let the church celebrate with you. A baptism class begins at 10:30 AM before the second service.",
     image: "/images/events/baptisms.webp",

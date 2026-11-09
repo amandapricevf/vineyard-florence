@@ -39,13 +39,13 @@ export default function EventsPage() {
         </div>
         <div className="events-hero-collage" aria-hidden="true">
           <figure className="events-collage-card events-collage-one">
-            <img src="/images/events/men-of-courage.webp" alt="" width={1024} height={768} decoding="async" />
+            <img src="/images/events/turkey-dinner-giveaway.webp" alt="" width={1500} height={844} decoding="async" />
           </figure>
           <figure className="events-collage-card events-collage-two">
-            <img src="/images/events/vf-foundations.webp" alt="" width={1500} height={844} decoding="async" />
+            <img src="/images/events/womens-christmas-pj-party.webp" alt="" width={1024} height={768} decoding="async" />
           </figure>
           <figure className="events-collage-card events-collage-three">
-            <img src="/images/events/men-of-courage-camp.webp" alt="" width={1500} height={1500} decoding="async" />
+            <img src="/images/events/men-of-courage-breakfast-dec.webp" alt="" width={1024} height={768} decoding="async" />
           </figure>
           <span className="events-collage-orbit" />
         </div>
@@ -76,6 +76,7 @@ export default function EventsPage() {
           <div className="events-horizon-details"><span>Status</span><strong>Now Open</strong><span>Ways To Help</span><strong>Furnish · give · pray</strong></div>
           <div className="events-horizon-actions">
             <a className="button button-dark" href="https://a.co/04FZOIZG" target="_blank" rel="noreferrer">View Amazon Wish List <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href="mailto:amber.brown@vineyardflorence.church?subject=VF%20Reset%20House">Email Amber To Learn More <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>

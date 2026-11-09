@@ -52,7 +52,7 @@ export function EventsCalendar() {
         {rest.length > 0 ? (
           <div className="events-calendar-list">
             {rest.map((event, index) => (
-              <EventRow key={event.title} event={event} number={index + 2} />
+              <EventRow key={`${event.title}-${event.isoDate}`} event={event} number={index + 2} />
             ))}
           </div>
         ) : visible.length === 0 ? (
@@ -199,7 +199,7 @@ export function EventRhythms() {
       </div>
       <div className="events-rhythm-grid">
         {rhythms.map((rhythm) => (
-          <article className="rhythm-card" key={rhythm.title}>
+          <article className="rhythm-card" id={rhythm.id} key={rhythm.title}>
             <div className="rhythm-card-media">
               <img
                 src={rhythm.image}
