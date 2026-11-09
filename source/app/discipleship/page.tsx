@@ -3,6 +3,7 @@ import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
 import { TriadMark } from "../components/TriadMark";
 import { DiscipleshipStages } from "./DiscipleshipStages";
+import { MovementStack } from "../components/MovementStack";
 import {
   contactTopicLink,
   churchCenterGroupsUrl,
@@ -210,8 +211,10 @@ export default function DiscipleshipPage() {
           <p className="eyebrow">Jesus Did Not Say “Come And Watch”</p>
           <h2>He Said,<br /><em>“Follow Me.”</em></h2>
         </div>
-        <p>Discipleship is the lifelong process of becoming more like Jesus—and helping someone else do the same. It is not a class you finish. It is a life you practice with God and other people.</p>
+        <p>Discipleship is the lifelong process of becoming more like Jesus—and helping someone else do the same. It is not a class you finish. It is a life you practice with God and other people. We do this in three ways.</p>
       </section>
+
+      <MovementStack />
 
       <DiscipleshipStages />
 
