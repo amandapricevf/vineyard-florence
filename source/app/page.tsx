@@ -586,8 +586,11 @@ export default function Home() {
       <section className="purpose" id="pathway">
         <div className="purpose-intro" data-reveal>
           <p className="eyebrow light">Our Way Of Life</p>
-          <h2>Whole-Life Discipleship,<br />In Three Simple Movements.</h2>
-          <p>Jesus invites us upward toward God, inward toward one another and outward toward the world He loves.</p>
+          <div>
+            <h2>What Is Discipleship?</h2>
+            <p className="purpose-definition">Discipleship is the lifelong adventure of following Jesus: staying close to Him, learning His ways, becoming more like Him and, in the power of the Holy Spirit, doing the things He did.</p>
+          </div>
+          <p>We live it out in three simple movements: Up toward God, In toward one another and Out toward the world He loves.</p>
         </div>
         <div className="purpose-grid">
           {[

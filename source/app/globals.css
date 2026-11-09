@@ -1132,3 +1132,7 @@ section[id]{scroll-margin-top:76px}
 .sticky-news.is-collapsed .sticky-news-window,.sticky-news.is-collapsed .sticky-news-arrow{opacity:0;transform:translateX(-45%)}
 .sticky-news.is-collapsed .sticky-news-track{animation-play-state:paused}
 .sticky-news.is-collapsed .sticky-news-kicker{cursor:pointer}
+
+/* Home "What Is Discipleship?" definition, under the heading in the
+   purpose (UP / IN / OUT) intro. */
+.purpose-intro .purpose-definition{color:rgba(255,255,255,.9);font-size:clamp(19px,1.7vw,25px);letter-spacing:-.01em;line-height:1.45;margin:28px 0 0;max-width:36ch}
