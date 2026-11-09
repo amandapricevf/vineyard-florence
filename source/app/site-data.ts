@@ -103,6 +103,7 @@ export type NavItem = { label: string; href: string; external?: boolean };
 export const primaryNavigation: NavItem[] = [
   { label: "New Here", href: "/#what-to-expect" },
   { label: "Discipleship", href: "/discipleship" },
+  { label: "Prayer", href: "/prayer" },
   { label: "Ministries", href: "/ministries" },
   { label: "Events", href: "/events" },
   { label: "Messages", href: "/messages" },
