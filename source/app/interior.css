@@ -1144,3 +1144,10 @@ main textarea {
 .discipleship-transition b{font-weight:800}
 .discipleship-transition i{color:var(--vine);display:inline-block;font-style:normal;margin-left:6px}
 @media(max-width:620px){.discipleship-manifesto{padding-bottom:50px}.discipleship-transition{margin:0 24px;padding:44px 0 56px}}
+
+/* Vineyard Kids: which service each age group is offered at. */
+.kids-times-note{background:white;border-left:3px solid var(--vine);color:var(--ink);font-size:17px;line-height:1.55;margin:0 4vw 28px;max-width:860px;padding:18px 22px}
+.kids-times-note strong{display:block;font-size:var(--text-label);font-weight:800;letter-spacing:.16em;margin-bottom:6px;text-transform:uppercase;color:var(--vine)}
+.kids-times-note b{font-weight:700}
+.interior-page .kids-age-grid p.kids-age-time{background:var(--vine);border-radius:999px;color:white;display:inline-block;font-size:13px;font-weight:700;letter-spacing:.02em;margin-top:16px;padding:7px 14px}
+@media(max-width:620px){.kids-times-note{margin:0 18px 22px}}

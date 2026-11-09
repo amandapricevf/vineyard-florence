@@ -74,7 +74,7 @@ const sundayFlow: SundayFlowStep[] = [
   {
     time: "Bringing kids?",
     title: "Register And Drop Off",
-    copy: "Our Kids team will help you register your children, answer questions and show you to the right kids area.",
+    copy: "Our Kids team will help you register your children, answer questions and show you to the right kids area. Nursery, Toddlers and Preschool are at 11 AM only; Elementary is at 9 & 11 AM.",
     href: "/kids/register",
     linkLabel: "Register Your Kids",
   },
@@ -131,7 +131,7 @@ const frequentlyAskedQuestions = [
   },
   {
     question: "What should I expect if I bring kids?",
-    answer: "A member of our Kids team will help you register and check in your children, answer your questions and guide you to the right kids area. First-time check-in takes a few extra minutes—tiny humans, surprisingly, come with logistics.",
+    answer: "A member of our Kids team will help you register and check in your children, answer your questions and guide you to the right kids area. First-time check-in takes a few extra minutes—tiny humans, surprisingly, come with logistics. Nursery (0–18 months), Toddlers and Preschool are available at the 11:00 service only; Elementary (K–5th grade) is available at both 9:00 and 11:00.",
   },
   {
     question: "Will I be singled out because I am new?",

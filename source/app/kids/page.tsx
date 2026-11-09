@@ -7,11 +7,13 @@ export const metadata: Metadata = {
   description: "A safe, exciting and Spirit-led Sunday environment for infants through fifth grade at Vineyard Florence Church.",
 };
 
+/** Each age group and the Sunday services it is offered at. Nursery through
+ *  Preschool run at 11 AM only; Elementary runs at both services. */
 const ageGroups = [
-  ["Nursery", "Ages 0–18 Months"],
-  ["Toddlers", "18 Months–3 Years"],
-  ["Preschool", "Ages 4–5"],
-  ["Elementary", "Kindergarten–2nd Grade · 3rd–5th Grade"],
+  ["Nursery", "Ages 0–18 Months", "11 AM only"],
+  ["Toddlers", "18 Months–3 Years", "11 AM only"],
+  ["Preschool", "Ages 4–5", "11 AM only"],
+  ["Elementary", "Kindergarten–2nd Grade · 3rd–5th Grade", "9 AM & 11 AM"],
 ] as const;
 
 export default function VineyardKidsPage() {
@@ -42,9 +44,10 @@ export default function VineyardKidsPage() {
         <p>At Vineyard Florence, our kids experience safe, exciting environments where they learn about Jesus in creative, Bible-based and Spirit-led ways. The heartbeat of Vineyard Kids is to show children who God is, teach them how they can hear God for themselves and provide fun ways to share His amazing love. It is our greatest honor to partner with parents and guardians in discipling their children. We would love to see your family this Sunday!</p>
       </section>
 
-      <section className="kids-age-grid" aria-label="Vineyard Kids age groups">
-        {ageGroups.map(([title, ages], index) => (
-          <article key={title}><span>0{index + 1}</span><h2>{title}</h2><p>{ages}</p></article>
+      <p className="kids-times-note"><strong>Planning which service to attend?</strong> Nursery, Toddlers and Preschool are available at the <b>11 AM</b> service only. Elementary is available at both <b>9 AM and 11 AM</b>.</p>
+      <section className="kids-age-grid" aria-label="Vineyard Kids age groups and service times">
+        {ageGroups.map(([title, ages, time], index) => (
+          <article key={title}><span>0{index + 1}</span><h2>{title}</h2><p>{ages}</p><p className="kids-age-time">Available {time}</p></article>
         ))}
       </section>
 
