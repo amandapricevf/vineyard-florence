@@ -207,7 +207,7 @@ export const churchEvents: ChurchEvent[] = [
     schedule: "November 22 · Distribution & prayer 1:30–2:30 PM",
     location: "Vineyard Florence",
     description:
-      "Help bless families in need with a complete Thanksgiving meal. Sponsor a $25 meal bag (text \"$25 Thanksgiving\" to 1-833-263-0025, or give online to the Thanksgiving fund), or pick up a bag and shopping list at the church doors and return it filled by November 16. Need a meal? Apply and someone will reach out within two business days.",
+      "Help bless families in need with a complete Thanksgiving meal. Sponsor a $25 meal bag (text \"$25 Thanksgiving\" to 1-833-263-0025, or give online to the Thanksgiving fund), or pick up a bag and shopping list at the church doors and return it filled by Sunday, November 15. Need a meal? Apply and someone will reach out within two business days.",
     image: "/images/events/turkey-dinner-giveaway.webp",
     imageSize: { width: 1500, height: 844 },
     alt: "Turkey Dinner Giveaway announcement",
