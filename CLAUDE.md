@@ -7,6 +7,16 @@ replies; when a technical term is unavoidable, explain it in one short phrase.
 
 The staff manual that teaches this workflow is `docs/Vineyard-Florence-Website-Manual.pdf`.
 
+## Who owns what
+
+- The GitHub repository belongs to the church's GitHub account (transferred
+  from the developer who built the site).
+- The Netlify project `vineyardflorence` lives in the original developer's
+  Netlify team; the church has been added to it as an Owner. Builds use that
+  team's plan and credits.
+- If a push to `main` does not start a Netlify deploy, Netlify's link to the
+  transferred repository may need renewing (manual, Chapter 2).
+
 ## How publishing works
 
 - `main` is the live site. Every push to `main` makes Netlify rebuild and
