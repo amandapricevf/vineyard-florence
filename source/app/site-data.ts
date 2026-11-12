@@ -327,9 +327,9 @@ export function goToSearchResult(href: string): void {
 export const tickerMessage = {
   kicker: "Latest",
   /** Optional bold lead-in before the copy; leave empty for none. */
-  lead: "Turkey Dinner Giveaway:",
+  lead: "We're Cooking! Turkey Dinner Giveaway:",
   copy: "Sunday, November 22 · sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
-  label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
+  label: "We're Cooking! Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
   href: "/events#turkey-dinner-giveaway",
   expires: "2026-11-22" as string | null,
 };
