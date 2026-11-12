@@ -281,6 +281,27 @@ export const churchEvents: ChurchEvent[] = [
     featuredHeadline: "Celebrate Our Savior",
     featuredHeadlineEmphasis: "Together.",
   },
+  {
+    isoDate: "2026-12-09",
+    month: "DEC",
+    day: "09",
+    dateMeta: "Wednesday",
+    category: "Vineyard Kids",
+    title: "Worship With Santa",
+    schedule: "December 9 · 6:30–8:00 PM",
+    location: "Vineyard Florence",
+    description:
+      "Join us for a fun evening put together by our Vineyard Kids ministry. We will dance and sing together as we worship Jesus. Santa will be joining us, and everyone will have the opportunity to get pictures with Santa. We will enjoy hot cocoa and cookies, and hear the story of Jesus as well.",
+    image: "/images/events/worship-with-santa.webp",
+    imageSize: { width: 1024, height: 1325 },
+    alt: "Worship with Santa, a family-friendly Christmas evening for all ages: Wednesday, December 9th, 6:30–8:00 PM at Vineyard Florence Church. Cookies, crafts, the Christmas story and pictures with Santa. Everything is free!",
+    primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/3955887",
+    primaryLabel: "Register",
+    featuredDate: "Wednesday · December 9",
+    featuredWhen: "6:30–8:00 PM",
+    featuredHeadline: "Worship With",
+    featuredHeadlineEmphasis: "Santa.",
+  },
 ];
 
 /** The in-page anchor for an event, e.g. "turkey-dinner-giveaway" (used by links like the ticker's). */
