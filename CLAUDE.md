@@ -16,12 +16,16 @@ The staff manual that teaches this workflow is `docs/Vineyard-Florence-Website-M
   team's plan and credits.
 - If a push to `main` does not start a Netlify deploy, Netlify's link to the
   transferred repository may need renewing (manual, Chapter 2).
+- The domain `vineyardflorence.church` is registered with Squarespace Domains,
+  and its DNS is edited there. Church email is Microsoft 365/Outlook through
+  the same domain: never remove the MX or SPF records (manual, Chapter 14).
 
 ## How publishing works
 
 - `main` is the live site. Every push to `main` makes Netlify rebuild and
-  publish https://vineyardflorence.netlify.app (and the church domain once it
-  points at Netlify). Each build costs Netlify credits, so changes are batched.
+  publish the site at https://www.vineyardflorence.church (Netlify's own
+  address, https://vineyardflorence.netlify.app, serves the same site; use it
+  to check a publish if the domain's DNS ever points elsewhere). Each build costs Netlify credits, so changes are batched.
 - Work on a separate branch. **Only push or merge to `main` when the person
   says so** ("push", "push to main", "merge", "publish", "make it live").
 - After pushing to `main`, wait for Netlify to finish (poll the live page for
