@@ -30,6 +30,16 @@ export function EventsCalendar() {
     setToday(churchToday());
   }, []);
 
+  // The static HTML lists every event, so a link like /events#turkey-dinner-giveaway
+  // first lands on that event's row further down. Once past events drop off and
+  // the next event moves up into the featured slot, scroll to it again.
+  useEffect(() => {
+    if (!today) return;
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    document.getElementById(id)?.scrollIntoView({ block: "start" });
+  }, [today]);
+
   const visible = today ? upcomingEvents(today) : sortedEvents;
   const featured = visible[0];
   const rest = visible.slice(1);
