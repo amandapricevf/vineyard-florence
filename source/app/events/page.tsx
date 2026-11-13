@@ -22,6 +22,9 @@ const lastBuilt = new Date().toLocaleDateString("en-US", {
   timeZone: "America/New_York",
 });
 
+/** Keeps each Reset House button on one line; the row wraps instead. */
+const noWrap = { whiteSpace: "nowrap" } as const;
+
 export default function EventsPage() {
   return (
     <main className="interior-page events-page" id="top">
@@ -72,11 +75,13 @@ export default function EventsPage() {
         <div className="events-horizon-copy">
           <TriadMark index={3} label="On The Horizon" />
           <h2>The First VF Reset<br />House Is <em>Open.</em></h2>
-          <p>Help purchase remaining items for the home, pray for the women being served and learn how you can support future Reset Houses.</p>
-          <div className="events-horizon-details"><span>Status</span><strong>Now Open</strong><span>Ways To Help</span><strong>Furnish · give · pray</strong></div>
-          <div className="events-horizon-actions">
-            <a className="button button-dark" href="https://a.co/04FZOIZG" target="_blank" rel="noreferrer">View Amazon Wish List <span aria-hidden="true">↗</span></a>
-            <a className="text-link" href="mailto:amber.brown@vineyardflorence.church?subject=VF%20Reset%20House">Email Amber To Learn More <span aria-hidden="true">→</span></a>
+          <p>Reset is a Christ-centered recovery program that empowers individuals to overcome addiction and rebuild their lives through structured community, spiritual growth, and dignified housing. From the very start, residents are supported holistically&mdash;addressing not just sobriety, but also discipleship, relational healing, financial stewardship, and physical and mental wellness. Through daily rhythms, mentoring relationships, and a strong church connection, residents are equipped to live transformed, purpose-filled lives. Ultimately, Reset exists not just to help people recover, but to raise up disciples who live missionally and help others find the same hope and freedom.</p>
+          <p>Vineyard Florence has opened its first Reset home, Leah&rsquo;s House. You can support us by praying for the women being served in and through this home, and by purchasing items needed for the house. To learn more about Leah&rsquo;s House and how to get involved, email Amber.</p>
+          <div className="events-horizon-details"><span>Status</span><strong>Now Open</strong><span>Ways To Help</span><strong>Furnish · Give · Pray</strong></div>
+          <div className="events-horizon-actions" style={{ flexWrap: "wrap", rowGap: 20 }}>
+            <a className="button button-dark" style={noWrap} href="https://a.co/04FZOIZG" target="_blank" rel="noreferrer">View Amazon Wish List <span aria-hidden="true">↗</span></a>
+            <a className="text-link" style={noWrap} href="mailto:amber.brown@vineyardflorence.church?subject=VF%20Reset%20House">Email Amber To Learn More <span aria-hidden="true">→</span></a>
+            <a className="text-link" style={noWrap} href="https://www.resetministries.org/" target="_blank" rel="noreferrer">Learn More about Reset <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
