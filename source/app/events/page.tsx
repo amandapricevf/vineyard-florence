@@ -78,6 +78,7 @@ export default function EventsPage() {
           <div className="events-horizon-actions">
             <a className="button button-dark" href="https://a.co/04FZOIZG" target="_blank" rel="noreferrer">View Amazon Wish List <span aria-hidden="true">↗</span></a>
             <a className="text-link" href="mailto:amber.brown@vineyardflorence.church?subject=VF%20Reset%20House">Email Amber To Learn More <span aria-hidden="true">→</span></a>
+            <a className="text-link" href="https://www.resetministries.org/" target="_blank" rel="noreferrer">Learn More about Reset <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
