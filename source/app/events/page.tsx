@@ -72,7 +72,8 @@ export default function EventsPage() {
         <div className="events-horizon-copy">
           <TriadMark index={3} label="On The Horizon" />
           <h2>The First VF Reset<br />House Is <em>Open.</em></h2>
-          <p>Help purchase remaining items for the home, pray for the women being served and learn how you can support future Reset Houses.</p>
+          <p>Reset is a Christ-centered recovery program that empowers individuals to overcome addiction and rebuild their lives through structured community, spiritual growth, and dignified housing. From the very start, residents are supported holistically&mdash;addressing not just sobriety, but also discipleship, relational healing, financial stewardship, and physical and mental wellness. Through daily rhythms, mentoring relationships, and a strong church connection, residents are equipped to live transformed, purpose-filled lives. Ultimately, Reset exists not just to help people recover, but to raise up disciples who live missionally and help others find the same hope and freedom.</p>
+          <p>Vineyard Florence has opened its first Reset home, Leah&rsquo;s House. You can support us by praying for the women being served in and through this home, and by purchasing items needed for the house. To learn more about Leah&rsquo;s House and how to get involved, email Amber.</p>
           <div className="events-horizon-details"><span>Status</span><strong>Now Open</strong><span>Ways To Help</span><strong>Furnish · give · pray</strong></div>
           <div className="events-horizon-actions">
             <a className="button button-dark" href="https://a.co/04FZOIZG" target="_blank" rel="noreferrer">View Amazon Wish List <span aria-hidden="true">↗</span></a>
