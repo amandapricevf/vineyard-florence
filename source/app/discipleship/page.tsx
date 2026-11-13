@@ -8,7 +8,6 @@ import {
   contactTopicLink,
   churchCenterGroupsUrl,
   houseGroupInterestUrl,
-  lectio365Url,
   wahaUrl,
 } from "../site-data";
 
@@ -101,10 +100,9 @@ const recommendedBooks = [
 ] as const;
 
 /**
- * The resource library in three groups that follow Up, In and Out. The
- * resources the church named for each group come first; the rest of the
- * original guides follow where they fit best. `external` marks apps that open
- * another site rather than a VF guide.
+ * The resource library in three groups that follow Up, In and Out, holding
+ * only the resources the church chose for each group. `external` marks apps
+ * that open another site rather than a VF guide.
  */
 const resourceGroups = [
   {
@@ -114,14 +112,8 @@ const resourceGroups = [
     links: [
       { title: "Learning To Hear God’s Voice", note: "Practice listening and responding to God", href: "/resources/discipleship/Learning-to-Hear-Gods-Voice.pdf" },
       { title: "Alone Time With God", note: "A personal prayer guide", href: "/resources/discipleship/Alone-Time-wGod-Prayer-Guide.pdf" },
-      { title: "Prayer Hexagon", note: "Printable guide; try the interactive version on the Prayer page", href: "/resources/discipleship/Prayer-Hexagon.jpg" },
-      { title: "Lectio 365 App", note: "Daily Lectio Divina prayer on your phone", href: lectio365Url, external: true },
-      { title: "Lectio Divina", note: "Read Scripture slowly and prayerfully", href: "/resources/discipleship/Lectio-Divina-1.pdf" },
-      { title: "Personal Prayer Time Based On The Disciple’s Prayer", note: "Pray through the Lord’s Prayer", href: "/resources/discipleship/Personal-Prayer-Time-based-on-the-Disciples-Prayer.pdf" },
-      { title: "Prayer Wheel", note: "A visual guide for sustained prayer", href: "/resources/discipleship/Prayer-Wheel.pdf" },
-      { title: "Prayer Of Examen", note: "Notice God’s presence in your day", href: "/resources/discipleship/Prayer-of-Examen.pdf" },
-      { title: "Fasting And Feasting", note: "A guide to hunger, attention and celebration", href: "/resources/discipleship/Fasting-and-Feasting.pdf" },
-      { title: "John Wesley Covenant Prayer", note: "A historic prayer of surrender", href: "/resources/discipleship/John-Wesley-Covenant-Prayer-hm6b.pdf" },
+      { title: "Prayer Hexagon", note: "Pray through the interactive guide on our Prayer page", href: "/prayer#learn" },
+      { title: "Lectio Divina App", note: "Daily Lectio Divina prayer on your phone", href: "https://lectio365.com/the-app/", external: true },
     ],
   },
   {
@@ -130,10 +122,7 @@ const resourceGroups = [
     description: "Grow with others in House Groups and Discovery Bible Studies, and pray for disciple-making movements.",
     links: [
       { title: "DMM Prayers", note: "Pray for disciple-making movements", href: "/resources/discipleship/DMM-Prayers.pdf" },
-      { title: "Waha App", note: "Start a Discovery Bible Study", href: wahaUrl, external: true },
-      { title: "Circle Of Accountability", note: "A discipleship conversation guide", href: "/resources/discipleship/Circle-of-Accountability.pdf" },
-      { title: "Prayer For Disciple-Making Movements", note: "Focused movement prayer prompts", href: "/resources/discipleship/Praying-for-Disciple-Making-Movements.pdf" },
-      { title: "Prayer Cycle Movement Prayer", note: "A repeatable prayer rhythm for movements", href: "/resources/discipleship/Prayer-Cycle-Movement-Prayer.pdf" },
+      { title: "Waha App", note: "Start a Discovery Bible Study", href: "https://waha.app/eng", external: true },
     ],
   },
   {
@@ -142,10 +131,8 @@ const resourceGroups = [
     description: "Join God’s mission: pray for His Kingdom, pray for people and serve those far from Him.",
     links: [
       { title: "Kingdom Prayer", note: "A guide to praying for God’s Kingdom", href: "/resources/discipleship/Kingdom-Prayer-DMM.pdf" },
-      { title: "Vineyard Five-Step Prayer Model", note: "Learn to pray for someone", href: "/resources/discipleship/Vineyard-5-Step-Prayer-Model.pdf" },
-      { title: "The Prayer Triangle", note: "A three-part prayer tool", href: "/resources/discipleship/The-Prayer-Triangle-1.pdf" },
-      { title: "Workers For The Harvest", note: "Pray and prepare to join God’s mission", href: "/resources/discipleship/Workers-for-the-Harvest.pdf" },
-      { title: "Persecuted Church Prayers", note: "Stand with the persecuted church in prayer", href: "/resources/discipleship/Persecuted-Church-Prayer.pdf" },
+      { title: "5 Step Prayer Model", note: "Learn to pray for someone", href: "/resources/discipleship/Vineyard-5-Step-Prayer-Model.pdf" },
+      { title: "Bless App", note: "Love and bless the people around you", href: "https://www.theblessapp.com/", external: true },
     ],
   },
 ] as const;
