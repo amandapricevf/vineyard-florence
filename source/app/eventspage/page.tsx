@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
 import { TriadMark } from "../components/TriadMark";
-import { EventsCalendar, EventRhythms } from "./EventsCalendar";
+// The calendar and the event list stay in app/events/ (event-data.ts is
+// where events are added); only the page itself lives at /eventspage.
+import { EventsCalendar, EventRhythms } from "../events/EventsCalendar";
 import { contactEmail } from "../site-data";
 
 export const metadata: Metadata = {

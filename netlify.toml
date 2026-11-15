@@ -10,3 +10,13 @@
 [functions]
   node_bundler = "esbuild"
   included_files = ["netlify/sermons-snapshot.json"]
+
+# The Events page moved to /eventspage (its old Squarespace address).
+# Old /events links and bookmarks forward there. This matches /events exactly,
+# so pages under /events/ (such as the Turkey Dinner Giveaway QR page) are not
+# affected. `force` makes it win over any leftover built /events page.
+[[redirects]]
+  from = "/events"
+  to = "/eventspage"
+  status = 301
+  force = true

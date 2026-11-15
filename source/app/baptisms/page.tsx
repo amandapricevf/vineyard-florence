@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
-import { contactTopicLink } from "../site-data";
+import { contactTopicLink, eventsUrl } from "../site-data";
 
 export const metadata: Metadata = {
   title: "Baptisms | Vineyard Florence Church",
@@ -16,7 +16,7 @@ export default function BaptismsPage() {
         <p className="eyebrow light">A Public Yes</p>
         <h1>Go Public With<br /><em>Your Faith.</em></h1>
         <p>Baptism is for anyone who wants to declare publicly that Jesus is the Lord of their life—and it is one of the greatest shared experiences we have at Vineyard Florence.</p>
-        <Link className="text-link light" href="/events">← Back To Events</Link>
+        <Link className="text-link light" href={eventsUrl}>← Back To Events</Link>
       </section>
 
       <section className="kids-form-shell">

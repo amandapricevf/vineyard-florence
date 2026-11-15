@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "./components/InteriorChrome";
-import { contactEmail } from "./site-data";
+import { contactEmail, eventsUrl } from "./site-data";
 
 export const metadata: Metadata = {
   title: "Page Not Found | Vineyard Florence Church",
@@ -31,7 +31,7 @@ export default function NotFound() {
           <Link className="button button-light" href="/">
             Back to home <span aria-hidden="true">↗</span>
           </Link>
-          <Link className="text-link light" href="/events">
+          <Link className="text-link light" href={eventsUrl}>
             See what&rsquo;s coming up <span aria-hidden="true">→</span>
           </Link>
         </div>

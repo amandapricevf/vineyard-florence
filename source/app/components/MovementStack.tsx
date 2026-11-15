@@ -4,6 +4,7 @@ import { TriadMark } from "./TriadMark";
 import {
   bibleReadingPlanUrl,
   contactTopicLink,
+  eventsUrl,
   freePantryUrl,
   houseGroupInterestUrl,
   latviaFacebookUrl,
@@ -30,8 +31,8 @@ const waysToLiveItOut: ReactNode[][] = [
     <>Serve on a Sunday, in Kids or Student Ministries, on our First Impressions Team or Media/Worship Team: <Link href={volunteerUrl}>Sign up to volunteer →</Link></>,
   ],
   [
-    <>Serve at VF with one of our outreach ministries: <Link href={freePantryUrl}>Monthly Grocery Giveaways</Link>, <Link href={resetHouseUrl}>Local Reset Ministries sober-living house</Link>, <a href={vinedresserUrl} target="_blank" rel="noreferrer">The Vinedresser Foster and Kinship ↗</a>, <Link href="/events">other outreach events</Link> and more.</>,
-    <>Go on a mission trip with us to Appalachia at <Link href="/events">Red Bird</Link>, or globally to <Link href="/merp">Greece</Link> or <a href={latviaFacebookUrl} target="_blank" rel="noreferrer">Latvia ↗</a>.</>,
+    <>Serve at VF with one of our outreach ministries: <Link href={freePantryUrl}>Monthly Grocery Giveaways</Link>, <Link href={resetHouseUrl}>Local Reset Ministries sober-living house</Link>, <a href={vinedresserUrl} target="_blank" rel="noreferrer">The Vinedresser Foster and Kinship ↗</a>, <Link href={eventsUrl}>other outreach events</Link> and more.</>,
+    <>Go on a mission trip with us to Appalachia at <Link href={eventsUrl}>Red Bird</Link>, or globally to <Link href="/merp">Greece</Link> or <a href={latviaFacebookUrl} target="_blank" rel="noreferrer">Latvia ↗</a>.</>,
   ],
 ];
 

@@ -49,7 +49,8 @@ export const vinedresserUrl = "https://www.thevinedresser.org/";
 export const churchCenterHomeUrl = "https://vineyardflorence.churchcenter.com/";
 export const churchCenterGroupsUrl = "https://vineyardflorence.churchcenter.com/groups";
 export const houseGroupInterestUrl = "/join-a-house-group";
-export const eventsUrl = "/events";
+/** The Events page; `/eventspage` matches the old Squarespace address. */
+export const eventsUrl = "/eventspage";
 export const prayerRequestUrl = "/prayer-request";
 /** Weekday morning prayer on Zoom, 6:30–7:00 AM. */
 export const prayerZoomUrl = "https://us02web.zoom.us/j/218791174";
@@ -64,7 +65,7 @@ export const turkeyDinnerApplicationUrl =
   "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=8TLNmEEi0U23Nw-RYAe2c46eNn2j2xZIgdNH_7QO7AtUMkxRNVVFOUFDRDNLRkJRMlAzSFFVVDNJUS4u";
 export const volunteerUrl = "/serve";
 export const freePantryUrl = "/free-pantry";
-export const resetHouseUrl = "/events#reset-house";
+export const resetHouseUrl = `${eventsUrl}#reset-house`;
 /** Free Discovery Bible Study app. */
 export const wahaUrl = "https://waha.app/eng";
 /** Lectio 365: daily Lectio Divina prayer app (linked from the old Prayer Resources page). */
@@ -107,7 +108,7 @@ export const primaryNavigation: NavItem[] = [
   { label: "Discipleship", href: "/discipleship" },
   { label: "Prayer", href: "/prayer" },
   { label: "Ministries", href: "/ministries" },
-  { label: "Events", href: "/events" },
+  { label: "Events", href: eventsUrl },
   { label: "Messages", href: "/messages" },
   { label: "Staff", href: "/staff" },
   { label: "Beliefs", href: "/beliefs" },
@@ -125,7 +126,7 @@ export const footerExploreLinks: NavItem[] = [
   { label: "MERP", href: "/merp" },
   { label: "Prayer", href: "/prayer" },
   { label: "Messages", href: "/messages" },
-  { label: "Events", href: "/events" },
+  { label: "Events", href: eventsUrl },
   { label: "Staff", href: "/staff" },
   { label: "Beliefs", href: "/beliefs" },
   { label: "Our Church", href: "/#impact" },
@@ -171,7 +172,7 @@ export const searchIndex: SearchItem[] = [
   { title: "VF Foundations", description: "Go deeper through Vineyard Florence's eight-week Foundations course.", href: "/discipleship#resources", keywords: "foundations course class eight week 8 week deeper" },
   { title: "Baptisms", description: "Go public with your faith. Baptisms happen on the first Sunday of each month during the 11:00 AM service.", href: "/baptisms", keywords: "baptism baptized baptize water dunk public faith class kids again" },
   { title: "VF’s Free Pantry", description: "Free groceries for neighbors in need on the fourth Tuesday of each month, 6:00–7:30 PM.", href: "/free-pantry", keywords: "pantry food groceries free grocery giveaway hungry need help serve volunteer tuesday" },
-  { title: "Upcoming Events", description: "Explore courses, gatherings, camps, baptisms and life at VF.", href: "/events", keywords: "events calendar alpha baptism upcoming foundations camp pantry" },
+  { title: "Upcoming Events", description: "Explore courses, gatherings, camps, baptisms and life at VF.", href: eventsUrl, keywords: "events calendar alpha baptism upcoming foundations camp pantry" },
   { title: "The Vinedresser", description: "Free children’s clothing and practical support for foster and kinship families in Northern Kentucky.", href: "/ministries#vinedresser", keywords: "vinedresser foster kinship families children clothing diapers shop donate" },
   { title: "Leah’s House: VF Reset House", description: "Vineyard Florence’s first Reset home, a Christ-centered recovery house for women. Pray, give or help furnish the home.", href: resetHouseUrl, keywords: "leah leahs reset ministries home living women amazon wish list furnish" },
   { title: "Outreach & Mission", description: "See how Vineyard Florence serves Northern Kentucky and communities beyond it.", href: "/#impact", keywords: "outreach mission serve volunteer vinedresser foster kinship" },
@@ -333,6 +334,6 @@ export const tickerMessage = {
   lead: "Turkey Dinner Giveaway:",
   copy: "Sunday, November 22 · sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
   label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
-  href: "/events#turkey-dinner-giveaway",
+  href: `${eventsUrl}#turkey-dinner-giveaway`,
   expires: "2026-11-22" as string | null,
 };
