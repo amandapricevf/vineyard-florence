@@ -16,6 +16,7 @@ import {
   churchCenterGroupsUrl,
   churchCenterGivingUrl,
   everyOrgCryptoGivingUrl,
+  eventsUrl,
   churchCenterSignInUrl,
   directionsUrl,
   logoSize,
@@ -43,7 +44,7 @@ const heroMessages = [
     label: "Coming Up At VF",
     copy: "Find out what is coming up at VF. From Alpha to Baptisms, find out here.",
     cta: "Explore events",
-    href: "/events",
+    href: eventsUrl,
   },
 ];
 
