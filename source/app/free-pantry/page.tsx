@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../components/InteriorChrome";
-import { address, contactTopicLink, directionsUrl } from "../site-data";
+import { address, contactTopicLink, directionsUrl, eventsUrl } from "../site-data";
 
 export const metadata: Metadata = {
   title: "VF’s Free Pantry | Vineyard Florence Church",
@@ -16,7 +16,7 @@ export default function FreePantryPage() {
         <p className="eyebrow light">For Our Neighbors</p>
         <h1>VF’s Free<br /><em>Pantry.</em></h1>
         <p>On the fourth Tuesday of each month, our Free Food Pantry is an opportunity to bless those in need in our community with free groceries.</p>
-        <Link className="text-link light" href="/events">← Back To Events</Link>
+        <Link className="text-link light" href={eventsUrl}>← Back To Events</Link>
       </section>
 
       <section className="kids-form-shell">

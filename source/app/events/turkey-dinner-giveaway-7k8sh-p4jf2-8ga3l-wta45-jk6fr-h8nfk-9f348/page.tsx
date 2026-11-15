@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { InteriorFooter, InteriorHeader, SiteTicker } from "../../components/InteriorChrome";
 import { TriadMark } from "../../components/TriadMark";
-import { churchCenterGivingUrl, turkeyDinnerApplicationUrl } from "../../site-data";
+import { churchCenterGivingUrl, eventsUrl, turkeyDinnerApplicationUrl } from "../../site-data";
 
 export const metadata: Metadata = {
   title: "Turkey Dinner Giveaway | Vineyard Florence Church",
@@ -44,7 +44,7 @@ export default function TurkeyDinnerGiveawayPage() {
           <div className="events-horizon-actions" style={{ flexWrap: "wrap", rowGap: 20 }}>
             <a className="button button-dark" style={noWrap} href={turkeyDinnerApplicationUrl} target="_blank" rel="noreferrer">Apply For A Meal <span aria-hidden="true">↗</span></a>
             <a className="text-link" style={noWrap} href={churchCenterGivingUrl} target="_blank" rel="noreferrer">Give To The Thanksgiving Fund <span aria-hidden="true">↗</span></a>
-            <Link className="text-link" style={noWrap} href="/events">See All Events <span aria-hidden="true">→</span></Link>
+            <Link className="text-link" style={noWrap} href={eventsUrl}>See All Events <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>
