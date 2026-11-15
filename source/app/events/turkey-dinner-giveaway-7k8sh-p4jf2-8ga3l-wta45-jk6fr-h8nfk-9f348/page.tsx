@@ -19,6 +19,13 @@ export const metadata: Metadata = {
 /** Keeps each button on one line; the row wraps instead. */
 const noWrap = { whiteSpace: "nowrap" } as const;
 
+/**
+ * The shared image style stretches the card to the column's height, which
+ * left a wide banner floating in white. Auto height lets the card match the
+ * banner's own shape.
+ */
+const bannerFit = { width: "100%", height: "auto" } as const;
+
 export default function TurkeyDinnerGiveawayPage() {
   return (
     <main className="interior-page events-page" id="top">
@@ -26,7 +33,7 @@ export default function TurkeyDinnerGiveawayPage() {
 
       <section className="events-horizon" id="turkey-dinner-giveaway" style={{ paddingTop: 160 }}>
         <div className="events-horizon-media">
-          <img src="/images/events/turkey-dinner-giveaway.webp" alt="Turkey Dinner Giveaway announcement" width={1500} height={844} decoding="async" />
+          <img src="/images/events/turkey-dinner-giveaway.webp" alt="Turkey Dinner Giveaway announcement" width={1500} height={844} decoding="async" style={bannerFit} />
         </div>
         <div className="events-horizon-copy">
           <TriadMark index={3} label="Outreach" />
