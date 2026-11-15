@@ -57,6 +57,8 @@ export const prayerZoomUrl = "https://us02web.zoom.us/j/218791174";
 export const bibleReadingPlanUrl =
   "https://www.fivedaybiblereading.com/wp-content/uploads/2025/12/2026-5-Day-Bible-Reading-Schedule.pdf";
 export const stockGiftUrl = "/give-stock";
+/** The Giving page; `/giving-1` matches the old Squarespace address. */
+export const givingPageUrl = "/giving-1";
 /** Turkey Dinner Giveaway 2026: application for families who need a meal (Microsoft Form). */
 export const turkeyDinnerApplicationUrl =
   "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=8TLNmEEi0U23Nw-RYAe2c46eNn2j2xZIgdNH_7QO7AtUMkxRNVVFOUFDRDNLRkJRMlAzSFFVVDNJUS4u";
@@ -129,7 +131,7 @@ export const footerExploreLinks: NavItem[] = [
   { label: "Our Church", href: "/#impact" },
   { label: "Plan A Visit", href: "/#visit" },
   { label: "FAQs", href: "/#faq" },
-  { label: "Give", href: churchCenterGivingUrl, external: true },
+  { label: "Give", href: givingPageUrl },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -193,7 +195,7 @@ export const searchIndex: SearchItem[] = [
   { title: "Daily Bible Reading Plan", description: "Read through the whole Bible in a year with five readings a week. Get the reading plan.", href: bibleReadingPlanUrl, keywords: "bible reading plan daily read scripture year schedule devotional five day" },
   { title: "Serve On A Sunday", description: "Sign up to volunteer with Kids, Students, First Impressions, Media, Worship, Cleaning or Counting.", href: volunteerUrl, keywords: "serve volunteer volunteering help sunday team kids students first impressions greeter media worship band tech cleaning counting offering sign up" },
   { title: "Give Stock", description: "Tell us about a gift of stock and we will reach out about how to donate it.", href: stockGiftUrl, keywords: "stock stocks shares securities donate give gift broker ticker appreciated" },
-  { title: "Give To Vineyard Florence", description: "Give simply and securely—and see how generosity moves beyond the walls of the church.", href: "/#give", keywords: "giving give donate generosity online church center mission community" },
+  { title: "Give To Vineyard Florence", description: "Give simply and securely—and see how generosity moves beyond the walls of the church.", href: givingPageUrl, keywords: "giving give donate generosity online church center mission community crypto" },
   { title: "Contact Vineyard Florence", description: "Ask a question or start a conversation with Vineyard Florence.", href: "/#footer", keywords: "email contact office conversation question" },
 ];
 
