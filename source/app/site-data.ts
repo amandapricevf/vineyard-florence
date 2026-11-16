@@ -90,6 +90,8 @@ export const spotifyPodcastUrl = "https://open.spotify.com/show/2IGMUuutUKP9Junu
 export const applePodcastUrl = "https://podcasts.apple.com/no/podcast/vineyard-florence/id1479721753";
 export const celebrateRecoveryUrl = "https://celebraterecovery.com/";
 export const mensHealthySexualityUrl = "https://menshealthysexuality.com/";
+/** The Vineyard Freedom page; this address is printed on QR codes, so keep it. */
+export const vineyardFreedomUrl = "/ministries/vineyard-freedom-ministry";
 /** Vineyard Freedom intake questionnaire (Google Form), the first step to a prayer session. */
 export const vineyardFreedomIntakeUrl = "https://forms.gle/RZcUhggff8VNQGdw5";
 export const alcoholicsAnonymousUrl = "https://www.aa.org/";
@@ -183,7 +185,7 @@ export const searchIndex: SearchItem[] = [
   { title: "Vineyard Students", description: "Weekly gatherings, parent resources and clear next steps for sixth through twelfth grade students.", href: "/students", keywords: "youth group teenagers middle school high school students ascend class wednesday" },
   { title: "New To Vineyard Students", description: "Tell the Students team your family is coming to a gathering.", href: "/students/new", keywords: "student first visit new youth coming register" },
   { title: "Vineyard Students Parent Newsletter", description: "Sign up for student-ministry news, reminders and parent updates.", href: "/students/newsletter", keywords: "student youth parent newsletter updates schedule" },
-  { title: "Vineyard Freedom", description: "Freedom, healing and restoration through prayer, biblical truth and the leading of the Holy Spirit. Start with the intake questionnaire.", href: "/ministries/vineyard-freedom", keywords: "vineyard freedom vf healing deliverance inner healing trauma oppression strongholds prayer session intake questionnaire" },
+  { title: "Vineyard Freedom", description: "Freedom, healing and restoration through prayer, biblical truth and the leading of the Holy Spirit. Start with the intake questionnaire.", href: vineyardFreedomUrl, keywords: "vineyard freedom vf healing deliverance inner healing trauma oppression strongholds prayer session intake questionnaire" },
   { title: "Celebrate Recovery", description: "A biblical 12-step program for any hurt, hang-up or habit. Mondays, 6:30–8:30 PM.", href: "/ministries/celebrate-recovery", keywords: "recovery celebrate recovery cr 12 step hurt habit hang-up healing freedom support monday amber" },
   { title: "Men’s Healthy Sexuality", description: "Men bonding together to live connected, live sober and live free.", href: "/ministries/mens-healthy-sexuality", keywords: "men mens healthy sexuality mhs wholeness recovery pornography compulsive" },
   { title: "Alcoholics Anonymous (A.A.)", description: "An A.A. meeting at Vineyard Florence, Mondays at 7:30 PM. Free and open to anyone.", href: "/ministries/alcoholics-anonymous", keywords: "aa alcoholics anonymous alcohol drinking sobriety sober recovery twelve steps monday" },
