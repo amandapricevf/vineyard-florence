@@ -20,3 +20,11 @@
   to = "/eventspage"
   status = 301
   force = true
+
+# The Vineyard Freedom page moved to the address printed on its QR code.
+# Old links forward there.
+[[redirects]]
+  from = "/ministries/vineyard-freedom"
+  to = "/ministries/vineyard-freedom-ministry"
+  status = 301
+  force = true

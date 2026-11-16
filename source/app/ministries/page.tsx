@@ -6,6 +6,7 @@ import {
   contactTopicLink,
   latviaFacebookUrl,
   vinedresserUrl,
+  vineyardFreedomUrl,
 } from "../site-data";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ const ministries = [
   { id: "alcoholics-anonymous", group: "recovery", label: "Recovery · Mondays 7:30 PM", title: "Alcoholics Anonymous", copy: "A fellowship of people who come together to solve their drinking problem. Free, and open to anyone who wants to do something about their drinking.", href: "/ministries/alcoholics-anonymous", cta: "Explore A.A.", external: false },
   { id: "mens-healthy-sexuality", group: "recovery", label: "Recovery · For Men", title: "Men’s Healthy Sexuality", copy: "Men who have chosen to bond together to live connected, live sober and live free of compulsive sexual behaviors and their impacts.", href: "/ministries/mens-healthy-sexuality", cta: "Explore MHS", external: false },
   { id: "griefshare", group: "recovery", label: "Support · Saturdays 1:00 PM", title: "GriefShare", copy: "A 13-week, faith-based support group for anyone grieving the loss of a friend, family member, spouse or grandparent.", href: "/ministries/griefshare", cta: "Explore GriefShare", external: false },
-  { id: "vineyard-freedom", group: "recovery", label: "Healing + Freedom", title: "Vineyard Freedom", copy: "Experience the freedom, healing and restoration Jesus offers. Through prayer, biblical truth and the leading of the Holy Spirit, we walk alongside those seeking breakthrough from spiritual oppression, generational cycles, emotional wounds, trauma and strongholds.", href: "/ministries/vineyard-freedom", cta: "Explore Vineyard Freedom", external: false },
+  { id: "vineyard-freedom", group: "recovery", label: "Healing + Freedom", title: "Vineyard Freedom", copy: "Experience the freedom, healing and restoration Jesus offers. Through prayer, biblical truth and the leading of the Holy Spirit, we walk alongside those seeking breakthrough from spiritual oppression, generational cycles, emotional wounds, trauma and strongholds.", href: vineyardFreedomUrl, cta: "Explore Vineyard Freedom", external: false },
   { id: "men", group: "life", label: "Men", title: "Men’s Ministry", copy: "Connection, discipleship and practical brotherhood.", href: contactTopicLink("mens-ministry"), cta: "Connect With Men’s Ministry", external: false },
   { id: "women", group: "life", label: "Women", title: "Women’s Ministry", copy: "Gatherings and relationships that create room for women to be encouraged, grow in faith and follow Jesus together.", href: eventsUrl, cta: "See Women’s Events", external: false },
   { id: "vinedresser", group: "mission", label: "Foster + Kinship", title: "The Vinedresser", copy: "Free children’s clothing, diapers and practical support for foster and kinship families in Northern Kentucky, helping to ease the costs of caring for kids.", href: vinedresserUrl, cta: "Visit The Vinedresser", external: true },

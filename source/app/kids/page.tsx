@@ -82,8 +82,8 @@ export default function VineyardKidsPage() {
       <section className="kids-first-visit">
         <div className="kids-first-visit-copy">
           <p className="eyebrow light">Your First Visit</p>
-          <h2>Start At The<br /><em>Kids Cave.</em></h2>
-          <p>Find the Kids Cave in the lobby. We will meet your family, check your child into our system and direct you to the right classroom for drop-off.</p>
+          <h2>Start At<br /><em>Guest Central.</em></h2>
+          <p>Find Guest Central in the lobby. We will meet your family, check your child into our system and direct you to the right classroom for drop-off.</p>
           <Link className="button button-light" href="/kids/register">Pre-Register Here <span aria-hidden="true">→</span></Link>
         </div>
         <div className="kids-first-visit-note">
@@ -98,7 +98,7 @@ export default function VineyardKidsPage() {
           <h2>Simple. Secure.<br /><em>Ready For Sunday.</em></h2>
         </div>
         <div className="kids-checkin-steps">
-          <article><span>01</span><h3>Before Service</h3><p>Check your child in at any kiosk in the Kids Cave in the lobby. You and your child will receive matching, visit-specific name tags. Your child wears one; you keep the matching tag.</p></article>
+          <article><span>01</span><h3>Before Service</h3><p>Check your child in at any kiosk at Guest Central in the lobby. You and your child will receive matching, visit-specific name tags. Your child wears one; you keep the matching tag.</p></article>
           <article><span>02</span><h3>During Service</h3><p>If we need to contact you, your child&apos;s identification code will appear on the screens and we may send you a text. Exit the auditorium and a team member will direct you to the classroom.</p></article>
           <article><span>03</span><h3>After Service</h3><p>Go to your child&apos;s classroom and show your matching tag before your child is released. If you would like prayer, please pick up your child first or send someone you trust with your tag.</p></article>
         </div>

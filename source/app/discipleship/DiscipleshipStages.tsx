@@ -7,6 +7,7 @@ import {
   contactTopicLink,
   houseGroupInterestUrl,
   bibleReadingPlanUrl,
+  vineyardFreedomUrl,
 } from "../site-data";
 
 type StageIcon = "seeker" | "believer" | "follower" | "disciple";
@@ -62,7 +63,7 @@ const stages: Stage[] = [
       { label: "Help Lead A House Group Or Prayer Meeting", href: "/discipleship#leader-path" },
       { label: "Ask About Leader Training", href: contactTopicLink("house-group-leader-training") },
       { label: "Share Life And Resources", href: "/discipleship#resources" },
-      { label: "Explore Vineyard Freedom", href: "/ministries/vineyard-freedom" },
+      { label: "Explore Vineyard Freedom", href: vineyardFreedomUrl },
     ],
   },
   {
