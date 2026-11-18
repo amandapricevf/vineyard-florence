@@ -349,7 +349,7 @@ export const tickerMessages: TickerMessage[] = [
   {
     kicker: "Latest",
     lead: "Turkey Dinner Giveaway:",
-    copy: "Sunday, November 22 · sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
+    copy: "Sunday, November 22 · Sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
     label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
     href: `${eventsUrl}#turkey-dinner-giveaway`,
     starts: null,
@@ -358,7 +358,7 @@ export const tickerMessages: TickerMessage[] = [
   {
     kicker: "Latest",
     lead: "Christmas Angels:",
-    copy: "Choose an angel ornament from the tree in Guest Central · return gifts by Sunday, December 13",
+    copy: "Choose an angel ornament from the tree in Guest Central · Return gifts by Sunday, December 13",
     label: "Christmas Angels: choose an angel ornament from the tree in Guest Central and return gifts by Sunday, December 13",
     href: `${eventsUrl}#christmas-angels`,
     starts: "2026-11-23",
@@ -367,7 +367,7 @@ export const tickerMessages: TickerMessage[] = [
   {
     kicker: "Latest",
     lead: "Christmas Eve Eve Service:",
-    copy: "Wednesday, December 23 · doors open 6:00 PM for cookies and music · service at 7:00 PM",
+    copy: "Wednesday, December 23 · Doors open at 6PM for cookies and music · Service at 7PM",
     label: "Christmas Eve Eve Service, Wednesday December 23: doors open at 6:00 PM for cookies and music, service at 7:00 PM",
     href: `${eventsUrl}#christmas-eve-eve-service`,
     starts: "2026-12-14",
@@ -376,7 +376,7 @@ export const tickerMessages: TickerMessage[] = [
   {
     kicker: "Latest",
     lead: "Student New Year’s Eve Lock-In:",
-    copy: "Burgers @ Midnight · December 31, 8:00 PM – 8:00 AM · grades 6–12 · $5 · register now",
+    copy: "Burgers @ Midnight · December 31, 8PM – 8AM · Grades 6–12 · $5 · Register now",
     label: "Student New Year’s Eve Lock-In, Burgers at Midnight: December 31, 8:00 PM to 8:00 AM, grades 6 to 12, $5. Register now",
     href: `${eventsUrl}#student-new-years-eve-lock-in`,
     starts: "2026-12-24",
