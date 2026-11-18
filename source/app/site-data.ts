@@ -322,20 +322,63 @@ export function goToSearchResult(href: string): void {
 /* News ticker                                                         */
 /* ------------------------------------------------------------------ */
 
-/**
- * The sticky ticker at the bottom of every page.
- *
- * `expires` is the last day the message should be shown (church local time).
- * Once that day passes the ticker hides itself in the browser, so a stale
- * announcement never sits on a live site waiting for someone to notice.
- * Set `expires: null` for a message with no end date.
- */
-export const tickerMessage = {
-  kicker: "Latest",
+export type TickerMessage = {
+  kicker: string;
   /** Optional bold lead-in before the copy; leave empty for none. */
-  lead: "Turkey Dinner Giveaway:",
-  copy: "Sunday, November 22 · sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
-  label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
-  href: `${eventsUrl}#turkey-dinner-giveaway`,
-  expires: "2026-11-22" as string | null,
+  lead: string;
+  copy: string;
+  /** What screen readers announce for the whole bar. */
+  label: string;
+  href: string;
+  /** First day to show it (church local time). `null` = show right away. */
+  starts: string | null;
+  /** Last day to show it. `null` = no end date. */
+  expires: string | null;
+};
+
+/**
+ * The sticky ticker at the bottom of every page, as a schedule.
+ *
+ * The browser shows the first message whose `starts`–`expires` window
+ * includes today (church local time), so announcements can be queued ahead
+ * and hand over on their own. When none is current the bar hides itself, so
+ * a stale announcement never sits on the live site waiting for someone to
+ * notice. Add the next message to the list before the last one runs out.
+ */
+export const tickerMessages: TickerMessage[] = [
+  {
+    kicker: "Latest",
+    lead: "Turkey Dinner Giveaway:",
+    copy: "Sunday, November 22 · sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
+    label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
+    href: `${eventsUrl}#turkey-dinner-giveaway`,
+    starts: null,
+    expires: "2026-11-22",
+  },
+  {
+    kicker: "Latest",
+    lead: "Christmas Angels:",
+    copy: "Choose an angel ornament from the tree in Guest Central · return gifts by Sunday, December 13",
+    label: "Christmas Angels: choose an angel ornament from the tree in Guest Central and return gifts by Sunday, December 13",
+    href: `${eventsUrl}#christmas-angels`,
+    starts: "2026-11-23",
+    expires: "2026-12-13",
+  },
+];
+
+/**
+ * The Christmas Eve Eve pop-up on the home page. It appears from `starts`
+ * through `expires` (church local time); a visitor who closes it is not
+ * shown it again. Set `starts` to null to switch it off.
+ */
+export const homePopup = {
+  id: "christmas-eve-eve-2026",
+  starts: "2026-12-01" as string | null,
+  expires: "2026-12-23",
+  image: "/images/events/christmas-eve-eve.webp",
+  imageSize: { width: 1654, height: 1654 },
+  alt: "Please join us for Christmas Eve Eve at Vineyard Florence Church, Wednesday, December 23rd. Service begins at 7 PM; doors open at 6 PM for Christmas cookies and an orchestral ensemble",
+  title: "Christmas Eve Eve at Vineyard Florence",
+  href: `${eventsUrl}#christmas-eve-eve-service`,
+  cta: "See Event Details",
 };
