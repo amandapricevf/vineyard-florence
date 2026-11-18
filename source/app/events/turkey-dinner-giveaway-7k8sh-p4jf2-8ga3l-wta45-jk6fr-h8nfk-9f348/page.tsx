@@ -20,7 +20,7 @@ export const metadata: Metadata = {
  * "wrapped up" message instead. To bring it back next year, update the
  * details below and set GIVEAWAY_LAST_DAY to the new giveaway date.
  */
-const GIVEAWAY_LAST_DAY = "2026-11-22";
+const GIVEAWAY_LAST_DAY = "2026-11-17";
 
 /** Keeps each button on one line; the row wraps instead. */
 const noWrap = { whiteSpace: "nowrap" } as const;
