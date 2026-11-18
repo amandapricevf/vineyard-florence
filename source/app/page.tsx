@@ -6,6 +6,7 @@ import Script from "next/script";
 import Lenis from "lenis";
 import { GiveMenu } from "./components/GiveMenu";
 import { HeaderSearch } from "./components/HeaderSearch";
+import { HomePopup } from "./components/HomePopup";
 import { MenuVisit, focusMenuIfKeyboard, returnFocusFromHeaderPanel } from "./components/MenuVisit";
 import { SiteFooter } from "./components/SiteFooter";
 import { TriadMark } from "./components/TriadMark";
@@ -773,6 +774,8 @@ export default function Home() {
       <SiteFooter reveal />
 
       <SiteTicker />
+
+      <HomePopup ready={introComplete} />
     </main>
   );
 }
