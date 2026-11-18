@@ -364,6 +364,24 @@ export const tickerMessages: TickerMessage[] = [
     starts: "2026-11-23",
     expires: "2026-12-13",
   },
+  {
+    kicker: "Latest",
+    lead: "Christmas Eve Eve Service:",
+    copy: "Wednesday, December 23 · doors open 6:00 PM for cookies and music · service at 7:00 PM",
+    label: "Christmas Eve Eve Service, Wednesday December 23: doors open at 6:00 PM for cookies and music, service at 7:00 PM",
+    href: `${eventsUrl}#christmas-eve-eve-service`,
+    starts: "2026-12-14",
+    expires: "2026-12-23",
+  },
+  {
+    kicker: "Latest",
+    lead: "Student New Year’s Eve Lock-In:",
+    copy: "Burgers @ Midnight · December 31, 8:00 PM – 8:00 AM · grades 6–12 · $5 · register now",
+    label: "Student New Year’s Eve Lock-In, Burgers at Midnight: December 31, 8:00 PM to 8:00 AM, grades 6 to 12, $5. Register now",
+    href: `${eventsUrl}#student-new-years-eve-lock-in`,
+    starts: "2026-12-24",
+    expires: "2026-12-31",
+  },
 ];
 
 /**
