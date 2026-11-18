@@ -39,3 +39,13 @@ export function isActive(expires: string | null | undefined, today: string = chu
   if (!expires) return true;
   return expires >= today;
 }
+
+/** True when today falls within `starts`–`expires` (either end may be open). */
+export function isInWindow(
+  starts: string | null | undefined,
+  expires: string | null | undefined,
+  today: string = churchToday(),
+): boolean {
+  if (starts && starts > today) return false;
+  return isActive(expires, today);
+}

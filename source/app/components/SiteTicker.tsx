@@ -2,19 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { tickerMessage } from "../site-data";
-import { isActive } from "../lib/church-date";
+import { tickerMessages } from "../site-data";
+import { isInWindow } from "../lib/church-date";
 
 /**
  * The sticky announcement bar.
  *
- * The message carries an expiry date. Because this is a static export, the
- * check has to happen in the browser — so the ticker renders on the server and
- * removes itself after mount if the announcement has passed. That ordering
- * keeps the markup identical on both sides of hydration.
+ * Messages are scheduled with start and expiry dates. Because this is a static
+ * export, the choice has to happen in the browser — so the ticker renders the
+ * first message on the server, then after mount swaps to whichever message is
+ * current today, or removes itself if none is. That ordering keeps the markup
+ * identical on both sides of hydration.
  */
 export function SiteTicker() {
-  const [expired, setExpired] = useState(false);
+  const [tickerMessage, setTickerMessage] = useState(tickerMessages[0]);
+  const [expired, setExpired] = useState(!tickerMessages.length);
   const [collapsed, setCollapsed] = useState(false);
   const collapsedRef = useRef(false);
   const reopenedAt = useRef<number | null>(null);
@@ -22,7 +24,9 @@ export function SiteTicker() {
   const kickerRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!isActive(tickerMessage.expires)) setExpired(true);
+    const current = tickerMessages.find((message) => isInWindow(message.starts, message.expires));
+    if (current) setTickerMessage(current);
+    else setExpired(true);
   }, []);
 
   // Once the visitor scrolls down, the moving message rolls left and tucks
