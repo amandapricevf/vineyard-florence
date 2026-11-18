@@ -98,17 +98,19 @@ export function EventsCalendar() {
 function FeaturedEvent({ event }: { event: ChurchEvent }) {
   return (
     <section className="events-featured" id={eventAnchor(event)} aria-labelledby="featured-event-title">
-      <div className="events-featured-media">
-        <img
-          src={event.image}
-          alt={event.alt}
-          width={event.imageSize.width}
-          height={event.imageSize.height}
-          fetchPriority="high"
-          decoding="async"
-        />
-        <span>Next up</span>
-      </div>
+      {event.image ? (
+        <div className="events-featured-media">
+          <img
+            src={event.image}
+            alt={event.alt ?? ""}
+            width={event.imageSize?.width}
+            height={event.imageSize?.height}
+            fetchPriority="high"
+            decoding="async"
+          />
+          <span>Next up</span>
+        </div>
+      ) : null}
       <div className="events-featured-copy">
         <div className="events-featured-topline">
           <span>01 / {event.category}</span>
@@ -172,23 +174,25 @@ function EventRow({ event, number }: { event: ChurchEvent; number: number }) {
           </a>
         </div>
       </div>
-      <a
-        className="event-row-image"
-        href={event.primaryHref}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`${event.primaryLabel}: ${event.title}`}
-      >
-        <img
-          src={event.image}
-          alt={event.alt}
-          width={event.imageSize.width}
-          height={event.imageSize.height}
-          loading="lazy"
-          decoding="async"
-        />
-        <span aria-hidden="true">↗</span>
-      </a>
+      {event.image ? (
+        <a
+          className="event-row-image"
+          href={event.primaryHref}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${event.primaryLabel}: ${event.title}`}
+        >
+          <img
+            src={event.image}
+            alt={event.alt ?? ""}
+            width={event.imageSize?.width}
+            height={event.imageSize?.height}
+            loading="lazy"
+            decoding="async"
+          />
+          <span aria-hidden="true">↗</span>
+        </a>
+      ) : null}
     </article>
   );
 }
