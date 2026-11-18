@@ -353,7 +353,7 @@ export const tickerMessages: TickerMessage[] = [
     label: "Turkey Dinner Giveaway, Sunday November 22: sponsor a $25 Thanksgiving meal, fill a bag, or apply for a meal",
     href: `${eventsUrl}#turkey-dinner-giveaway`,
     starts: null,
-    expires: "2026-11-22",
+    expires: "2026-11-17",
   },
   {
     kicker: "Latest",
@@ -361,7 +361,7 @@ export const tickerMessages: TickerMessage[] = [
     copy: "Choose an angel ornament from the tree in Guest Central · return gifts by Sunday, December 13",
     label: "Christmas Angels: choose an angel ornament from the tree in Guest Central and return gifts by Sunday, December 13",
     href: `${eventsUrl}#christmas-angels`,
-    starts: "2026-11-23",
+    starts: "2026-11-18",
     expires: "2026-12-13",
   },
 ];
@@ -373,7 +373,7 @@ export const tickerMessages: TickerMessage[] = [
  */
 export const homePopup = {
   id: "christmas-eve-eve-2026",
-  starts: "2026-12-01" as string | null,
+  starts: "2026-11-18" as string | null,
   expires: "2026-12-23",
   image: "/images/events/christmas-eve-eve.webp",
   imageSize: { width: 1654, height: 1654 },
