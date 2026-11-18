@@ -1,4 +1,4 @@
-import { contactTopicLink, turkeyDinnerApplicationUrl, womenOfWarfareUrl } from "../site-data";
+import { contactFormLink, contactTopicLink, directionsUrl, turkeyDinnerApplicationUrl, womenOfWarfareUrl } from "../site-data";
 
 /**
  * Every dated event on the site.
@@ -29,10 +29,11 @@ export type ChurchEvent = {
   schedule: string;
   location: string;
   description: string;
-  image: string;
+  /** Event graphic. Optional: an event without one is listed without a picture. */
+  image?: string;
   /** Intrinsic pixel size of `image`, so the browser can reserve space. */
-  imageSize: { width: number; height: number };
-  alt: string;
+  imageSize?: { width: number; height: number };
+  alt?: string;
   /** Church Center registration page; the old website's event pages are retired. */
   primaryHref: string;
   primaryLabel: string;
@@ -301,6 +302,71 @@ export const churchEvents: ChurchEvent[] = [
     featuredWhen: "6:30–8:00 PM",
     featuredHeadline: "Worship With",
     featuredHeadlineEmphasis: "Santa.",
+  },
+  {
+    // Listed by the gift deadline; it stays up through the families' luncheon.
+    isoDate: "2026-12-13",
+    endDate: "2026-12-20",
+    month: "DEC",
+    day: "13",
+    dateMeta: "Gifts due",
+    category: "Outreach",
+    title: "Christmas Angels",
+    schedule: "Return gifts by Sunday, December 13 · Family luncheon December 20",
+    location: "Angel tree in Guest Central · Vineyard Florence",
+    description:
+      "Join us in providing Christmas for Camp Ernst Middle School families in need by selecting an angel ornament from the tree in Guest Central. Please return the gifts purchased by December 13. We will have a luncheon for the families on December 20 when they come for pick-up.",
+    image: "/images/events/christmas-angels.webp",
+    imageSize: { width: 1920, height: 1080 },
+    alt: "Christmas Angels outreach: select an angel ornament from the tree in Guest Central and return gifts by December 13",
+    primaryHref: contactFormLink("Christmas Angels"),
+    primaryLabel: "Ask About Christmas Angels",
+    featuredDate: "Return gifts by Sunday · December 13",
+    featuredWhen: "Gifts due December 13 · Family luncheon and pick-up December 20",
+    featuredWhere: "Angel tree in Guest Central · Vineyard Florence",
+    featuredHeadline: "Christmas",
+    featuredHeadlineEmphasis: "Angels.",
+  },
+  {
+    isoDate: "2026-12-23",
+    month: "DEC",
+    day: "23",
+    dateMeta: "Wednesday",
+    category: "Christmas",
+    title: "Christmas Eve Eve Service",
+    schedule: "December 23 · Doors open 6:00 PM · Service 7:00 PM",
+    location: "Vineyard Florence",
+    description:
+      "Please join us for Christmas Eve Eve at Vineyard Florence. Doors open at 6:00 PM for Christmas cookies and an orchestral ensemble, and the service begins at 7:00 PM.",
+    image: "/images/events/christmas-eve-eve.webp",
+    imageSize: { width: 1654, height: 1654 },
+    alt: "Please join us for Christmas Eve Eve at Vineyard Florence Church, Wednesday, December 23rd. Service begins at 7 PM; doors open at 6 PM for Christmas cookies and an orchestral ensemble",
+    primaryHref: directionsUrl,
+    primaryLabel: "Get Directions",
+    featuredDate: "Wednesday · December 23",
+    featuredWhen: "Doors open 6:00 PM · Service 7:00 PM",
+    featuredHeadline: "Please Join Us For",
+    featuredHeadlineEmphasis: "Christmas Eve Eve.",
+  },
+  {
+    isoDate: "2027-01-12",
+    endDate: "2027-03-16",
+    month: "JAN",
+    day: "12",
+    dateMeta: "Tuesdays",
+    category: "Course",
+    title: "Alpha",
+    schedule: "Tuesdays · January 12 – March 16 · 6:00–8:00 PM",
+    location: "Leah’s House (VF’s Reset House)",
+    description:
+      "A series of group conversations that explore the basics of the Christian faith in a friendly environment. Each evening begins with a free dinner, followed by a short film and small-group discussion. Everyone’s welcome, no matter your background or beliefs.",
+    primaryHref: "https://vineyardflorence.churchcenter.com/registrations/events/4034363",
+    primaryLabel: "Register",
+    featuredDate: "Tuesdays · January 12 – March 16",
+    featuredWhen: "6:00–8:00 PM",
+    featuredWhere: "Leah’s House (VF’s Reset House)",
+    featuredHeadline: "A Conversation About",
+    featuredHeadlineEmphasis: "Life, Faith And Meaning.",
   },
 ];
 
