@@ -44,3 +44,11 @@
   to = "https://www.amazon.com/hz/wishlist/ls/KBYEDFA8051Z/ref=hz_ls_biz_ex"
   status = 301
   force = true
+
+# The old site's About page (still listed in Google search results) now lives
+# at the Staff page.
+[[redirects]]
+  from = "/about"
+  to = "/staff/"
+  status = 301
+  force = true
