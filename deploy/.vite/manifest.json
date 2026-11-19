@@ -1,24 +1,24 @@
 {
-  "_SiteTicker-CS7cPnjL.js": {
-    "file": "assets/SiteTicker-CS7cPnjL.js",
+  "_SiteTicker-EWrwE1vj.js": {
+    "file": "assets/SiteTicker-EWrwE1vj.js",
     "name": "SiteTicker",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_church-date-CB-Vz8Z-.js",
-      "_site-data-DHRH8v1V.js",
+      "_church-date-v3IV8P4n.js",
+      "_site-data-DRk9-ZT5.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
     ]
   },
-  "_TriadMark-Ci8KGwPb.js": {
-    "file": "assets/TriadMark-Ci8KGwPb.js",
+  "_TriadMark-BbiMtpBj.js": {
+    "file": "assets/TriadMark-BbiMtpBj.js",
     "name": "TriadMark",
     "imports": [
       "_framework-CXnKph_e.js"
     ]
   },
-  "_church-date-CB-Vz8Z-.js": {
-    "file": "assets/church-date-CB-Vz8Z-.js",
+  "_church-date-v3IV8P4n.js": {
+    "file": "assets/church-date-v3IV8P4n.js",
     "name": "church-date"
   },
   "_contact-topics-BQqdyQdl.js": {
@@ -36,28 +36,39 @@
     "file": "assets/rolldown-runtime-S-ySWqyJ.js",
     "name": "rolldown-runtime"
   },
-  "_site-data-DHRH8v1V.js": {
-    "file": "assets/site-data-DHRH8v1V.js",
+  "_site-data-DRk9-ZT5.js": {
+    "file": "assets/site-data-DRk9-ZT5.js",
     "name": "site-data",
     "imports": [
       "_contact-topics-BQqdyQdl.js"
     ]
   },
   "app/components/InteriorChrome.tsx": {
-    "file": "assets/InteriorChrome-DeV1kzdR.js",
+    "file": "assets/InteriorChrome-Zfx35lJr.js",
     "name": "InteriorChrome",
     "src": "app/components/InteriorChrome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-CS7cPnjL.js",
-      "_site-data-DHRH8v1V.js",
+      "_SiteTicker-EWrwE1vj.js",
+      "_site-data-DRk9-ZT5.js",
       "_framework-CXnKph_e.js",
       "node_modules/vinext/dist/shims/link.js"
     ]
   },
+  "app/components/SeasonalContent.tsx": {
+    "file": "assets/SeasonalContent-Ddq7S-iy.js",
+    "name": "SeasonalContent",
+    "src": "app/components/SeasonalContent.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_church-date-v3IV8P4n.js",
+      "_framework-CXnKph_e.js"
+    ]
+  },
   "app/contact/ContactForm.tsx": {
-    "file": "assets/ContactForm-CV-cgBaY.js",
+    "file": "assets/ContactForm-Dkas4TOg.js",
     "name": "ContactForm",
     "src": "app/contact/ContactForm.tsx",
     "isDynamicEntry": true,
@@ -68,31 +79,31 @@
     ]
   },
   "app/discipleship/DiscipleshipStages.tsx": {
-    "file": "assets/DiscipleshipStages-D_qiQ2UU.js",
+    "file": "assets/DiscipleshipStages-HAoaUUTE.js",
     "name": "DiscipleshipStages",
     "src": "app/discipleship/DiscipleshipStages.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_site-data-DHRH8v1V.js",
+      "_site-data-DRk9-ZT5.js",
       "_framework-CXnKph_e.js"
     ]
   },
   "app/events/EventsCalendar.tsx": {
-    "file": "assets/EventsCalendar-Bq1iDZgd.js",
+    "file": "assets/EventsCalendar-BqpfhR4D.js",
     "name": "EventsCalendar",
     "src": "app/events/EventsCalendar.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_TriadMark-Ci8KGwPb.js",
-      "_church-date-CB-Vz8Z-.js",
-      "_site-data-DHRH8v1V.js",
+      "_TriadMark-BbiMtpBj.js",
+      "_church-date-v3IV8P4n.js",
+      "_site-data-DRk9-ZT5.js",
       "_framework-CXnKph_e.js"
     ]
   },
   "app/give-stock/StockGiftForm.tsx": {
-    "file": "assets/StockGiftForm-C9DHUA5m.js",
+    "file": "assets/StockGiftForm-Csb40r2T.js",
     "name": "StockGiftForm",
     "src": "app/give-stock/StockGiftForm.tsx",
     "isDynamicEntry": true,
@@ -102,7 +113,7 @@
     ]
   },
   "app/join-a-house-group/HouseGroupForm.tsx": {
-    "file": "assets/HouseGroupForm-BT7RDfkn.js",
+    "file": "assets/HouseGroupForm-CwXaDk4t.js",
     "name": "HouseGroupForm",
     "src": "app/join-a-house-group/HouseGroupForm.tsx",
     "isDynamicEntry": true,
@@ -112,7 +123,7 @@
     ]
   },
   "app/kids/KidsForms.tsx": {
-    "file": "assets/KidsForms-xWAeTBjV.js",
+    "file": "assets/KidsForms-C5OC8dxY.js",
     "name": "KidsForms",
     "src": "app/kids/KidsForms.tsx",
     "isDynamicEntry": true,
@@ -122,7 +133,7 @@
     ]
   },
   "app/messages/SermonDirectory.tsx": {
-    "file": "assets/SermonDirectory-Dnbd0qhP.js",
+    "file": "assets/SermonDirectory-BozwI-Ts.js",
     "name": "SermonDirectory",
     "src": "app/messages/SermonDirectory.tsx",
     "isDynamicEntry": true,
@@ -132,21 +143,23 @@
     ]
   },
   "app/page.tsx": {
-    "file": "assets/page-CQISNw9c.js",
+    "file": "assets/page-Szl8HiD4.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_SiteTicker-CS7cPnjL.js",
-      "_TriadMark-Ci8KGwPb.js",
-      "_site-data-DHRH8v1V.js",
+      "_SiteTicker-EWrwE1vj.js",
+      "_TriadMark-BbiMtpBj.js",
+      "_church-date-v3IV8P4n.js",
+      "_site-data-DRk9-ZT5.js",
       "_framework-CXnKph_e.js",
-      "node_modules/vinext/dist/shims/link.js"
+      "node_modules/vinext/dist/shims/link.js",
+      "node_modules/vinext/dist/shims/script.js"
     ]
   },
   "app/prayer-request/PrayerRequestForm.tsx": {
-    "file": "assets/PrayerRequestForm-CKWCnlsU.js",
+    "file": "assets/PrayerRequestForm-0FP1sv2E.js",
     "name": "PrayerRequestForm",
     "src": "app/prayer-request/PrayerRequestForm.tsx",
     "isDynamicEntry": true,
@@ -156,7 +169,7 @@
     ]
   },
   "app/prayer/PrayerHexagon.tsx": {
-    "file": "assets/PrayerHexagon-BGBzIskU.js",
+    "file": "assets/PrayerHexagon-Dcsf0zwp.js",
     "name": "PrayerHexagon",
     "src": "app/prayer/PrayerHexagon.tsx",
     "isDynamicEntry": true,
@@ -166,7 +179,7 @@
     ]
   },
   "app/serve/ServeForm.tsx": {
-    "file": "assets/ServeForm-DrsD7gcD.js",
+    "file": "assets/ServeForm-B6wr7h5b.js",
     "name": "ServeForm",
     "src": "app/serve/ServeForm.tsx",
     "isDynamicEntry": true,
@@ -176,18 +189,18 @@
     ]
   },
   "app/staff/StaffDirectory.tsx": {
-    "file": "assets/StaffDirectory-CJ6N0ZCg.js",
+    "file": "assets/StaffDirectory-DG9LNwgE.js",
     "name": "StaffDirectory",
     "src": "app/staff/StaffDirectory.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_site-data-DHRH8v1V.js",
+      "_site-data-DRk9-ZT5.js",
       "_framework-CXnKph_e.js"
     ]
   },
   "app/students/StudentsForms.tsx": {
-    "file": "assets/StudentsForms-CZm5oSbW.js",
+    "file": "assets/StudentsForms-UkTllmAP.js",
     "name": "StudentsForms",
     "src": "app/students/StudentsForms.tsx",
     "isDynamicEntry": true,
@@ -197,7 +210,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-Bfz9T96M.js",
+    "file": "assets/layout-segment-context-C0FH8JpJ.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -208,7 +221,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/link.js": {
-    "file": "assets/link-DVuZVtma.js",
+    "file": "assets/link-Mp_hov6j.js",
     "name": "link",
     "src": "node_modules/vinext/dist/shims/link.js",
     "isDynamicEntry": true,
@@ -222,7 +235,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/router.js": {
-    "file": "assets/router-DqAv43Tq.js",
+    "file": "assets/router-D06dO7hc.js",
     "name": "router",
     "src": "node_modules/vinext/dist/shims/router.js",
     "isDynamicEntry": true,
@@ -236,8 +249,18 @@
       "_framework-CXnKph_e.js"
     ]
   },
+  "node_modules/vinext/dist/shims/script.js": {
+    "file": "assets/script-BkrsmaeE.js",
+    "name": "script",
+    "src": "node_modules/vinext/dist/shims/script.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-CXnKph_e.js"
+    ]
+  },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-81305mZA.js",
+    "file": "assets/index-mDI1NxwM.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -253,6 +276,7 @@
       "app/discipleship/DiscipleshipStages.tsx",
       "virtual:vinext-app-browser-entry",
       "app/give-stock/StockGiftForm.tsx",
+      "node_modules/vinext/dist/shims/script.js",
       "app/join-a-house-group/HouseGroupForm.tsx",
       "app/page.tsx",
       "app/contact/ContactForm.tsx",
@@ -260,6 +284,7 @@
       "app/serve/ServeForm.tsx",
       "app/kids/KidsForms.tsx",
       "app/components/InteriorChrome.tsx",
+      "app/components/SeasonalContent.tsx",
       "app/staff/StaffDirectory.tsx",
       "app/events/EventsCalendar.tsx",
       "app/prayer/PrayerHexagon.tsx"

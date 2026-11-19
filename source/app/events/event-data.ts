@@ -1,4 +1,4 @@
-import { contactFormLink, contactTopicLink, directionsUrl, turkeyDinnerApplicationUrl, womenOfWarfareUrl } from "../site-data";
+import { churchCenterGivingUrl, contactFormLink, contactTopicLink, directionsUrl, turkeyDinnerApplicationUrl, womenOfWarfareUrl } from "../site-data";
 
 /**
  * Every dated event on the site.
@@ -37,6 +37,9 @@ export type ChurchEvent = {
   /** Church Center registration page; the old website's event pages are retired. */
   primaryHref: string;
   primaryLabel: string;
+  /** Optional second link shown beside the main button, e.g. a giving page. */
+  secondaryHref?: string;
+  secondaryLabel?: string;
   /** Kicker shown when this event is in the featured slot. */
   category: string;
   /** Long-form date line for the featured panel, e.g. "Wednesday · August 19". */
@@ -315,12 +318,14 @@ export const churchEvents: ChurchEvent[] = [
     schedule: "Return gifts by Sunday, December 13 · Family luncheon December 20",
     location: "Angel tree in Guest Central · Vineyard Florence",
     description:
-      "Join us in providing Christmas for Camp Ernst Middle School families in need by selecting an angel ornament from the tree in Guest Central. Please return the gifts purchased by December 13. We will have a luncheon for the families on December 20 when they come for pick-up.",
+      "Join us in providing Christmas for Camp Ernst Middle School families in need by selecting an angel ornament from the tree in Guest Central. Please return the gifts purchased by December 13. We will have a luncheon for the families on December 20 when they come for pick-up. If you don’t have time to shop for a specific gift, you can give online instead—just choose Christmas Angels from the fund drop-down.",
     image: "/images/events/christmas-angels.webp",
     imageSize: { width: 1920, height: 1080 },
     alt: "Christmas Angels outreach: select an angel ornament from the tree in Guest Central and return gifts by December 13",
     primaryHref: contactFormLink("Christmas Angels"),
     primaryLabel: "Ask About Christmas Angels",
+    secondaryHref: churchCenterGivingUrl,
+    secondaryLabel: "Give Instead",
     featuredDate: "Return gifts by Sunday · December 13",
     featuredWhen: "Gifts due December 13 · Family luncheon and pick-up December 20",
     featuredWhere: "Angel tree in Guest Central · Vineyard Florence",

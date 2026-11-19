@@ -1,0 +1,1 @@
+import{r as e}from"./rolldown-runtime-S-ySWqyJ.js";import{i as t,r as n}from"./framework-CXnKph_e.js";import{n as r}from"./church-date-v3IV8P4n.js";var i=e(t(),1),a=n();function o({lastDay:e,children:t,afterwards:n}){let[o,s]=(0,i.useState)(!1);return(0,i.useEffect)(()=>{r(e)||s(!0)},[e]),(0,a.jsx)(a.Fragment,{children:o?n:t})}export{o as SeasonalContent};

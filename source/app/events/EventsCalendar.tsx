@@ -135,9 +135,19 @@ function FeaturedEvent({ event }: { event: ChurchEvent }) {
           <a className="button button-light" href={event.primaryHref} target="_blank" rel="noreferrer">
             {event.primaryLabel} <span aria-hidden="true">↗</span>
           </a>
+          <SecondaryLink event={event} light />
         </div>
       </div>
     </section>
+  );
+}
+
+function SecondaryLink({ event, light = false }: { event: ChurchEvent; light?: boolean }) {
+  if (!event.secondaryHref || !event.secondaryLabel) return null;
+  return (
+    <a className={`text-link${light ? " light" : ""}`} href={event.secondaryHref} target="_blank" rel="noreferrer">
+      {event.secondaryLabel} <span aria-hidden="true">↗</span>
+    </a>
   );
 }
 
@@ -172,6 +182,7 @@ function EventRow({ event, number }: { event: ChurchEvent; number: number }) {
           >
             {event.primaryLabel} <span aria-hidden="true">↗</span>
           </a>
+          <SecondaryLink event={event} />
         </div>
       </div>
       {event.image ? (

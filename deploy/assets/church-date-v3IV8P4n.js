@@ -1,0 +1,1 @@
+var e=new Intl.DateTimeFormat(`en-CA`,{timeZone:`America/New_York`,year:`numeric`,month:`2-digit`,day:`2-digit`});function t(t=new Date){return e.format(t)}function n(e,n=t()){return e?e>=n:!0}function r(e,r,i=t()){return e&&e>i?!1:n(r,i)}export{n,r,t};
