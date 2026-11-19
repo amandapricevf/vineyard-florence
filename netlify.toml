@@ -28,3 +28,19 @@
   to = "/ministries/vineyard-freedom-ministry"
   status = 301
   force = true
+
+# Old addresses printed in QR codes on church graphics. They forward to where
+# each QR code should now go, so the printed codes keep working.
+# Join a House Group graphic -> Church Center groups.
+[[redirects]]
+  from = "/house-groups-1/rjqqqliqrsqxd8oatpfeoffwdhvn7s-eepc7"
+  to = "https://vineyardflorence.churchcenter.com/groups"
+  status = 301
+  force = true
+
+# Leah's House graphic -> Amazon wish list.
+[[redirects]]
+  from = "/events/5n8h7sx5x8g7kqzkhqb0e925i2mrs8"
+  to = "https://www.amazon.com/hz/wishlist/ls/KBYEDFA8051Z/ref=hz_ls_biz_ex"
+  status = 301
+  force = true
